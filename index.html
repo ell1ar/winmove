@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <title>Document</title>
+    <title>Win Move</title>
   </head>
   <body>
     <header class="header">
@@ -55,6 +56,11 @@
             <img src="assets/main/plus.svg" alt="add wallet" />
           </button>
         </div>
+        <button class="typical-heder-block login">Войти</button>
+        <button class="typical-heder-block register">Регистрация</button>
+        <button class="typical-heder-block settings">
+          <img src="assets/main/settings.svg" alt="settings" />
+        </button>
         <button class="typical-heder-block profile">
           <img src="assets/main/profile1-test.png" alt="profile" />
           <svg
@@ -69,6 +75,42 @@
               fill="inherit"
             />
           </svg>
+          <div class="modal_header modal_profile">
+            <img src="assets/main/profile1-test.png" alt="profile" />
+            <div>
+              <h4></h4>
+              <div>
+                <span>$326 / </span>
+                <span>$705</span>
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="" />
+                    <span> Аккаунт</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="" />
+                    <span> Аккаунт</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="" />
+                    <span> Аккаунт</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- <button>
+              <img src="" alt="" />
+              <span>Выход</span>
+            </button> -->
+          </div>
         </button>
         <button class="typical-heder-block language">
           <img src="assets/main/russain.svg" alt="russian" />
@@ -92,6 +134,9 @@
               fill="inherit"
             />
           </svg>
+        </button>
+        <button class="typical-heder-block messages">
+          <img src="assets/main/messages.svg" alt="messages" />
         </button>
       </div>
     </header>
@@ -153,9 +198,9 @@
                     transform-origin: 0 0;
                     opacity: 0.5;
                     background: linear-gradient(0deg, #bd52fd 0%, #bd52fd 100%);
-                    box-shadow: 150px 150px 150px;
+                    box-shadow: 8px 9px 50px;
                     border-radius: 9999px;
-                    filter: blur(150px);
+                    filter: blur(50px);
                   "
                 ></div>
               </div>
@@ -204,21 +249,6 @@
                     position: absolute;
                   "
                 >
-                  <div
-                    style="
-                      width: 64.67px;
-                      height: 64.67px;
-                      left: 371.41px;
-                      top: 72.25px;
-                      position: absolute;
-                      opacity: 0.55;
-                      background: #347afe;
-                      box-shadow: 65.69999694824219px 65.69999694824219px
-                        65.69999694824219px;
-                      border-radius: 9999px;
-                      filter: blur(65.7px);
-                    "
-                  ></div>
                   <div
                     style="
                       width: 207px;
@@ -274,7 +304,7 @@
               <h3>Скоро</h3>
             </div>
           </li>
-          <li class="block double">
+          <li class="block">
             <div
               class="backround_item double"
               style="width: 207px; height: 60px; position: relative"
@@ -340,304 +370,328 @@
             </div>
           </li>
         </ul>
-        <ul>
-          <li>
-            <img src="assets/main/relate.svg" alt="" />
-            <h2>Партнерство</h2>
-          </li>
-          <li>
-            <img src="assets/main/support.svg" alt="" />
-            <h2>Поддержка</h2>
-          </li>
-        </ul>
-        <!-- <ul></ul> -->
-        <div class="contacts">
-          <a href="">
-            <img src="assets/main/telegram.svg" alt="" />
-          </a>
-          <a href=""> <img src="assets/main/vk.svg" alt="" /></a>
-          <a href=""> <img src="assets/main/discord.svg" alt="" /></a>
-          <a href=""><img src="assets/main/youtube.svg" alt="" /></a>
+        <div class="bottom_content">
+          <ul>
+            <li>
+              <img src="assets/main/relate.svg" alt="" />
+              <h2>Партнерство</h2>
+            </li>
+            <li>
+              <img src="assets/main/support.svg" alt="" />
+              <h2>Поддержка</h2>
+            </li>
+          </ul>
+          <div class="contacts">
+            <a href="">
+              <img src="assets/main/telegram.svg" alt="" />
+            </a>
+            <a href=""> <img src="assets/main/vk.svg" alt="" /></a>
+            <a href=""> <img src="assets/main/discord.svg" alt="" /></a>
+            <a href=""><img src="assets/main/youtube.svg" alt="" /></a>
+          </div>
         </div>
       </div>
       <div class="main_section_content">
         <div class="main">
           <div class="main_section">
-            <div class="slider_wrapper">
-              <div class="slider">
-                <div class="slide slide_1"></div>
-                <div class="slide slide_2">
+            <div>
+              <section class="section_slider">
+                <div class="slider_wrapper">
+                  <div class="slider">
+                    <div class="slide slide_1"></div>
+                    <div class="slide slide_2">
+                      <h2>
+                        Обнови <br />Steam аватар<br />и получай<br />
+                        ежедневные<br />
+                        выплаты
+                      </h2>
+                      <button>Начать</button>
+                    </div>
+                    <div class="slide slide_1"></div>
+                    <div class="slide slide_1"></div>
+                    <div class="slide slide_1"></div>
+                    <div class="slide slide_1"></div>
+                  </div>
+                </div>
+                <div class="dots_wrapper">
+                  <button class="arrow">
+                    <svg
+                      width="8"
+                      height="13"
+                      viewBox="0 0 8 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.23242 11.6845L6.20064 6.71632L1.23242 1.74811"
+                        stroke="inherit"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div class="dots">
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                  </div>
+                  <button class="arrow">
+                    <svg
+                      width="8"
+                      height="13"
+                      viewBox="0 0 8 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.23242 11.6845L6.20064 6.71632L1.23242 1.74811"
+                        stroke="inherit"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </section>
+              <section class="playing">
+                <div class="favorite_games">
                   <h2>
-                    Обнови <br />Steam аватар<br />и получай<br />
-                    ежедневные<br />
-                    выплаты
+                    Ваши любимые игры, изучайте и <br />
+                    играйте прямо сейчас!
                   </h2>
-                  <button>Начать</button>
+                  <div class="choice-play">
+                    <button class="bones">
+                      <img src="assets/main/bones.svg" alt="bones" />
+                    </button>
+                    <button class="football">
+                      <img src="assets/main/football.svg" alt="football" />
+                    </button>
+                    <button class="select">
+                      <span>Популярные игры</span>
+                      <svg
+                        width="11"
+                        height="9"
+                        viewBox="0 0 11 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.49989 0.200073L10.0898 8.15007L0.909956 8.15007L5.49989 0.200073Z"
+                          fill="inherit"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <div class="slide slide_1"></div>
-                <div class="slide slide_1"></div>
-                <div class="slide slide_1"></div>
-                <div class="slide slide_1"></div>
-              </div>
+                <div class="section_1_2">
+                  <div class="share_section section_1 no_block">
+                    <div class="content">
+                      <div class="title">
+                        <h1>СRUSH</h1>
+                        <p>ONLINE: 345</p>
+                      </div>
+                      <button>Играть</button>
+                    </div>
+                    <div class="close_content">
+                      <img src="assets/main/close.svg" alt="" />
+                      <h3>Скоро</h3>
+                    </div>
+                  </div>
+                  <div class="share_section section_2 block">
+                    <div class="content">
+                      <div class="title">
+                        <h1>MINES</h1>
+                        <p>ONLINE: 345</p>
+                      </div>
+                      <button>Играть</button>
+                    </div>
+                    <div class="close_content">
+                      <img src="assets/main/close.svg" alt="" />
+                      <h3>Скоро</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="section_3_4">
+                  <div class="share_section section_3 block">
+                    <div class="content">
+                      <div class="title">
+                        <h1>MINES</h1>
+                        <p>ONLINE: 345</p>
+                      </div>
+                      <button>Играть</button>
+                    </div>
+                    <div class="close_content">
+                      <img src="assets/main/close.svg" alt="" />
+                      <h3>Скоро</h3>
+                    </div>
+                  </div>
+                  <div class="share_section section_4 block">
+                    <div class="content">
+                      <div class="title">
+                        <h1>СRUSH</h1>
+                        <p>ONLINE: 345</p>
+                      </div>
+                      <button>Играть</button>
+                    </div>
+                    <div class="close_content">
+                      <img src="assets/main/close.svg" alt="" />
+                      <h3>Скоро</h3>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <table class="leaderboard">
+                  <thead>
+                    <tr>
+                      <th>Пользователь</th>
+                      <th>Время</th>
+                      <th>Выигрыш</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="flexbox">
+                          <img
+                            src="assets/main/profile1-test.png"
+                            alt="RakshaSallan"
+                          />
+                          <span>RakshaSallan</span>
+                          <span>Lvl 10</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span>20:27</span>
+                        <span>27.06.2024</span>
+                      </td>
+                      <td>$56.90</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
             </div>
-            <div class="dots_wrapper">
-              <button class="dot active"></button>
-              <button class="dot"></button>
-              <button class="dot"></button>
-            </div>
-            <div class="favorite_games">
-              <h2>
-                Ваши любимые игры, изучайте и <br />
-                играйте прямо сейчас!
-              </h2>
-              <div class="choice-play">
-                <button class="bones">
-                  <img src="assets/main/bones.svg" alt="bones" />
-                </button>
-                <button class="football">
-                  <img src="assets/main/football.svg" alt="football" />
-                </button>
-                <button class="select">
-                  <span>Популярные игры</span>
-                  <svg
-                    width="11"
-                    height="9"
-                    viewBox="0 0 11 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.49989 0.200073L10.0898 8.15007L0.909956 8.15007L5.49989 0.200073Z"
-                      fill="inherit"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <section class="playing">
-              <div class="section_1_2">
-                <div class="share_section section_1 no_block">
-                  <div class="content">
-                    <div class="title">
-                      <h1>СRUSH</h1>
-                      <p>ONLINE: 345</p>
-                    </div>
-                    <button>Играть</button>
-                  </div>
-                  <div class="close_content">
-                    <img src="assets/main/close.svg" alt="" />
-                    <h3>Скоро</h3>
-                  </div>
-                </div>
-                <div class="share_section section_2 block">
-                  <div class="content">
-                    <div class="title">
-                      <h1>СRUSH</h1>
-                      <p>ONLINE: 345</p>
-                    </div>
-                    <button>Играть</button>
-                  </div>
-                  <div class="close_content">
-                    <img src="assets/main/close.svg" alt="" />
-                    <h3>Скоро</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="section_3_4">
-                <div class="share_section section_3 block">
-                  <div class="content">
-                    <div class="title">
-                      <h1>СRUSH</h1>
-                      <p>ONLINE: 345</p>
-                    </div>
-                    <button>Играть</button>
-                  </div>
-                  <div class="close_content">
-                    <img src="assets/main/close.svg" alt="" />
-                    <h3>Скоро</h3>
-                  </div>
-                </div>
-                <div class="share_section section_4 block">
-                  <div class="content">
-                    <div class="title">
-                      <h1>СRUSH</h1>
-                      <p>ONLINE: 345</p>
-                    </div>
-                    <button>Играть</button>
-                  </div>
-                  <div class="close_content">
-                    <img src="assets/main/close.svg" alt="" />
-                    <h3>Скоро</h3>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section>
-              <table class="leaderboard">
-                <thead>
-                  <tr>
-                    <th>Пользователь</th>
-                    <th>Время</th>
-                    <th>Выигрыш</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="flexbox">
-                        <img
-                          src="assets/main/profile1-test.png"
-                          alt="RakshaSallan"
-                        />
-                        <span>RakshaSallan</span>
-                        <img src="assets/main/ref10.png" alt="" />
-                      </div>
-                    </td>
-                    <td>
-                      <span>20:27</span>
-                      <span>27.06.2024</span>
-                    </td>
-                    <td>$56.90</td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
           </div>
           <div class="optional_section">
             <div class="section_1">
@@ -766,7 +820,7 @@
                 </div>
               </li>
               <li>
-                <img src="assets/main/people.svg" alt="" />
+                <img src="assets/main/community.svg" alt="" />
                 <div>
                   <h3>1 293 238</h3>
                   <span>Игроков</span>
@@ -834,7 +888,7 @@
               <div class="name_time">
                 <div class="name">
                   <span>RakshaSallan</span>
-                  <img src="assets/main/ref10.png" alt="" />
+                  <span>Lvl 10</span>
                 </div>
                 <span>15:24</span>
               </div>
@@ -847,7 +901,7 @@
               <div class="name_time">
                 <div class="name">
                   <span>RakshaSallan</span>
-                  <img src="assets/main/ref10.png" alt="" />
+                  <span>Lvl 10</span>
                 </div>
                 <span>15:24</span>
               </div>
@@ -860,7 +914,7 @@
               <div class="name_time">
                 <div class="name">
                   <span>RakshaSallan</span>
-                  <img src="assets/main/ref10.png" alt="" />
+                  <span>Lvl 10</span>
                 </div>
                 <span>15:24</span>
               </div>
@@ -873,31 +927,50 @@
               <div class="name_time">
                 <div class="name">
                   <span>RakshaSallan</span>
-                  <img src="assets/main/ref10.png" alt="" />
+                  <span>Lvl 10</span>
                 </div>
                 <span>15:24</span>
               </div>
-              <p>
-                Классная игра, <b>@RakshaSallan</b> не переживай тебе тоже
-                повезет
-              </p>
+              <p>Я знал что так будет</p>
             </div>
           </li>
           <li>
             <img src="assets/main/profile1-test.png" alt="" />
             <div class="content">
               <div class="name_time">
-                <div class="name moderate">
-                  <span>Moderator</span>
-                  <img src="assets/main/ref10.png" alt="" />
+                <div class="name">
+                  <span>RakshaSallan</span>
+                  <span>Lvl 10</span>
                 </div>
                 <span>15:24</span>
               </div>
-              <p>
-                <b>@Vanopum</b>, соблюдайте правила чата, в следующий раз будете
-                заблокированы. С правилами чата можно ознакомиться выше, нажав
-                кнопку правила
-              </p>
+              <p>Я знал что так будет</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/main/profile1-test.png" alt="" />
+            <div class="content">
+              <div class="name_time">
+                <div class="name">
+                  <span>RakshaSallan</span>
+                  <span>Lvl 10</span>
+                </div>
+                <span>15:24</span>
+              </div>
+              <p>Я знал что так будет</p>
+            </div>
+          </li>
+          <li>
+            <img src="assets/main/profile1-test.png" alt="" />
+            <div class="content">
+              <div class="name_time">
+                <div class="name">
+                  <span>RakshaSallan</span>
+                  <span>Lvl 10</span>
+                </div>
+                <span>15:24</span>
+              </div>
+              <p>Я знал что так будет</p>
             </div>
           </li>
         </ul>
