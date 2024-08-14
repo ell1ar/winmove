@@ -1,0 +1,1 @@
+import{_ as t,c as e,F as s,f as a,o as n,b as c,r as _}from"./index-Dz4FQoPk.js";const d={},l={class:"bg-[#101113] rounded-[20px] flex flex-col grow p-5 gap-2.5"};function f(i,p){const o=_("MainBetCard");return n(),e("div",l,[(n(),e(s,null,a(5,r=>c(o,{key:r})),64))])}const u=t(d,[["render",f]]);export{u as default};
