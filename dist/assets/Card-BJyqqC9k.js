@@ -1,1 +1,0 @@
-import{_ as e,c as r,o}from"./index-B-ME7caq.js";const c={},t={class:"h-[188px] w-full rounded-[20px] border-[1px] border-[#151619] bg-white/10"};function s(n,_){return o(),r("div",t)}const d=e(c,[["render",s]]);export{d as default};
