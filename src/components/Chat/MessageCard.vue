@@ -1,0 +1,24 @@
+<script setup>
+const message = defineProps({
+    message: {
+        type: Object,
+        required: true,
+    },
+});
+</script>
+
+<template>
+    <div class="flex gap-2.5 w-full">
+        <div class="w-[40px] shrink-0 h-[40px] rounded-[8px] bg-white/10"></div>
+
+        <div class="flex flex-col">
+            <div class="flex justify-between">
+                <h2 class="text-[14px] font-[400] text-[#7C7C7C]">RakshaSallan</h2>
+                <span class="text-[#3D3F43] text-[13px]">15:24</span>
+            </div>
+            <p class="text-[#BCBCBC] text-[15px] font-[400]">Да, это было предсказуемо, но я рад такому исходу событий</p>
+        </div>
+    </div>
+</template>
+
+<style scoped></style>
