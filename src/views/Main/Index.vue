@@ -10,7 +10,7 @@
 
         <div class="2xl:min-w-[409px] 2xl:max-w-[525px] gap-5 contents 2xl:flex flex-col">
             <MainBannerRightList class="order-2 2xl:order-1" />
-            <MainBetList class="order-3 2xl:order-2" />
+            <MainBetWidget class="order-3 2xl:order-2" />
         </div>
     </div>
 </template>
