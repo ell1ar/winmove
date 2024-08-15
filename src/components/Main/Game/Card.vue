@@ -30,7 +30,7 @@ const classes = {
 
         <button class="mt-auto h-[35.52px] w-[132px] rounded-[8px] bg-gradient-to-r text-[16px] uppercase font-bold" :class="classes.button">Играть</button>
 
-        <div v-if="isClosed" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-[#08090C]/50 z-10 backdrop-blur-[2px]">
+        <div v-if="isClosed" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-[#08090C]/50 z-0 backdrop-blur-[2px]">
             <span class="inline-flex items-center justify-center flex-col">
                 <img :src="close" class="w-[50px] h-[50px]" alt="close" />
                 <span class="text-[20px] text-white/[18%]">Скоро</span>

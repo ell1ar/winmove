@@ -40,8 +40,8 @@ const messages = [
 </script>
 
 <template>
-    <aside class="w-[300px] shrink-0 overflow-y-auto bg-[#0D0E11] border-[1px] border-[#151619] flex items-center flex-col px-[15px] py-[35px]">
-        <ChatHead @close="$emit('close')" />
+    <aside id="chat" class="lg:w-[300px] rounded-[20px] lg:rounded-none shrink-0 overflow-y-auto bg-[#0D0E11] border-[1px] border-[#151619] flex items-center flex-col px-[15px] py-[35px]">
+        <ChatHead @toggle-chat="$emit('toggle-chat')" />
 
         <div class="flex flex-col w-full gap-[18px] mb-[20px] overflow-y-auto grow">
             <ChatMessageCard v-for="(message, index) in messages" :key="index" :message="message" />
