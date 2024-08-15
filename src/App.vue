@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const isShowChat = ref(true);
+</script>
 
 <template>
     <HeaderIndex />
@@ -11,7 +14,7 @@
             <FooterIndex />
         </div>
 
-        <ChatIndex />
+        <ChatIndex @close="isShowChat = false" v-if="isShowChat" />
     </div>
 </template>
 

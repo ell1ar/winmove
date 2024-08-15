@@ -13,15 +13,15 @@ import avatar from "@assets/img/avatar.png";
             </div>
         </div>
 
-        <div class="w-[101px] rounded-[7px] h-[35px] bg-[#1B1C1E] flex items-center justify-center">
+        <button class="w-[101px] rounded-[7px] h-[35px] bg-[#1B1C1E] flex items-center justify-center">
             <span class="text-[#A8A9AB] text-[14px]">Правила</span>
-        </div>
+        </button>
 
-        <div class="w-[35px] shrink-0 rounded-[7px] h-[35px] bg-[#1B1C1E] flex items-center justify-center">
+        <button @click="$emit('close')" class="w-[35px] shrink-0 rounded-[7px] h-[35px] bg-[#1B1C1E] flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <rect width="35.4326" height="35.4326" rx="7" fill="#1B1C1E" />
                 <path d="M15.2324 22.6845L20.2006 17.7163L15.2324 12.7481" stroke="#A8A9AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-        </div>
+        </button>
     </div>
 </template>

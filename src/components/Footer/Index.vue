@@ -1,11 +1,14 @@
 <script setup>
-import { ref } from "vue";
 import wifiIcon from "@assets/main/wifi.svg";
 import playIcon from "@assets/main/play.svg";
 import communityIcon from "@assets/main/community.svg";
 import payIcon from "@assets/main/pay.svg";
+import telegram from "@assets/main/telegram.svg";
+import discord from "@assets/main/discord.svg";
+import vk from "@assets/main/vk.svg";
+import youtube from "@assets/main/youtube.svg";
 const props = defineProps(["foo"]);
-const stats = ref([
+const stats = [
     {
         value: 1293238,
         title: "Онлайн",
@@ -26,7 +29,35 @@ const stats = ref([
         title: "Выйграно",
         img: payIcon,
     },
-]);
+];
+const socials = [
+    {
+        img: telegram,
+    },
+    {
+        img: vk,
+    },
+    {
+        img: discord,
+    },
+    {
+        img: youtube,
+    },
+];
+const links = [
+    {
+        title: "Игры",
+    },
+    {
+        title: "Ставки",
+    },
+    {
+        title: "Поддежка",
+    },
+    {
+        title: "Политика конфиденциальности",
+    },
+];
 </script>
 
 <template>
@@ -47,27 +78,15 @@ const stats = ref([
             </ul>
 
             <div class="flex">
-                <a href=""><img src="../../assets/main/telegram.svg" alt="" class="ml-[17px] w-[37px]" /></a>
-                <a href=""><img src="../../assets/main/vk.svg" alt="" class="ml-[17px] w-[37px]" /></a>
-                <a href=""><img src="../../assets/main/discord.svg" alt="" class="ml-[17px] w-[37px]" /></a>
-                <a href=""><img src="../../assets/main/youtube.svg" alt="" class="ml-[17px] w-[37px]" /></a>
+                <a v-for="(social, index) in socials" :key="index" href=""><img :src="social.img" alt="socail" class="ml-[17px] w-[37px]" /></a>
             </div>
         </div>
 
         <div class="mt-[45px] flex justify-between">
             <h3 class="font-bold text-[12px] leading-[17px] text-[#bcbcbc]">© 2018 – 2024 CSFail</h3>
             <ul class="flex list-none">
-                <li class="ml-[30px] text-center">
-                    <a href="" class="font-medium text-[14px] leading-[17px] text-[#bcbcbc]">Игры</a>
-                </li>
-                <li class="ml-[30px] text-center">
-                    <a href="" class="font-medium text-[14px] leading-[17px] text-[#bcbcbc]">Ставки</a>
-                </li>
-                <li class="ml-[30px] text-center">
-                    <a href="" class="font-medium text-[14px] leading-[17px] text-[#bcbcbc]">Поддежка</a>
-                </li>
-                <li class="ml-[30px] text-center">
-                    <a href="" class="font-medium text-[14px] leading-[17px] text-[#bcbcbc]">Политика конфиденциальности</a>
+                <li v-for="(link, index) in links" :key="index" class="ml-[30px] text-center">
+                    <a href="" class="font-medium text-[14px] leading-[17px] text-[#bcbcbc]">{{ link.title }}</a>
                 </li>
             </ul>
         </div>
