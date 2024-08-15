@@ -1,1 +1,0 @@
-import{_ as e,c,o as t}from"./index-AeV_zru3.js";const o={},r={class:"w-full h-[219px] rounded-[20px] bg-white/10"};function s(n,_){return t(),c("div",r)}const d=e(o,[["render",s]]);export{d as default};
