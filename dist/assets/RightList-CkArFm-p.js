@@ -1,0 +1,1 @@
+import{_ as o,b as t,c as a,d as n,o as c}from"./index-DE6QBiCM.js";const r={},s={class:"w-full flex flex-col gap-5 p-5 rounded-[20px] bg-[#101113]"};function _(d,i){const e=t("MainBannerRightCard");return c(),a("div",s,[n(e),n(e)])}const f=o(r,[["render",_]]);export{f as default};
