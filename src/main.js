@@ -1,7 +1,8 @@
 import { createApp } from "vue";
 import { createMemoryHistory, createRouter } from "vue-router";
 import App from "./App.vue";
-import "./styles/main.scss";
+import "./styles/main.css";
+import "./assets/font/style.css";
 import Main from "./views/Main/Index.vue";
 
 const routes = [{ path: "/", component: Main }];

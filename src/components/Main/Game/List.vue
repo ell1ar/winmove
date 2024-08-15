@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import pinkFigure from "./assets/pink-figure.svg";
+import yellowFigure from "./assets/yellow-figure.svg";
+import blueFigure from "./assets/blue-figure.svg";
+</script>
 
 <template>
-    <div class="h-[511px] bg-[#101113] rounded-[20px] p-5 gap-5 flex flex-col">
+    <div class="bg-[#101113] rounded-[20px] p-5 gap-5 flex flex-col">
         <div class="flex justify-between">
             <p class="text-[#BDBDBD] font-[400] text-[19px]">
                 Ваши любимые игры, изучайте и <br />
@@ -40,11 +44,11 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-12 w-full gap-5 mt-auto">
-            <MainGameCard class="col-span-8" />
-            <MainGameCard class="col-span-4" />
-            <MainGameCard class="col-span-4" />
-            <MainGameCard class="col-span-8" />
+        <div class="grid grid-cols-11 w-full gap-5 mt-auto">
+            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" class="col-span-7" />
+            <MainGameCard title="Crush" color="yellow" :figure="yellowFigure" figureClass="-right-[30%]" class="col-span-4" />
+            <MainGameCard title="Crush" color="blue" :figure="blueFigure" figureClass="-right-[30%]" class="col-span-4" />
+            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" class="col-span-7" />
         </div>
     </div>
 </template>
