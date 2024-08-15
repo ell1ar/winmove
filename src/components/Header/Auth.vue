@@ -42,7 +42,7 @@ import avatar from "@assets/img/avatar.png";
         </button>
 
         <button class="h-[53px] rounded-[10px] p-[7px] w-[90px] bg-[#1B1C1E] flex items-center">
-            <div class="w-[39px] h-[39px] rounded-[10px] bg-[#1B1C1E] border-[1px] border-[#FDF74B] bg-no-repeat bg-contain bg-cente" :style="{ 'background-image': 'url(' + avatar + ')' }"></div>
+            <div class="w-[39px] h-[39px] rounded-[10px] bg-[#1B1C1E] border-[1px] border-[#FDF74B] bg-no-repeat bg-contain bg-center" :style="{ 'background-image': 'url(' + avatar + ')' }"></div>
 
             <div class="grow items-center justify-center flex">
                 <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">

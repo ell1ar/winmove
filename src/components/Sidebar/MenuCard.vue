@@ -1,5 +1,6 @@
 <script setup>
-const { title, color } = defineProps(["title", "color"]);
+import close from "@assets/img/close.svg";
+const { isFull, isClosed, title, color } = defineProps(["isFull", "isClosed", "title", "color"]);
 const classes = {
     pink: {
         title: "text-[#BD52FD]",
@@ -32,12 +33,12 @@ const classes = {
 </script>
 
 <template>
-    <div class="flex relative w-full pl-[50px] pr-[11px] items-center bg-gradient-to-r overflow-hidden rounded-[10px] h-[60px]" :class="[classes.bg]">
-        <span class="absolute top-0 left-0">
+    <div class="flex relative w-full items-center bg-gradient-to-r overflow-hidden rounded-[10px]" :class="[isFull ? 'pl-[50px] pr-[11px] h-[60px]' : 'h-[50px] w-[50px]', classes.bg]">
+        <span class="absolute top-0 left-0" :class="[isFull ? 'h-[60px]' : 'h-[50px]']">
             <slot name="image"></slot>
         </span>
 
-        <div class="flex flex-col">
+        <div v-if="isFull" class="flex flex-col">
             <h1 class="text-[18px]" :class="[classes.title]">{{ title }}</h1>
 
             <span class="text-[13px] inline-flex gap-0.5 items-center" :class="[classes.count]">
@@ -59,11 +60,18 @@ const classes = {
             </span>
         </div>
 
-        <div class="flex flex-col items-center ml-auto">
+        <div v-if="isFull" class="flex flex-col items-center ml-auto">
             <span class="text-[#CEBCE3]" :class="[classes.price]">$18.32</span>
             <div class="p-[1px] rounded-full flex items-center h-[21px] bg-gradient-to-r justify-center text-[#9883B0] text-[11px]" :class="[classes.winBg]">
                 <div class="flex items-center justify-center bg-[#141517] rounded-full px-[13px]" :class="[classes.winText]">WIN</div>
             </div>
+        </div>
+
+        <div v-if="isClosed" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-[#08090C]/50 z-10 backdrop-blur-[2px]">
+            <span class="inline-flex items-center justify-center gap-[7px]">
+                <img :src="close" class="w-[23px] h-[23px]" alt="close" />
+                <span v-if="isFull" class="text-[16px] text-white/[18%]">Скоро</span>
+            </span>
         </div>
     </div>
 </template>

@@ -1,6 +1,10 @@
+<script setup>
+const { isFull } = defineProps(["isFull"]);
+</script>
+
 <template>
     <div class="flex flex-col w-full gap-2.5 mb-2.5">
-        <SidebarMenuCard title="Crush" color="pink">
+        <SidebarMenuCard title="Crush" color="pink" :isFull="isFull">
             <template v-slot:image>
                 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="60" viewBox="0 0 68 60" fill="none">
                     <path d="M30.6398 65.1153L28.9671 66.6708C7.30887 54.4145 -19.1723 61.2837 -35.0279 67.6083L-38.216 64.1799L-1.75781 30.2764L30.6398 65.1153Z" fill="#BD52FD" />
@@ -11,7 +15,7 @@
             </template>
         </SidebarMenuCard>
 
-        <SidebarMenuCard title="Mines" color="yellow">
+        <SidebarMenuCard title="Mines" color="yellow" :isFull="isFull" :isClosed="true">
             <template v-slot:image>
                 <svg xmlns="http://www.w3.org/2000/svg" width="88" height="60" viewBox="0 0 88 60" fill="none">
                     <path
@@ -52,7 +56,7 @@
             </template>
         </SidebarMenuCard>
 
-        <SidebarMenuCard title="Double" color="blue">
+        <SidebarMenuCard title="Double" color="blue" :isFull="isFull" :isClosed="true">
             <template v-slot:image>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60" fill="none">
                     <path d="M-30.6294 4.75017L-29.4562 3.34987C-11.0522 10.9297 0.872492 3.59452 12.8291 -2.99687L15.6992 -0.592055L-5.29785 33.7639L-30.6294 4.75017Z" fill="#91E2FD" />

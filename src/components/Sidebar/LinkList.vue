@@ -1,5 +1,9 @@
+<script setup>
+const { isFull } = defineProps(["isFull"]);
+</script>
+
 <template>
-    <SidebarLinkCard color="blue" title="Партнерство">
+    <SidebarLinkCard color="blue" title="Партнерство" :isFull="isFull">
         <template v-slot:image>
             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="28" viewBox="0 0 38 28" fill="none">
                 <path
@@ -14,7 +18,7 @@
         </template>
     </SidebarLinkCard>
 
-    <SidebarLinkCard color="yellow" title="Поддержка">
+    <SidebarLinkCard color="yellow" title="Поддержка" :isFull="isFull">
         <template v-slot:image>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" viewBox="0 0 32 36" fill="none">
                 <path

@@ -25,8 +25,11 @@ import navi2 from "./assets/navi2.png";
 
         <p class="text-[12px] text-[#4C4D4F] mt-[14px] mb-2.5">PGL CS2 Major Copenhagen 2024</p>
 
-        <button class="h-[40px] w-full rounded-[10px] p-[1.5px] bg-gradient-to-b from-[#898630] to-[#36351f]">
-            <div class="w-full h-full flex items-center justify-center rounded-[9px] text-[14px] bg-[#17181A] text-[#FDF74B] uppercase">Сделать ставку</div>
+        <button class="h-[40px] w-full flex items-center justify-center rounded-[10px] overflow-hidden p-[1.5px] bg-gradient-to-b from-[#898630] to-[#36351f]">
+            <div class="w-full h-full relative flex items-center justify-center rounded-[9px] text-[14px] bg-[#17181A] text-[#FDF74B] uppercase">
+                <span>Сделать ставку</span>
+                <div class="absolute z-0 bg-[#FDF74B] blur-lg opacity-20 rounded-[100%] w-2/3 h-2/3"></div>
+            </div>
         </button>
     </div>
 </template>

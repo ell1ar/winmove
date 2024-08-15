@@ -3,7 +3,7 @@
 <template>
     <header class="h-[90px] shrink-0 border-[1px] border-[#191A1C] bg-[#111214] flex items-center justify-between px-[15px]">
         <div class="flex gap-[42px]">
-            <button class="h-[53px] w-[53px] rounded-[8px] bg-[#141517] flex items-center justify-center">
+            <button @click="$emit('toggle-sidebar')" class="h-[53px] w-[53px] rounded-[8px] bg-[#141517] flex items-center justify-center">
                 <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.200196 5.30012L8.1502 9.89006L8.1502 0.710187L0.200196 5.30012Z" fill="#3B3C3E" />
                 </svg>
