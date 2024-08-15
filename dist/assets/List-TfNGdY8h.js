@@ -1,1 +1,0 @@
-import{_ as o,d as a,c,e as n,o as r}from"./index-Dqwt7bdd.js";const s={},t={class:"h-[270px] flex gap-5 p-5 bg-[#101113] rounded-[20px]"};function _(d,p){const e=a("MainBannerCard");return r(),c("div",t,[n(e),n(e)])}const f=o(s,[["render",_]]);export{f as default};

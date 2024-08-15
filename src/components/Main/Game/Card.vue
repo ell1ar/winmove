@@ -23,7 +23,7 @@ const classes = {
             <p class="text-[14px] text-[#FFFFFF] font-light ml-0.5">ONLINE: 345</p>
         </div>
 
-        <img class="absolute top-0 right-0 h-full" :class="figureClass" :src="figure" alt="figure" />
+        <img class="absolute top-0 h-full" :class="figureClass" :src="figure" alt="figure" />
 
         <button class="mt-auto h-[35.52px] w-[132px] rounded-[8px] bg-gradient-to-r text-[16px] uppercase font-bold" :class="classes.button">Играть</button>
     </div>

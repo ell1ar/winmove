@@ -45,10 +45,10 @@ import blueFigure from "./assets/blue-figure.svg";
         </div>
 
         <div class="grid grid-cols-11 w-full gap-5 mt-auto">
-            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" class="col-span-7" />
+            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" figureClass="-right-0" class="col-span-7" />
             <MainGameCard title="Crush" color="yellow" :figure="yellowFigure" figureClass="-right-[30%]" class="col-span-4" />
             <MainGameCard title="Crush" color="blue" :figure="blueFigure" figureClass="-right-[30%]" class="col-span-4" />
-            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" class="col-span-7" />
+            <MainGameCard title="Crush" color="pink" :figure="pinkFigure" figureClass="-right-0" class="col-span-7" />
         </div>
     </div>
 </template>
