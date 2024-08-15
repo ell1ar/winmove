@@ -1,0 +1,1 @@
+import{_ as o,b as t,c as a,d as n,o as c}from"./index-DrM5rUZE.js";const r={},s={class:"flex flex-col shrink-0 gap-5 p-5 rounded-[20px] bg-[#101113]"};function _(i,d){const e=t("MainBannerRightCard");return c(),a("div",s,[n(e),n(e)])}const p=o(r,[["render",_]]);export{p as default};
