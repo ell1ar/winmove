@@ -1,9 +1,11 @@
-<script setup></script>
+<script setup>
+const { isAuth } = defineProps(["isAuth"]);
+</script>
 
 <template>
-    <header class="h-[65px] lg:h-[90px] shrink-0 border-[1px] border-[#191A1C] bg-[#111214] flex items-center justify-between px-[15px]">
+    <header class="flex h-[65px] shrink-0 items-center justify-between border-[1px] border-[#191A1C] bg-[#111214] px-[15px] lg:h-[90px]">
         <div class="flex gap-[42px]">
-            <button @click="$emit('toggle-sidebar')" class="hidden lg:flex h-[53px] w-[53px] rounded-[8px] bg-[#141517] items-center justify-center">
+            <button @click="$emit('toggle-sidebar')" class="hidden h-[53px] w-[53px] items-center justify-center rounded-[8px] bg-[#141517] lg:flex">
                 <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.200196 5.30012L8.1502 9.89006L8.1502 0.710187L0.200196 5.30012Z" fill="#3B3C3E" />
                 </svg>
@@ -26,8 +28,9 @@
         </div>
 
         <div class="flex gap-2.5">
-            <HeaderAuth />
-            <HeaderButtonList />
+            <HeaderAuth @toggle-auth="$emit('toggle-auth')" v-if="isAuth" />
+            <HeaderGuest @toggle-auth="$emit('toggle-auth')" v-if="!isAuth" />
+            <HeaderButtonList class="hidden lg:flex" />
         </div>
     </header>
 </template>

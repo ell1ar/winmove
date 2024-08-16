@@ -102,7 +102,7 @@ const links = [
             </div>
         </div>
 
-        <ul class="flex justify-center list-none gap-8">
+        <ul class="flex justify-between lg:justify-center gap-2 list-none lg:gap-8">
             <li>
                 <img src="../../assets/main/bitcoin.svg" alt="bitcoin" />
             </li>

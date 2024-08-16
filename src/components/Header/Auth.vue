@@ -4,7 +4,7 @@ import avatar from "@assets/img/avatar.png";
 
 <template>
     <div class="flex gap-2.5">
-        <button class="h-[53px] pr-[7px] pl-[14px] bg-[#1B1C1E] flex items-center rounded-[10px]">
+        <button class="flex h-[35px] items-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px] lg:h-[53px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <g clip-path="url(#clip0_790_90682)">
                     <path
@@ -28,23 +28,26 @@ import avatar from "@assets/img/avatar.png";
                 </defs>
             </svg>
 
-            <span class="text-[#AFB0B2] ml-[15px] text-[16px]">1 283.93208</span>
+            <span class="ml-[15px] text-[13px] text-[#AFB0B2] lg:text-[16px]">1 283.93208</span>
 
-            <svg class="ml-[30px]" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+            <svg class="ml-[15px] lg:ml-[30px]" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
                 <path d="M4.70039 8L0.630072 0.95L8.77071 0.95L4.70039 8Z" fill="#A8A9AB" />
             </svg>
 
-            <div class="w-[39px] h-[39px] ml-[14px] bg-[#91E2FD] flex items-center justify-center rounded-[8px]">
+            <div class="ml-[14px] flex h-[25px] w-[25px] items-center justify-center rounded-[8px] bg-[#91E2FD] lg:h-[39px] lg:w-[39px]">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 2L8 14M2 8H5.9H14" stroke="#1B1C1E" stroke-width="3" stroke-linecap="round" />
                 </svg>
             </div>
         </button>
 
-        <button class="h-[53px] rounded-[10px] p-[7px] w-[90px] bg-[#1B1C1E] flex items-center">
-            <div class="w-[39px] h-[39px] rounded-[10px] bg-[#1B1C1E] border-[1px] border-[#FDF74B] bg-no-repeat bg-contain bg-center" :style="{ 'background-image': 'url(' + avatar + ')' }"></div>
+        <button class="hidden h-[35px] w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] lg:flex lg:h-[53px]">
+            <div
+                class="h-[39px] w-[39px] rounded-[10px] border-[1px] border-[#FDF74B] bg-[#1B1C1E] bg-contain bg-center bg-no-repeat"
+                :style="{ 'background-image': 'url(' + avatar + ')' }"
+            ></div>
 
-            <div class="grow items-center justify-center flex">
+            <div class="flex grow items-center justify-center">
                 <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.70039 8L0.630072 0.95L8.77071 0.95L4.70039 8Z" fill="#A8A9AB" />
                 </svg>

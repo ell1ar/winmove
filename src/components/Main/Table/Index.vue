@@ -1,13 +1,27 @@
-<script setup></script>
-
 <template>
-    <div class="h-[633px] grow lg:bg-[#101113] rounded-[20px] p-0 lg:p-5 flex flex-col overflow-y-auto gap-[5px]">
-        <div class="h-[45px] shrink-0 bg-[#161719] rounded-[10px] place-content-center grid grid-cols-12 w-full text-[#4C4D4F]">
-            <div class="col-span-4 pl-[15px] lg:pl-[30px]"><span>Пользователь</span></div>
-            <div class="col-span-4"><span>Время</span></div>
-            <div class="col-span-2"><span>Выигрыш</span></div>
-        </div>
+    <div class="flex h-[633px] grow flex-col gap-[5px] overflow-y-auto rounded-[20px] p-0 lg:bg-[#101113] lg:p-5">
+        <MainTableRowWrapper class="h-[45px]">
+            <div class="flex w-[40%] justify-start pl-[15px] sm:w-[40%] lg:pl-[30px]"><span>Пользователь</span></div>
+            <div class="flex w-[20%] justify-center sm:w-[40%] sm:justify-start"><span>Время</span></div>
+            <div class="flex w-[40%] justify-end pr-[15px] sm:w-[20%] sm:justify-start"><span>Выигрыш</span></div>
+        </MainTableRowWrapper>
 
-        <MainTableRow v-for="i in 12" :key="i" />
+        <template v-for="i in 2">
+            <MainTableRowWrapper class="h-[56px]" v-for="i in 5" :key="i">
+                <div class="flex w-[40%] items-center justify-start gap-2.5 pl-[15px] sm:w-[40%] lg:pl-[30px]">
+                    <MainTablePlayerAvatar :color="['blue', 'orange', 'purple', 'white', 'yellow'][i - 1]" />
+                    <MainTablePlayerName :color="['blue', 'orange', 'purple', 'white', 'yellow'][i - 1]" />
+                </div>
+
+                <div class="flex w-[20%] flex-col items-center text-[15px] text-[#5E5E5E] sm:w-[40%] sm:flex-row sm:justify-start sm:gap-2">
+                    <strong class="text-[#BDBDBD]">20:27</strong>
+                    <span class="text-[12px] sm:text-[15px]">27.06.24</span>
+                </div>
+
+                <div class="flex w-[40%] items-center justify-end gap-2 pr-[15px] text-[15px] text-[#5E5E5E] sm:w-[20%] sm:justify-start">
+                    <strong class="text-[#BDBDBD]">$56.90</strong>
+                </div>
+            </MainTableRowWrapper>
+        </template>
     </div>
 </template>

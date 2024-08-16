@@ -4,32 +4,33 @@ const isMobile = window.innerWidth < 1024;
 const isShowChat = ref(!isMobile);
 const isShowSidebar = ref(!isMobile);
 const isFullSidebar = ref(true);
+const isAuth = ref(false);
 </script>
 
 <template>
-    <HeaderIndex class="fixed top-0 left-0 right-0" @toggle-sidebar="isFullSidebar = !isFullSidebar" />
+    <HeaderIndex class="fixed left-0 right-0 top-0" @toggle-sidebar="isFullSidebar = !isFullSidebar" @toggle-auth="isAuth = !isAuth" :isAuth="isAuth" />
 
-    <div class="flex grow pt-[65px] lg:pt-[90px] h-full">
+    <div class="flex h-full grow pt-[65px] lg:pt-[90px]">
         <SidebarIndex
             v-if="isShowSidebar"
-            class="fixed z-50 left-2.5 top-[75px] bottom-[88px] lg:left-0 lg:top-0 lg:bottom-0 lg:relative"
+            class="fixed bottom-[88px] left-2.5 top-[75px] z-50 lg:relative lg:bottom-0 lg:left-0 lg:top-0"
             :isShowSidebar="isShowSidebar"
             :isFull="isFullSidebar"
         />
 
-        <main class="flex flex-col grow pb-[90px] lg:pb-[35px] px-0 pt-[35px] lg:px-[35px] overflow-y-auto h-full max-w-[1588px] mx-auto w-full">
+        <main class="mx-auto flex h-full w-full max-w-[1588px] grow flex-col overflow-y-auto px-0 pb-[90px] pt-[35px] lg:px-[35px] lg:pb-[35px]">
             <router-view></router-view>
-            <FooterIndex class="mx-[15px] lg:mx-0 mt-[25px] 2xl:mt-[80px]" />
+            <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />
         </main>
 
         <ChatIndex
             v-if="isShowChat"
             @toggle-chat="isShowChat = !isShowChat"
-            class="fixed lg:relative top-[75px] left-2.5 right-2.5 bottom-[88px] lg:left-0 lg:right-0 lg:top-0 lg:bottom-0"
+            class="fixed bottom-[88px] left-2.5 right-2.5 top-[75px] lg:relative lg:bottom-0 lg:left-0 lg:right-0 lg:top-0"
         />
     </div>
 
-    <MobileNavBarIndex @toggle-sidebar="isShowSidebar = !isShowSidebar" class="lg:hidden fixed bottom-[9px] left-[15px] right-[15px] z-[9999]" />
+    <MobileNavBarIndex @toggle-sidebar="isShowSidebar = !isShowSidebar" class="fixed bottom-[9px] left-[15px] right-[15px] z-[9999] lg:hidden" />
 </template>
 
 <style scoped></style>
