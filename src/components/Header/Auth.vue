@@ -1,10 +1,16 @@
 <script setup>
 import avatar from "@assets/img/avatar.png";
+import { ref } from "vue";
+const isShowModalProfile = ref(false);
+const isShowModalBalance = ref(false);
 </script>
 
 <template>
     <div class="flex gap-2.5">
-        <button class="flex h-[35px] items-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px] lg:h-[53px]">
+        <button
+            @click="isShowModalBalance = !isShowModalBalance"
+            class="relative flex h-[35px] items-center justify-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px] lg:h-[53px]"
+        >
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <g clip-path="url(#clip0_790_90682)">
                     <path
@@ -39,9 +45,11 @@ import avatar from "@assets/img/avatar.png";
                     <path d="M8 2L8 14M2 8H5.9H14" stroke="#1B1C1E" stroke-width="3" stroke-linecap="round" />
                 </svg>
             </div>
+
+            <ModalsBalance v-if="isShowModalBalance" class="absolute top-[calc(100%+38px)] z-[9999]" />
         </button>
 
-        <button class="hidden h-[35px] w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] lg:flex lg:h-[53px]">
+        <button @click="isShowModalProfile = !isShowModalProfile" class="relative hidden h-[35px] w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] lg:flex lg:h-[53px]">
             <div
                 class="h-[39px] w-[39px] rounded-[10px] border-[1px] border-[#FDF74B] bg-[#1B1C1E] bg-contain bg-center bg-no-repeat"
                 :style="{ 'background-image': 'url(' + avatar + ')' }"
@@ -52,6 +60,8 @@ import avatar from "@assets/img/avatar.png";
                     <path d="M4.70039 8L0.630072 0.95L8.77071 0.95L4.70039 8Z" fill="#A8A9AB" />
                 </svg>
             </div>
+
+            <ModalsProfile v-if="isShowModalProfile" class="absolute right-0 top-[calc(100%+38px)] z-[9999]" />
         </button>
     </div>
 </template>

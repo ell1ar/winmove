@@ -1,7 +1,15 @@
+<script setup>
+import { ref } from "vue";
+import ruflag from "@assets/img/ruflag.png";
+const isShowModalLang = ref(false);
+</script>
+
 <template>
     <div class="flex items-center gap-2.5">
-        <button class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
-            <img class="flex h-[23px] w-[23px] rounded-full object-cover" src="./assets/flag.png" alt="flag" />
+        <button @click="isShowModalLang = !isShowModalLang" class="relative flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
+            <img class="flex h-[23px] w-[23px] rounded-full object-cover" :src="ruflag" alt="flag" />
+
+            <ModalsLang v-if="isShowModalLang" class="absolute top-[calc(100%+38px)] z-[9999]" />
         </button>
 
         <button class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">

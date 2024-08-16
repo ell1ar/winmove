@@ -30,7 +30,7 @@ const isAuth = ref(false);
         />
     </div>
 
-    <MobileNavBarIndex @toggle-sidebar="isShowSidebar = !isShowSidebar" class="fixed bottom-[9px] left-[15px] right-[15px] z-[9999] lg:hidden" />
+    <MobileNavBarIndex :isShowSidebar="isShowSidebar" @toggle-sidebar="isShowSidebar = !isShowSidebar" class="fixed bottom-[9px] left-[15px] right-[15px] z-[9999] lg:hidden" />
 </template>
 
 <style scoped></style>

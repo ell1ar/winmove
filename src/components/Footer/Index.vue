@@ -61,18 +61,18 @@ const links = [
 </script>
 
 <template>
-    <footer class="flex flex-col w-full grow gap-[25px]">
-        <div class="flex flex-col w-full items-center border-[1px] border-[#222325] rounded-[20px] bg-[#101113] p-[30px]">
-            <div class="flex flex-col lg:flex-row lg:flex-wrap justify-center lg:justify-between w-full items-center gap-y-10">
-                <ul class="w-full lg:w-auto grid grid-cols-2 justify-center md:flex md:flex-wrap gap-y-[22px] gap-x-[30px] items-center">
-                    <li v-for="(stat, i) in stats" :key="i" class="flex gap-[14px]">
+    <footer class="flex w-full grow flex-col gap-[25px]">
+        <div class="flex w-full flex-col items-center rounded-[20px] border-[1px] border-[#222325] bg-[#101113] p-[30px] lg:p-[50px]">
+            <div class="flex w-full flex-col items-center justify-center gap-y-10 lg:flex-row lg:flex-wrap lg:justify-between">
+                <ul class="grid w-full grid-cols-2 items-center justify-center gap-x-[30px] gap-y-[22px] md:flex md:flex-wrap lg:w-auto">
+                    <li v-for="(stat, i) in stats" :key="i" class="flex items-start gap-[14px]">
                         <img :src="stat.img" alt="icon" class="w-[40px]" />
 
                         <div>
-                            <h3 class="font-bold text-[18px] leading-none text-white">
+                            <h3 class="text-[18px] font-bold leading-none text-white">
                                 {{ stat.value }}
                             </h3>
-                            <span class="font-medium text-[16px] leading-[26px] text-[#4c4d4f]">
+                            <span class="text-[16px] font-medium leading-[26px] text-[#4c4d4f]">
                                 {{ stat.title }}
                             </span>
                         </div>
@@ -84,17 +84,17 @@ const links = [
                 </div>
             </div>
 
-            <div class="mt-[50px] flex flex-col 2xl:flex-row w-full 2xl:justify-between items-center 2xl:items-start">
-                <ul class="flex list-none flex-wrap gap-x-[30px] 2xl:order-2 justify-center">
+            <div class="mt-[50px] flex w-full flex-col items-center 2xl:flex-row 2xl:items-start 2xl:justify-between">
+                <ul class="flex list-none flex-wrap justify-center gap-x-[30px] 2xl:order-2">
                     <li v-for="(link, index) in links" :key="index" class="text-center">
-                        <a href="" class="font-medium text-[14px] text-[#bcbcbc] whitespace-nowrap">{{ link.title }}</a>
+                        <a href="" class="whitespace-nowrap text-[14px] font-medium text-[#bcbcbc]">{{ link.title }}</a>
                     </li>
                 </ul>
 
-                <div class="flex flex-col mt-[25px] 2xl:mt-0 items-center 2xl:items-start 2xl:order-1">
-                    <h3 class="font-bold text-[12px] text-[#bcbcbc]">© 2018 – 2024 CSFail</h3>
+                <div class="mt-[25px] flex flex-col items-center 2xl:order-1 2xl:mt-0 2xl:items-start">
+                    <h3 class="text-[12px] font-bold text-[#bcbcbc]">© 2018 – 2024 CSFail</h3>
 
-                    <p class="font-medium text-[12px] leading-[17px] text-[#4c4d4f] text-center 2xl:text-start">
+                    <p class="text-center text-[12px] font-medium leading-[17px] text-[#4c4d4f] 2xl:text-start">
                         ITSFAIL LTD: Company number 13246765, 16 John Nicholas Crescent,<br />
                         Ellesmere Port, Cheshire, United Kingdom, CH65 2D
                     </p>
@@ -102,7 +102,7 @@ const links = [
             </div>
         </div>
 
-        <ul class="flex justify-between lg:justify-center gap-2 list-none lg:gap-8">
+        <ul class="flex list-none justify-between gap-2 lg:justify-center lg:gap-8">
             <li>
                 <img src="../../assets/main/bitcoin.svg" alt="bitcoin" />
             </li>
