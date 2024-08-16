@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as c}from"./index-CRq11Cvf.js";const r={},t={class:"h-[219px] rounded-[20px] bg-white/10 w-[318px] sm:w-full shrink-0 sm:shrink"};function n(o,_){return c(),s("div",t)}const i=e(r,[["render",n]]);export{i as default};

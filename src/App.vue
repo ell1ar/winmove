@@ -18,7 +18,7 @@ const isAuth = ref(false);
             :isFull="isFullSidebar"
         />
 
-        <main class="w-full px-0 pb-[100px] pt-[35px] lg:max-w-[1588px] lg:overflow-y-auto lg:px-[35px] lg:pb-[35px]">
+        <main class="w-full px-0 pb-[100px] pt-[35px] lg:mx-auto lg:max-w-[1588px] lg:overflow-y-auto lg:px-[35px] lg:pb-[35px]">
             <router-view></router-view>
             <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />
         </main>
