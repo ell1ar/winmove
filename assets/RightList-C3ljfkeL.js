@@ -1,1 +1,0 @@
-import{_ as o,b as t,c as a,d as n,o as c}from"./index-fejGHMpt.js";const r={},s={class:"w-full overflow-x-hidden flex 2xl:flex-col gap-5 p-5 rounded-[20px] bg-[#101113]"};function d(l,_){const e=t("MainBannerRightCard");return c(),a("div",s,[n(e),n(e)])}const f=o(r,[["render",d]]);export{f as default};
