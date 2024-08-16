@@ -1,10 +1,10 @@
 <template>
     <div class="flex items-center gap-2.5">
-        <button class="w-[53px] h-[53px] rounded-[10px] flex items-center justify-center bg-[#1B1C1E]">
-            <img class="rounded-full flex h-[23px] w-[23px] object-cover" src="./assets/flag.png" alt="flag" />
+        <button class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
+            <img class="flex h-[23px] w-[23px] rounded-full object-cover" src="./assets/flag.png" alt="flag" />
         </button>
 
-        <button class="w-[53px] h-[53px] rounded-[10px] bg-[#1B1C1E] flex items-center justify-center">
+        <button class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                 <g clip-path="url(#clip0_790_125520)">
                     <path
@@ -22,7 +22,7 @@
             </svg>
         </button>
 
-        <button class="w-[53px] h-[53px] rounded-[10px] bg-[#1B1C1E]">
+        <button class="h-[53px] w-[53px] rounded-[10px] bg-[#1B1C1E]">
             <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
                 <rect width="53" height="53" rx="10" fill="#1B1C1E" />
                 <path

@@ -4,14 +4,14 @@ const { isAuth } = defineProps(["isAuth"]);
 
 <template>
     <header class="flex h-[65px] shrink-0 items-center justify-between border-[1px] border-[#191A1C] bg-[#111214] px-[15px] lg:h-[90px]">
-        <div class="flex gap-[42px]">
+        <div class="flex lg:gap-[42px]">
             <button @click="$emit('toggle-sidebar')" class="hidden h-[53px] w-[53px] items-center justify-center rounded-[8px] bg-[#141517] lg:flex">
                 <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.200196 5.30012L8.1502 9.89006L8.1502 0.710187L0.200196 5.30012Z" fill="#3B3C3E" />
                 </svg>
             </button>
 
-            <svg width="72" height="51" viewBox="0 0 72 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-[49px] lg:w-[72px]" width="72" height="51" viewBox="0 0 72 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M71.9997 19.936V51H64.7103V34.3957L57.928 50.986H49.5225L49.0548 34.0796L41.8418 50.986H33.1816L47.4038 19.936H55.7908L56.2191 37.1982L63.4622 19.936H71.9997Z"
                     fill="#FDF74B"
