@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import ruflag from "@assets/img/ruflag.png";
 const isShowModalLang = ref(false);
+const isShowModalSettings = ref(false);
 </script>
 
 <template>
@@ -12,7 +13,7 @@ const isShowModalLang = ref(false);
             <ModalsLang v-if="isShowModalLang" class="absolute top-[calc(100%+38px)] z-[9999]" />
         </button>
 
-        <button class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
+        <button @click="isShowModalSettings = !isShowModalSettings" class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                 <g clip-path="url(#clip0_790_125520)">
                     <path
@@ -28,6 +29,8 @@ const isShowModalLang = ref(false);
                     </clipPath>
                 </defs>
             </svg>
+
+            <ModalsSettings v-if="isShowModalSettings" class="absolute top-[calc(100%+38px)] right-0 z-[9999]" />
         </button>
 
         <button class="h-[53px] w-[53px] rounded-[10px] bg-[#1B1C1E]">

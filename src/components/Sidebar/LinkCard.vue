@@ -12,19 +12,22 @@ const classes = {
 </script>
 
 <template>
-    <div class="relative w-full rounded-[10px] border-[1px] border-[#191A1C] bg-[#141517] flex items-center overflow-hidden" :class="[isFull ? 'h-[60px]' : 'h-[50px] w-[50px] justify-center']">
-        <span class="h-full flex items-center justify-center z-10 relative" :class="[isFull ? 'w-[60px]' : 'w-[30px]']">
+    <div
+        class="relative flex w-full items-center overflow-hidden rounded-[10px] border-[1px] border-[#191A1C] bg-[#141517]"
+        :class="[isFull ? 'h-[60px]' : 'h-[50px] w-[50px] justify-center']"
+    >
+        <span class="relative z-10 flex h-full items-center justify-center" :class="[isFull ? 'w-[60px]' : 'w-[30px]']">
             <slot name="image"></slot>
         </span>
 
         <template v-if="isFull">
-            <span class="text-[#ffffff] uppercase text-[15px] font-bold">{{ title }}</span>
-            <div class="w-[120px] h-[60px] absolute z-[0] -left-10 opacity-25 rounded-full blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
-            <div class="w-[100px] h-[70px] absolute z-[0] -right-10 -bottom-10 opacity-25 rounded-full blur-[40px]" :style="{ 'background-color': classes.color }"></div>
+            <span class="text-[15px] font-bold uppercase text-[#ffffff]">{{ title }}</span>
+            <div class="absolute -left-10 z-[0] h-[60px] w-[120px] rounded-full opacity-25 blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
+            <div class="absolute -bottom-10 -right-10 z-[0] h-[70px] w-[100px] rounded-full opacity-25 blur-[40px]" :style="{ 'background-color': classes.color }"></div>
         </template>
 
         <template v-if="!isFull">
-            <div class="w-[120px] h-[60px] absolute z-[0] -left-10 opacity-25 rounded-full blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
+            <div class="absolute -left-10 z-[0] h-[60px] w-[120px] rounded-full opacity-25 blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
         </template>
     </div>
 </template>

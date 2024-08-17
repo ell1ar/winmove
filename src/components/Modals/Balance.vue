@@ -4,7 +4,7 @@ import freegame from "./assets/freegame.png";
 </script>
 
 <template>
-    <div class="w-[310px] flex flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px]">
+    <div @click.stop class="w-[310px] flex flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px]">
         <div class="flex h-[50px] items-center justify-between rounded-[10px] border-[1px] border-[#242527] bg-[#1D1E20] px-[15px]">
             <div class="flex gap-2">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">

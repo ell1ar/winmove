@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import { createMemoryHistory, createRouter } from "vue-router";
 import App from "./App.vue";
-import "./styles/main.css";
+import "./styles/main.scss";
 import "./assets/font/style.css";
 import Main from "./views/Main/Index.vue";
 

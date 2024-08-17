@@ -40,7 +40,7 @@ const messages = [
 </script>
 
 <template>
-    <aside id="chat" class="lg:w-[300px] rounded-[20px] lg:rounded-none shrink-0 overflow-y-auto bg-[#0D0E11] border-[1px] border-[#151619] flex items-center flex-col px-[15px] py-[35px]">
+    <aside id="chat" class="lg:w-[300px] rounded-[20px] lg:rounded-none shrink-0 overflow-y-auto bg-[#121315] lg:bg-[#0D0E11] border-[1px] border-[#151619] flex items-center flex-col px-[15px] py-[15px] lg:py-[35px]">
         <ChatHead @toggle-chat="$emit('toggle-chat')" />
 
         <div class="flex flex-col w-full gap-[18px] mb-[20px] overflow-y-auto grow">

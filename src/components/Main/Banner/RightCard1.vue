@@ -27,8 +27,9 @@
             <span class="text-[22px] uppercase text-white">розыгрыши</span>
         </div>
 
-        <img class="absolute right-0 top-0 z-10 h-full" src="./assets/rightBanner1.svg" alt="right-banner" />
-        <img class="absolute left-0 top-0 z-[1] h-full w-full" src="./assets/rightBanner1pattern.svg" alt="right-banner" />
+        <img class="absolute right-0 top-0 z-10 h-full" src="./assets/rightCard1.svg" alt="right-Card1" />
+        <img class="absolute left-0 top-0 z-[1] h-full w-full" src="./assets/rightCard1pattern.svg" alt="right-pattern1" />
+        <!-- Gradients -->
         <div class="absolute -left-20 -top-6 z-0 h-[150px] w-[250px] -rotate-[35deg] rounded-full bg-[#FDF74B] opacity-30 blur-2xl"></div>
         <div class="absolute right-0 top-0 z-0 h-full w-1/2 bg-gradient-to-l from-[#FDF74B] opacity-40 blur-2xl"></div>
     </div>

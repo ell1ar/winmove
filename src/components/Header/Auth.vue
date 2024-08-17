@@ -46,7 +46,7 @@ const isShowModalBalance = ref(false);
                 </svg>
             </div>
 
-            <ModalsBalance v-if="isShowModalBalance" class="absolute top-[calc(100%+38px)] z-[9999]" />
+            <ModalsBalance v-if="isShowModalBalance" class="absolute right-0 top-[calc(100%+38px)] z-[9999] lg:right-[auto]" />
         </button>
 
         <button @click="isShowModalProfile = !isShowModalProfile" class="relative hidden h-[35px] w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] lg:flex lg:h-[53px]">

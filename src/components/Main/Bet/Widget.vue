@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from "vue";
-const activeClass = "border-[1px] border-[#262729] rounded-[10px] bg-[#1B1C1E]";
-const normalClass = "flex items-center justify-center px-[19px]";
 const buttons = [
     {
         title: "Live",
@@ -14,18 +12,24 @@ const slectedTab = ref(0);
 </script>
 
 <template>
-    <div class="bg-[#101113] rounded-[20px] flex flex-col grow p-5 gap-2.5">
-        <div class="flex mb-[25px] items-center">
-            <h3 class="text-[#BDBDBD] text-[18px]">Матчи</h3>
+    <div class="flex grow flex-col gap-2.5 rounded-[20px] bg-[#101113] p-5">
+        <div class="mb-[25px] flex items-center">
+            <h3 class="text-[18px] text-[#BDBDBD]">Матчи</h3>
 
-            <div class="gap-[7px] flex items-center ml-auto">
-                <div class="flex relative h-[40px] bg-[#161719] text-[#BDBDBD] rounded-[10px]">
-                    <button v-for="(button, index) in buttons" :key="index" :class="[slectedTab === index ? activeClass : '', normalClass]" @click="slectedTab = index">
+            <div class="ml-auto flex items-center gap-[7px]">
+                <div class="relative flex h-[40px] rounded-[10px] bg-[#161719]">
+                    <button
+                        class="text-[#BDBDBD]"
+                        v-for="(button, index) in buttons"
+                        :key="index"
+                        :class="[slectedTab === index ? 'rounded-[10px] border-[1px] border-[#262729] bg-[#1B1C1E]' : '', 'flex items-center justify-center px-[19px]']"
+                        @click="slectedTab = index"
+                    >
                         <span>{{ button.title }}</span>
                     </button>
                 </div>
 
-                <button class="w-[40px] h-[40px] flex items-center justify-center">
+                <button class="flex h-[40px] w-[40px] items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <rect width="40" height="40" rx="10" fill="#1B1C1E" />
                         <path
@@ -37,8 +41,8 @@ const slectedTab = ref(0);
             </div>
         </div>
 
-        <div class="flex overflow-x-auto xl:grid xl:grid-cols-2 2xl:grid-cols-1 gap-2.5">
-            <MainBetCard class="w-[318px] xl:w-full shrink-0" v-for="i in 5" :key="i" />
+        <div class="flex gap-2.5 overflow-x-auto xl:grid xl:grid-cols-2 2xl:grid-cols-1">
+            <MainBetCard class="w-[318px] shrink-0 xl:w-full" v-for="i in 5" :key="i" />
         </div>
     </div>
 </template>
