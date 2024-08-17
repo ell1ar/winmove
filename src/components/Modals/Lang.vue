@@ -3,7 +3,7 @@ import ruflag from "@assets/img/ruflag.png";
 </script>
 
 <template>
-    <div @click.stop class="flex flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px] lg:w-[310px]">
+    <div @click.stop class="animate__animated animate__fadeIn flex flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px] lg:w-[310px]">
         <div class="mb-[20px] flex w-full items-center justify-between lg:hidden">
             <h2 class="text-[18px] text-white">Язык</h2>
 

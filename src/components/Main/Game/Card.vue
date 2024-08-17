@@ -38,7 +38,7 @@ const classes = {
 
         <img class="absolute top-0 z-[1] h-full" :class="figureClass" :src="figure" alt="figure" />
         <img class="absolute left-0 top-0 z-0 h-full w-full object-cover mix-blend-normal" :src="pattern" alt="card-pattern" />
-        
+
         <div
             class="absolute left-0 top-0 z-0 h-[200px] w-[200px] -translate-x-[50%] -translate-y-[50%] rounded-full opacity-30 blur-3xl"
             :style="[{ backgroundColor: classes.color2 }]"

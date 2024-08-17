@@ -23,7 +23,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <div @click.stop class="settings flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg lg:w-[310px] lg:rounded-b-[15px]">
+    <div
+        @click.stop
+        class="settings animate__animated animate__fadeIn flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg lg:w-[310px] lg:rounded-b-[15px]"
+    >
         <div class="mb-[20px] flex w-full items-center justify-between lg:hidden">
             <h2 class="text-[18px] text-white">Настройки</h2>
 

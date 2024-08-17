@@ -5,7 +5,7 @@ import avatar from "@assets/img/avatar.png";
 <template>
     <div
         @click.stop
-        class="flex flex-col items-center justify-center rounded-[20px] bg-[#161719] px-[15px] py-[35px] [box-shadow:0px_0px_4px_0px_rgba(0,0,0,0.25)] sm:rounded-[15px] lg:w-[300px]"
+        class="animate__animated animate__fadeIn flex flex-col items-center justify-center rounded-[20px] bg-[#161719] px-[15px] py-[35px] [box-shadow:0px_0px_4px_0px_rgba(0,0,0,0.25)] sm:rounded-[15px] lg:w-[300px]"
     >
         <div
             class="h-[80px] w-[80px] rounded-[15px] border-[1px] border-[#FDF74B] bg-[#FDF74B]/10 bg-contain bg-center bg-no-repeat"

@@ -4,6 +4,7 @@ import App from "./App.vue";
 import "./styles/main.scss";
 import "./assets/font/style.css";
 import Main from "./views/Main/Index.vue";
+import 'animate.css';
 
 const routes = [{ path: "/", component: Main }];
 

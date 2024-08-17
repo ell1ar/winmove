@@ -1,6 +1,5 @@
 <script setup>
 const { isShowSidebar } = defineProps(["isShowSidebar"]);
-import { ref } from "vue";
 import iconHelloBonus from "./assets/iconHelloBonus.svg";
 import iconRegularBonus from "./assets/iconRegularBonus.svg";
 import iconBonusStar from "./assets/iconBonusStar.svg";
@@ -21,7 +20,7 @@ const list = [
 </script>
 
 <template>
-    <div class="flex gap-2 overflow-x-auto">
+    <div class="animate__animated animate__fadeIn flex gap-2 overflow-x-auto">
         <div v-for="(item, index) in list" :key="index" class="relative flex h-[60px] w-[164px] shrink-0 items-center overflow-hidden rounded-[10px] bg-[#0F1012] px-[10px]">
             <img :src="item.img" alt="iconRegularBonus" />
             <p class="ml-[10px] text-[14px] text-[#E2E2E2]">{{ item.title }}</p>

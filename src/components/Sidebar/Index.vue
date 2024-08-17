@@ -15,7 +15,7 @@ const toggleModalSettings = () => {
 
 <template>
     <aside
-        class="flex shrink-0 flex-col overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#0D0E11] px-[12px] py-[12px] transition-all duration-300 lg:rounded-none lg:py-[35px]"
+        class="animate__animated animate__fadeIn flex shrink-0 flex-col overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#0D0E11] px-[12px] py-[12px] transition-all duration-300 lg:rounded-none lg:py-[35px]"
         :class="[isFull ? 'w-[234px]' : 'w-[80px]']"
     >
         <SidebarMenuList :isFull="isFull" />
