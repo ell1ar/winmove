@@ -1,1 +1,0 @@
-import{c as e,o as t}from"./index-YhqBQHwo.js";const o={class:"flex w-[310px] flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px]"},n={__name:"Settings",setup(c){return(s,p)=>(t(),e("div",o))}};export{n as default};

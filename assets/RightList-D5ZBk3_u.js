@@ -1,1 +1,0 @@
-import{_ as t,b as n,c as r,d as e,o as c}from"./index-YhqBQHwo.js";const s={},i={class:"w-full overflow-x-hidden flex 2xl:flex-col gap-5 p-5 rounded-[20px] bg-[#101113]"};function d(_,l){const o=n("MainBannerRightCard1"),a=n("MainBannerRightCard2");return c(),r("div",i,[e(o),e(a)])}const p=t(s,[["render",d]]);export{p as default};
