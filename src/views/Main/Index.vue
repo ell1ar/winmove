@@ -8,7 +8,7 @@
             <MainTableIndex class="order-4 mx-[15px] lg:mx-0 2xl:order-3" />
         </div>
 
-        <div class="contents shrink-0 flex-col gap-5 2xl:flex 2xl:w-[clamp(409px,409px,525px)]">
+        <div class="contents shrink-0 flex-col gap-5 2xl:flex 2xl:w-[clamp(409px,37%,525px)]">
             <MainBannerRightList class="order-2 2xl:order-1" />
             <MainBetWidget class="order-3 2xl:order-2" />
         </div>
