@@ -3,7 +3,9 @@ import diamond from "./assets/diamond.svg";
 </script>
 
 <template>
-    <div class="relative flex h-[213px] w-full select-none items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5">
+    <div
+        class="relative flex h-[213px] w-full select-none items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5 lg:h-[270px] xl:h-[176px] 2xl:h-full 2xl:max-h-[213px]"
+    >
         <div class="relative z-10 flex flex-col items-center -space-y-5">
             <p class="uppercase text-white">Бонус</p>
             <div class="relative flex flex-nowrap font-['Stapel_Expanded'] text-[70px] text-white">

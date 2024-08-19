@@ -40,15 +40,18 @@ const messages = [
 </script>
 
 <template>
-    <aside id="chat" class="lg:w-[300px] rounded-[20px] lg:rounded-none shrink-0 overflow-y-auto bg-[#121315] lg:bg-[#0D0E11] border-[1px] border-[#151619] flex items-center flex-col px-[15px] py-[15px] lg:py-[35px]">
+    <aside
+        id="chat"
+        class="flex xl:w-[342px] shrink-0 flex-col items-center overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#121315] px-[15px] py-[15px] lg:rounded-none lg:bg-[#0D0E11] lg:py-[35px] 2xl:w-[300px]"
+    >
         <ChatHead @toggle-chat="$emit('toggle-chat')" />
 
-        <div class="flex flex-col w-full gap-[18px] mb-[20px] overflow-y-auto grow">
+        <div class="mb-[20px] flex w-full grow flex-col gap-[18px] overflow-y-auto">
             <ChatMessageCard v-for="(message, index) in messages" :key="index" :message="message" />
         </div>
 
-        <div class="rounded-[15px] flex border-[1px] justify-between shrink-0 border-[#222325] bg-transparent w-full text-white px-5 py-[23px]">
-            <textarea class="bg-transparent [resize:none] focus:outline-none placeholder:text-[#7C7C7C] text-[15px]" rows="4" placeholder="Отправить сообщение..."></textarea>
+        <div class="flex w-full shrink-0 justify-between rounded-[15px] border-[1px] border-[#222325] bg-transparent px-5 py-[23px] text-white">
+            <textarea class="bg-transparent text-[15px] [resize:none] placeholder:text-[#7C7C7C] focus:outline-none" rows="4" placeholder="Отправить сообщение..."></textarea>
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                 <path
                     fill-rule="evenodd"

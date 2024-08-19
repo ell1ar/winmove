@@ -19,10 +19,10 @@ const slectedTab = ref(0);
             <div class="ml-auto flex items-center gap-[7px]">
                 <div class="relative flex h-[40px] rounded-[10px] bg-[#161719]">
                     <button
-                        class="text-[#BDBDBD]"
                         v-for="(button, index) in buttons"
+                        class="text-[16px] text-[#BDBDBD] flex items-center justify-center px-[19px]"
+                        :class="[slectedTab === index ? 'rounded-[10px] border-[1px] border-[#262729] bg-[#1B1C1E]' : '']"
                         :key="index"
-                        :class="[slectedTab === index ? 'rounded-[10px] border-[1px] border-[#262729] bg-[#1B1C1E]' : '', 'flex items-center justify-center px-[19px]']"
                         @click="slectedTab = index"
                     >
                         <span>{{ button.title }}</span>
@@ -41,8 +41,6 @@ const slectedTab = ref(0);
             </div>
         </div>
 
-        <div class="flex gap-2.5 overflow-x-auto xl:grid xl:grid-cols-2 2xl:grid-cols-1">
-            <MainBetCard class="w-[318px] shrink-0 xl:w-full" v-for="i in 5" :key="i" />
-        </div>
+        <MainBetList />
     </div>
 </template>

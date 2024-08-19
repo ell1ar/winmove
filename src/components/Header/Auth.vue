@@ -6,10 +6,10 @@ const isShowModalBalance = ref(false);
 </script>
 
 <template>
-    <div class="flex gap-2.5">
+    <div class="flex gap-2.5 h-[35px] md:h-[53px]">
         <button
             @click="isShowModalBalance = !isShowModalBalance"
-            class="relative flex h-[35px] items-center justify-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px] lg:h-[53px]"
+            class="relative flex h-full items-center justify-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px] "
         >
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <g clip-path="url(#clip0_790_90682)">
@@ -49,7 +49,7 @@ const isShowModalBalance = ref(false);
             <ModalsBalance v-if="isShowModalBalance" class="absolute right-0 top-[calc(100%+38px)] z-[9999] lg:right-[auto]" />
         </button>
 
-        <button @click="isShowModalProfile = !isShowModalProfile" class="relative hidden h-[35px] w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] lg:flex lg:h-[53px]">
+        <button @click="isShowModalProfile = !isShowModalProfile" class="relative hidden h-full w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] md:flex">
             <div
                 class="h-[39px] w-[39px] rounded-[10px] border-[1px] border-[#FDF74B] bg-[#1B1C1E] bg-contain bg-center bg-no-repeat"
                 :style="{ 'background-image': 'url(' + avatar + ')' }"

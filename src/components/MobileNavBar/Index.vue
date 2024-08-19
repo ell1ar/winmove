@@ -28,7 +28,7 @@ const handleClickMenu = (link) => {
 </script>
 
 <template>
-    <div class="flex h-[70px]">
+    <div class="flex h-[70px] md:w-2/3 md:mx-auto">
         <div class="relative z-10 flex h-full w-full items-center justify-between rounded-[55px] border-[1px] border-[#232426] bg-[#1A1B1D] px-[22px]">
             <MobileNavBarItem :isActive="isShowSidebar" @click="$emit('toggle-sidebar')" :link="{ title: 'Меню', img: iconMenu }" />
 

@@ -62,17 +62,17 @@ const links = [
 
 <template>
     <footer class="flex w-full grow flex-col gap-[25px]">
-        <div class="flex w-full flex-col items-center rounded-[20px] border-[1px] border-[#222325] bg-[#101113] p-[30px] lg:p-[50px]">
+        <div class="flex w-full flex-col items-center rounded-[20px] border-[1px] border-[#222325] bg-[#101113] px-[25px] py-[30px] lg:py-[50px] lg:px-[50px]">
             <div class="flex w-full flex-col items-center justify-center gap-y-10 lg:flex-row lg:flex-wrap lg:justify-between">
                 <ul class="grid w-full grid-cols-2 items-center justify-center gap-x-[30px] gap-y-[22px] md:flex md:flex-wrap lg:w-auto">
-                    <li v-for="(stat, i) in stats" :key="i" class="flex items-start gap-[14px]">
-                        <img :src="stat.img" alt="icon" class="w-[40px]" />
+                    <li v-for="(stat, i) in stats" :key="i" class="flex items-cemter gap-[14px]">
+                        <img :src="stat.img" alt="icon" class="w-[30px] md:w-[40px]" />
 
                         <div>
-                            <h3 class="text-[18px] font-bold leading-none text-white">
+                            <h3 class="text-[16px] md:text-[18px] font-bold leading-none text-white">
                                 {{ stat.value }}
                             </h3>
-                            <span class="text-[16px] font-medium leading-[26px] text-[#4c4d4f]">
+                            <span class="text-[14px] md:text-[16px] font-medium leading-[26px] text-[#4c4d4f]">
                                 {{ stat.title }}
                             </span>
                         </div>
