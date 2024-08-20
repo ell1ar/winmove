@@ -1,1 +1,0 @@
-import{_ as t,c as r,k as s,o}from"./index-Bb0d5k1H.js";const c={},n={class:"flex w-full shrink-0 items-center rounded-[10px] bg-[#161719] text-[#4C4D4F]"};function a(e,l){return o(),r("div",n,[s(e.$slots,"default")])}const d=t(c,[["render",a]]);export{d as default};
