@@ -1,12 +1,12 @@
 <script setup>
-import wifiIcon from "@assets/main/wifi.svg";
-import playIcon from "@assets/main/play.svg";
-import communityIcon from "@assets/main/community.svg";
-import payIcon from "@assets/main/pay.svg";
-import telegram from "@assets/main/telegram.svg";
-import discord from "@assets/main/discord.svg";
-import vk from "@assets/main/vk.svg";
-import youtube from "@assets/main/youtube.svg";
+import wifiIcon from "@assets/img/wifi.svg";
+import playIcon from "@assets/img/play.svg";
+import communityIcon from "@assets/img/community.svg";
+import payIcon from "@assets/img/pay.svg";
+import telegram from "@assets/img/links/telegram.svg";
+import discord from "@assets/img/links/discord.svg";
+import vk from "@assets/img/links/vk.svg";
+import youtube from "@assets/img/links/youtube.svg";
 const props = defineProps(["foo"]);
 const stats = [
     {
@@ -104,19 +104,19 @@ const links = [
 
         <ul class="flex list-none justify-between gap-2 lg:justify-center lg:gap-8">
             <li>
-                <img src="../../assets/main/bitcoin.svg" alt="bitcoin" />
+                <img src="../../assets/img/bitcoin.svg" alt="bitcoin" />
             </li>
             <li>
-                <img src="../../assets/main/tether.svg" alt="tether" />
+                <img src="../../assets/img/tether.svg" alt="tether" />
             </li>
             <li>
-                <img src="../../assets/main/visa.svg" alt="visa" />
+                <img src="../../assets/img/visa.svg" alt="visa" />
             </li>
             <li>
-                <img src="../../assets/main/mastercard.svg" alt="mastercard" />
+                <img src="../../assets/img/mastercard.svg" alt="mastercard" />
             </li>
             <li>
-                <img src="../../assets/main/mir.svg" alt="mir" />
+                <img src="../../assets/img/mir.svg" alt="mir" />
             </li>
         </ul>
     </footer>

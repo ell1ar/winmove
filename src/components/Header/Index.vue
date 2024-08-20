@@ -5,7 +5,7 @@ const { isAuth } = defineProps(["isAuth"]);
 <template>
     <header class="flex h-[65px] shrink-0 items-center justify-between border-[1px] border-[#191A1C] bg-[#111214] px-[15px] md:h-[77px] 2xl:h-[90px]">
         <div class="flex lg:gap-[42px]">
-            <button @click="$emit('toggle-sidebar')" class="hidden h-[53px] w-[53px] items-center justify-center rounded-[8px] bg-[#141517] lg:flex">
+            <button @click="$emit('toggle-sidebar')" class="hidden h-[53px] w-[53px] items-center justify-center rounded-[8px] bg-[#141517] xl:flex">
                 <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.200196 5.30012L8.1502 9.89006L8.1502 0.710187L0.200196 5.30012Z" fill="#3B3C3E" />
                 </svg>
@@ -28,11 +28,11 @@ const { isAuth } = defineProps(["isAuth"]);
         </div>
 
         <div class="flex gap-2.5">
-            <HeaderAuth @toggle-auth="$emit('toggle-auth')" v-if="isAuth" />
-            <HeaderGuest @toggle-auth="$emit('toggle-auth')" v-if="!isAuth" />
-            <HeaderButtonList class="hidden md:flex" />
+            <HeaderAuth @logout="$emit('logout')" v-if="isAuth" />
+            <HeaderGuest @auth="$emit('auth')" @modal-register="$emit('modal-register')" v-if="!isAuth" />
+            <HeaderButtonList @toggle-chat="$emit('toggle-chat')" class="hidden md:flex" />
         </div>
     </header>
 </template>
 
-<style scoped></style>
+

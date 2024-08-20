@@ -1,40 +1,34 @@
 <script setup>
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import { onMounted, ref } from "vue";
-
-const carousel = ref();
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/vue-splide/css/core";
+import "@splidejs/vue-splide/css";
+import { ref } from "vue";
 const currentSlide = ref(0);
-const breakpoints = {
-    375: {
-        itemsToShow: 1,
-        snapAlign: "center",
+const options = ref({
+    rewind: true,
+    arrows: false,
+    pagination: false,
+    gap: "16px",
+    perPage: 2,
+    breakpoints: {
+        640: {
+            perPage: 1,
+        },
     },
-    768: {
-        itemsToShow: 2,
-        snapAlign: "start",
-    },
-};
-
-onMounted(() => {
-    window.addEventListener("resize", carousel.value.updateSlideWidth);
 });
-
-function next() {
-    carousel.value.next();
-}
-
-function prev() {
-    carousel.value.prev();
-}
 </script>
 
 <template>
-    <div class="h-[268px] rounded-[20px] bg-[#101113] px-3 py-5 md:h-[281px] lg:h-[344px] lg:overflow-x-hidden xl:h-[250px] 2xl:h-[270px]">
-        <Carousel ref="carousel" :wrap-around="true" :breakpoints="breakpoints" :autoplay="2000" v-model="currentSlide">
-            <Slide class="px-2" :key="1"><MainBannerCard1 /></Slide>
-            <Slide class="px-2" :key="2"><MainBannerCard2 /></Slide>
-        </Carousel>
+    <div class="rounded-[20px] bg-[#101113] px-5 py-5 lg:overflow-x-hidden">
+        <Splide :options="options" aria-label="My Favorite Images">
+            <SplideSlide>
+                <MainBannerCard1 />
+            </SplideSlide>
+
+            <SplideSlide>
+                <MainBannerCard2 />
+            </SplideSlide>
+        </Splide>
 
         <div class="mx-auto mt-[12px] flex items-center justify-center gap-4">
             <button @click="prev">

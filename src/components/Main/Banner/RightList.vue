@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-    <div class="w-full overflow-x-auto lg:overflow-x-hidden flex 2xl:flex-col gap-5 p-5 rounded-[20px] bg-[#101113]">
+    <div class="flex w-full gap-5 overflow-x-auto rounded-[20px] bg-[#101113] p-5 lg:overflow-x-hidden 2xl:flex-col">
         <MainBannerRightCard1 />
         <MainBannerRightCard2 />
     </div>
 </template>
 
-<style scoped></style>
+

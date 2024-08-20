@@ -21,7 +21,7 @@ const classes = {
         </span>
 
         <template v-if="isFull">
-            <span class="text-[15px] font-bold uppercase text-[#ffffff]">{{ title }}</span>
+            <span class="text-[15px] font-medium uppercase text-[#ffffff]">{{ title }}</span>
             <div class="absolute -left-10 z-[0] h-[60px] w-[120px] rounded-full opacity-25 blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
             <div class="absolute -bottom-10 -right-10 z-[0] h-[70px] w-[100px] rounded-full opacity-25 blur-[40px]" :style="{ 'background-color': classes.color }"></div>
         </template>

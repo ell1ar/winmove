@@ -1,7 +1,7 @@
 <template>
     <div class="bg-[#101113] rounded-[20px] p-5 gap-5 flex flex-col">
         <div class="flex justify-between">
-            <p class="text-[#BDBDBD] font-[400] text-[19px]">
+            <p class="text-[#BDBDBD] font-medium text-[19px]">
                 Ваши любимые игры, изучайте и <br />
                 играйте прямо сейчас!
             </p>
@@ -29,7 +29,7 @@
                     </svg>
                 </button>
 
-                <button class="h-[40px] rounded-[10px] text-[#BDBDBD] text-[16px] font-[400] px-4 gap-4 flex bg-[#1B1C1E] items-center">
+                <button class="h-[40px] rounded-[10px] text-[#BDBDBD] text-[16px] font-medium px-4 gap-4 flex bg-[#1B1C1E] items-center">
                     <span>Популярные игры</span>
                     <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.70039 8L0.630072 0.95L8.77071 0.95L4.70039 8Z" fill="#A8A9AB" />

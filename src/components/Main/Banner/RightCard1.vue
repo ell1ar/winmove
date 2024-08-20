@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class="relative flex h-[167px] md:h-[201px] w-[318px] shrink-0 select-none items-center overflow-hidden rounded-[20px] bg-white/10 bg-gradient-to-tr from-[#32343A] via-[#0C0E14] to-[#32343A] p-[20px] sm:w-full sm:shrink xl:h-[176px] 2xl:h-[213px]"
+        class="relative flex h-[167px] w-[318px] shrink-0 select-none items-center overflow-hidden rounded-[20px] bg-white/10 bg-gradient-to-tr from-[#32343A] via-[#0C0E14] to-[#32343A] p-[20px] sm:w-full sm:shrink md:h-[201px] lg:h-[270px] xl:h-[176px] 2xl:h-[213px]"
     >
         <div class="relative z-20 flex h-full w-fit flex-col justify-center">
             <svg width="107" height="17" viewBox="0 0 107 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,4 +35,4 @@
     </div>
 </template>
 
-<style scoped></style>
+

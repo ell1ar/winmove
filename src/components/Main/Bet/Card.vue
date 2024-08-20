@@ -13,7 +13,7 @@ import navi2 from "./assets/navi2.png";
 
             <div class="flex flex-col items-center text-center">
                 <h2 class="text-[#BCBCBC] text-[14px]">21:03 MSK</h2>
-                <p class="text-[#4C4D4F] text-[12px]">30 июня 2024</p>
+                <p class="text-[#4C4D4F] text-[12px] ">30 июня 2024</p>
                 <strong class="text-[22px] text-[#1E1E1E] -mb-[5px]">VS</strong>
             </div>
 

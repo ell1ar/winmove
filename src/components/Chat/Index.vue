@@ -4,6 +4,7 @@ const messages = [
         player: {
             name: "Sergey",
         },
+        color: "blue",
         text: "Я знал что так будет",
         time: "10:00",
     },
@@ -11,6 +12,7 @@ const messages = [
         player: {
             name: "CodeWithSomya",
         },
+        color: "purple",
         text: "Да, это было предсказуемо, но я рад такому исходу событий)",
         time: "10:00",
     },
@@ -18,6 +20,7 @@ const messages = [
         player: {
             name: "Sergey",
         },
+        color: "yellow",
         text: "Я рад за тебя, но не от всего сердца",
         time: "10:00",
     },
@@ -25,6 +28,7 @@ const messages = [
         player: {
             name: "NishitK",
         },
+        color: "white",
         text: "Классная игра, <strong class='text-[#727272]'>@RakshaSallan</strong> не переживай тебе тоже повезет",
         time: "10:00",
     },
@@ -32,9 +36,18 @@ const messages = [
         player: {
             name: "NishitK",
         },
+        color: "yellow",
         text: "<strong class='text-[#727272]'>@Vanopum</strong>, соблюдайте правила чата, в следующий раз будете заблокированы. С правилами чата можно ознакомиться выше, нажав кнопку правила",
         time: "10:00",
         isModerator: true,
+    },
+    {
+        player: {
+            name: "NishitK",
+        },
+        color: "orange",
+        text: "О да, я прям не верю",
+        time: "10:00",
     },
 ];
 </script>
@@ -42,7 +55,7 @@ const messages = [
 <template>
     <aside
         id="chat"
-        class="flex xl:w-[342px] shrink-0 flex-col items-center overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#121315] px-[15px] py-[15px] lg:rounded-none lg:bg-[#0D0E11] lg:py-[35px] 2xl:w-[300px]"
+        class="flex shrink-0 flex-col items-center overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#121315] px-[15px] py-[15px] lg:rounded-none lg:bg-[#0D0E11] lg:py-[35px] xl:w-[342px] 2xl:w-[300px]"
     >
         <ChatHead @toggle-chat="$emit('toggle-chat')" />
 
@@ -50,8 +63,8 @@ const messages = [
             <ChatMessageCard v-for="(message, index) in messages" :key="index" :message="message" />
         </div>
 
-        <div class="flex w-full shrink-0 justify-between rounded-[15px] border-[1px] border-[#222325] bg-transparent px-5 py-[23px] text-white">
-            <textarea class="bg-transparent text-[15px] [resize:none] placeholder:text-[#7C7C7C] focus:outline-none" rows="4" placeholder="Отправить сообщение..."></textarea>
+        <div class="flex h-[90px] w-full shrink-0 justify-between rounded-[15px] border-[1px] border-[#222325] bg-transparent px-5 py-[23px] text-white lg:h-[92px]">
+            <textarea class="mr-2.5 w-full bg-transparent text-[15px] [resize:none] placeholder:text-[#7C7C7C] focus:outline-none" placeholder="Отправить сообщение..."></textarea>
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                 <path
                     fill-rule="evenodd"
