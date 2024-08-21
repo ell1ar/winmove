@@ -10,10 +10,12 @@
             <div class="relative flex flex-nowrap font-['Stapel_Expanded'] text-[70px] text-white">
                 <span>5</span>
                 <span class="relative inline-flex items-center justify-center"
-                    >0 <img class="absolute z-[2] mt-1" src="./assets/diamond.svg" alt="" /> <span class="absolute z-0 mt-1 h-10 w-10 rounded-full bg-white"></span>
+                    >0 <img class="absolute z-[2] translate-y-0.5" src="./assets/diamond.svg" alt="" />
+                    <span class="absolute z-0 h-10 w-10 translate-y-0.5 rounded-full bg-white"></span>
                 </span>
                 <span class="relative inline-flex items-center justify-center"
-                    >0 <img class="absolute z-[2] mt-1" src="./assets/diamond.svg" alt="" /> <span class="absolute z-0 mt-1 h-10 w-10 rounded-full bg-white"></span>
+                    >0 <img class="absolute z-[2] translate-y-0.5" src="./assets/diamond.svg" alt="" />
+                    <span class="absolute z-0 h-10 w-10 translate-y-0.5 rounded-full bg-white"></span>
                 </span>
                 <span>%</span>
             </div>

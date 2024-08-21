@@ -81,9 +81,7 @@ export default {
             this.slidesPerView = 1;
             this.breakpoints &&
                 Object.keys(this.breakpoints).forEach((key) => {
-                    if (window.innerWidth >= parseInt(key)) {
-                        this.slidesPerView = this.breakpoints[key];
-                    }
+                    if (window.innerWidth >= parseInt(key)) this.slidesPerView = this.breakpoints[key];
                 });
             this.slideWidth = 100 / this.slidesPerView;
             const kof = this.slidesPerView === 1 ? 1 : 0.98;

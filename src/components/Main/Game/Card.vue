@@ -39,15 +39,31 @@ const classes = {
         <img class="absolute top-0 z-[1] h-full" :class="figureClass" :src="figure" alt="figure" />
         <img class="absolute left-0 top-0 z-0 h-full w-full object-cover mix-blend-normal" :src="pattern" alt="card-pattern" />
 
-        <div
-            class="absolute left-0 top-0 z-0 h-[200px] w-[200px] -translate-x-[50%] -translate-y-[50%] rounded-full opacity-30 blur-3xl"
-            :style="[{ backgroundColor: classes.color2 }]"
-        ></div>
+        <svg class="absolute left-0 top-0 z-0" xmlns="http://www.w3.org/2000/svg" width="218" height="226" viewBox="0 0 218 226" fill="none">
+            <g opacity="0.5" filter="url(#filter0_f_790_93827)">
+                <ellipse cx="206.206" cy="106.832" rx="206.206" ry="106.832" transform="matrix(0.941227 -0.337774 0.493662 0.869654 -380.402 22.8062)" :fill="classes.color" />
+            </g>
+            <defs>
+                <filter id="filter0_f_790_93827" x="-484.752" y="-220.061" width="702.35" height="532.245" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_790_93827" />
+                </filter>
+            </defs>
+        </svg>
 
-        <div
-            class="absolute right-0 top-0 z-0 h-[200px] w-[300px] translate-x-[20%] translate-y-[60%] rounded-full opacity-50 blur-3xl"
-            :style="[{ backgroundColor: classes.color }]"
-        ></div>
+        <svg class="absolute bottom-0 right-0 z-0" xmlns="http://www.w3.org/2000/svg" width="398" height="226" viewBox="0 0 398 226" fill="none">
+            <g opacity="0.5" filter="url(#filter0_f_790_93855)">
+                <ellipse cx="206.206" cy="106.832" rx="206.206" ry="106.832" transform="matrix(0.941227 -0.337774 0.493662 0.869654 104.996 219.49)" :fill="classes.color" />
+            </g>
+            <defs>
+                <filter id="filter0_f_790_93855" x="0.646484" y="-23.3773" width="702.35" height="532.245" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_790_93855" />
+                </filter>
+            </defs>
+        </svg>
 
         <div v-if="isClosed" class="absolute left-0 top-0 z-[3] flex h-full w-full items-center justify-center bg-[#08090C]/50 backdrop-blur-[2px]">
             <span class="inline-flex flex-col items-center justify-center">

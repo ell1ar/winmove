@@ -30,9 +30,30 @@
         <img class="absolute right-0 top-0 z-10 h-full" src="./assets/rightCard1.png" alt="right-Card1" />
         <img class="absolute left-0 top-0 z-[1] h-full w-full object-cover" src="./assets/rightCard1pattern.svg" alt="right-pattern1" />
         <!-- Gradients -->
-        <div class="absolute -left-20 -top-6 z-0 h-[150px] w-[250px] -rotate-[35deg] rounded-full bg-[#FDF74B] opacity-30 blur-2xl"></div>
-        <div class="absolute right-0 top-0 z-0 h-full w-1/2 bg-gradient-to-l from-[#FDF74B] opacity-40 blur-2xl"></div>
+        <svg class="absolute left-0 top-0 z-0 h-full" xmlns="http://www.w3.org/2000/svg" width="277" height="219" viewBox="0 0 277 219" fill="none">
+            <g opacity="0.4" filter="url(#filter0_f_790_92902)">
+                <ellipse cx="-80.5" cy="31.5" rx="207.5" ry="164.5" transform="rotate(180 -80.5 31.5)" fill="#FDF74B" />
+            </g>
+            <defs>
+                <filter id="filter0_f_790_92902" x="-437.8" y="-282.8" width="714.6" height="628.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="74.9" result="effect1_foregroundBlur_790_92902" />
+                </filter>
+            </defs>
+        </svg>
+
+        <svg class="absolute bottom-0 right-0 z-0 h-full" xmlns="http://www.w3.org/2000/svg" width="345" height="219" viewBox="0 0 345 219" fill="none">
+            <g opacity="0.45" filter="url(#filter0_f_790_92903)">
+                <ellipse cx="429.5" cy="217.5" rx="229.5" ry="167.5" transform="rotate(180 429.5 217.5)" fill="#FDF74B" />
+            </g>
+            <defs>
+                <filter id="filter0_f_790_92903" x="0" y="-150" width="859" height="735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_790_92903" />
+                </filter>
+            </defs>
+        </svg>
     </div>
 </template>
-
-

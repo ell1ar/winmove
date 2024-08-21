@@ -31,8 +31,6 @@ body {
         cursor: pointer;
         outline: none;
         border-radius: 15px;
-        /*  overflow: hidden;  remove this line*/
-
         /* New additions */
         height: 6px;
         background: #ccc;
@@ -49,8 +47,6 @@ body {
         background-color: #fdf74b;
         border-radius: 50%;
         border: none;
-
-        /* box-shadow: -407px 0 0 400px #FDF74B; emove this line */
         transition: 0.2s ease-in-out;
     }
 
@@ -61,13 +57,10 @@ body {
         background-color: #fdf74b;
         border-radius: 50%;
         border: none;
-
-        /* box-shadow: -407px 0 0 400px #FDF74B; emove this line */
         transition: 0.2s ease-in-out;
     }
 
     /* Hover, active & focus Thumb: Webkit */
-
     input[type="range"]::-webkit-slider-thumb:hover {
         box-shadow: 0 0 0 10px rgba(255, 238, 0, 0.1);
     }
@@ -79,7 +72,6 @@ body {
     }
 
     /* Hover, active & focus Thumb: Firfox */
-
     input[type="range"]::-moz-range-thumb:hover {
         box-shadow: 0 0 0 10px rgba(255, 238, 0, 0.1);
     }
