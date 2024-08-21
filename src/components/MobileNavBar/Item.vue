@@ -3,7 +3,7 @@ const { link, isActive, classIcon } = defineProps(["link", "isActive", "classIco
 </script>
 
 <template>
-    <div class="flex flex-col items-center h-full justify-between py-[7px]">
+    <div class="flex h-full flex-col items-center justify-between py-[7px]">
         <div class="h-[36px] w-[36px] rounded-full p-2 transition-all duration-300" :class="[isActive ? '!bg-[#FDF74B]' : '', classIcon]">
             <img class="h-full w-full object-contain" :src="link.img" :alt="link.title" />
         </div>

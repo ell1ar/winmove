@@ -16,11 +16,6 @@ const isShowModalProfile = ref(false);
 const isShowModalNotifications = ref(false);
 const activeLink = ref(null);
 
-const handleClickOnSidebarMenu = () => {
-    activeLink.value = null;
-    emit("toggle-sidebar");
-};
-
 const handleClickMenuItem = (link) => {
     if (activeLink.value === link) {
         activeLink.value = null;
@@ -30,12 +25,11 @@ const handleClickMenuItem = (link) => {
 };
 
 const handleClickGuestProfileMenu = () => {
-    activeLink.value = null;
     emit("auth");
 };
 
 const handleClickAuthProfileMenu = () => {
-    activeLink.value = null;
+    isShowModalNotifications.value = false;
     isShowModalProfile.value = !isShowModalProfile.value;
 };
 
@@ -45,7 +39,6 @@ const handleOpenNotifications = () => {
 };
 
 const handleLogout = () => {
-    isShowModalProfile.value = false;
     emit("logout");
 };
 </script>
@@ -53,26 +46,35 @@ const handleLogout = () => {
 <template>
     <div class="flex h-[70px] md:mx-auto md:w-2/3">
         <div class="relative z-10 flex h-full w-full items-center justify-between rounded-[55px] border-[1px] border-[#232426] bg-[#1A1B1D] px-[22px]">
-            <MobileNavBarItem :isActive="isShowSidebar" @click="handleClickOnSidebarMenu" :link="{ title: 'Меню', img: iconMenu }" />
+            <MobileNavBarItem :isActive="isShowSidebar" @click="emit('toggle-sidebar')" :link="{ title: 'Меню', img: iconMenu }" />
 
-            <MobileNavBarItem
-                :isActive="activeLink === 'bonuses'"
-                @click="() => handleClickMenuItem('bonuses')"
-                :link="{ title: 'Бонусы', img: activeLink === 'bonuses' ? iconBonusActive : iconBonus }"
-            />
+            <div v-click-outside="() => (activeLink === 'bonuses' ? (activeLink = null) : '')">
+                <MobileNavBarItem
+                    :isActive="activeLink === 'bonuses'"
+                    @click="() => handleClickMenuItem('bonuses')"
+                    :link="{ title: 'Бонусы', img: activeLink === 'bonuses' ? iconBonusActive : iconBonus }"
+                />
+                <MobileNavBarMenuBonus v-if="activeLink === 'bonuses'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+            </div>
 
-            <MobileNavBarItem
-                classIcon="bg-[#FDF74B]/[8%]"
-                :isActive="activeLink === 'games'"
-                @click="() => handleClickMenuItem('games')"
-                :link="{ title: 'Игры', img: activeLink === 'games' ? iconGameActive : iconGame }"
-            />
+            <div v-click-outside="() => (activeLink === 'games' ? (activeLink = null) : '')">
+                <MobileNavBarItem
+                    classIcon="bg-[#FDF74B]/[8%]"
+                    :isActive="activeLink === 'games'"
+                    @click="() => handleClickMenuItem('games')"
+                    :link="{ title: 'Игры', img: activeLink === 'games' ? iconGameActive : iconGame }"
+                />
+                <MobileNavBarMenuGames v-if="activeLink === 'games'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+            </div>
 
-            <MobileNavBarItem
-                :isActive="activeLink === 'bets'"
-                @click="() => handleClickMenuItem('bets')"
-                :link="{ title: 'Ставки', img: activeLink === 'bets' ? iconBetActive : iconBet }"
-            />
+            <div v-click-outside="() => (activeLink === 'bets' ? (activeLink = null) : '')">
+                <MobileNavBarItem
+                    :isActive="activeLink === 'bets'"
+                    @click="() => handleClickMenuItem('bets')"
+                    :link="{ title: 'Ставки', img: activeLink === 'bets' ? iconBetActive : iconBet }"
+                />
+                <MobileNavBarMenuBets v-if="activeLink === 'bets'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+            </div>
 
             <MobileNavBarItem
                 v-if="!isAuth"
@@ -81,16 +83,24 @@ const handleLogout = () => {
                 :link="{ title: 'Профиль', img: activeLink === 'profile' ? iconProfileActive : iconProfile }"
             />
 
-            <button v-if="isAuth" @click="handleClickAuthProfileMenu" class="relative flex h-full flex-col items-center justify-between py-[7px]">
-                <div
-                    class="relative flex h-[36px] w-[36px] justify-center rounded-full border-[0.5px] border-[#FDF74B] bg-contain bg-center bg-no-repeat"
-                    :style="{ 'background-image': 'url(' + avatar + ')' }"
-                >
-                    <div class="absolute -bottom-[6px] flex h-[11px] items-center justify-center rounded-[6px] bg-[#84FD4B] px-2 text-[10px] text-[#151618]">10</div>
-                </div>
-
-                <span class="text-[11px] font-extrabold text-[#717171]">Профиль</span>
-            </button>
+            <div v-if="isAuth" v-click-outside="() => (isShowModalProfile = isShowModalNotifications = false)">
+                <button @click="handleClickAuthProfileMenu" class="relative flex h-full flex-col items-center justify-between py-[7px]">
+                    <div
+                        class="relative flex h-[36px] w-[36px] justify-center rounded-full border-[0.5px] border-[#FDF74B] bg-contain bg-center bg-no-repeat"
+                        :style="{ 'background-image': 'url(' + avatar + ')' }"
+                    >
+                        <div class="absolute -bottom-[6px] flex h-[11px] items-center justify-center rounded-[6px] bg-[#84FD4B] px-2 text-[10px] text-[#151618]">10</div>
+                    </div>
+                    <span class="text-[11px] font-extrabold text-[#717171]">Профиль</span>
+                </button>
+                <PopupsProfile
+                    v-if="isShowModalProfile"
+                    class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0"
+                    @logout="handleLogout"
+                    @open-notifications="handleOpenNotifications"
+                />
+                <PopupsNotifications v-if="isShowModalNotifications" class="absolute bottom-full left-0 right-0 z-10" @close="isShowModalNotifications = false" />
+            </div>
         </div>
 
         <!-- Buttons -->
@@ -122,26 +132,5 @@ const handleLogout = () => {
                 </svg>
             </button>
         </div>
-
-        <!-- Mobile menu -->
-        <MobileNavBarMenuBets v-click-outside="() => (activeLink = null)" v-if="activeLink === 'bets'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-        <MobileNavBarMenuBonus v-click-outside="() => (activeLink = null)" v-if="activeLink === 'bonuses'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-        <MobileNavBarMenuGames v-click-outside="() => (activeLink = null)" v-if="activeLink === 'games'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-
-        <!-- Mobile modals -->
-        <PopupsProfile
-            v-if="isShowModalProfile"
-            class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0"
-            v-click-outside="() => (isShowModalProfile = false)"
-            @logout="handleLogout"
-            @notifications="handleOpenNotifications"
-        />
-
-        <PopupsNotifications
-            v-if="isShowModalNotifications"
-            class="absolute bottom-1/2 left-0 right-0 z-0"
-            v-click-outside="() => (isShowModalNotifications = false)"
-            @close="isShowModalNotifications = false"
-        />
     </div>
 </template>

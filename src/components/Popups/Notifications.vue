@@ -12,7 +12,7 @@ const buttons = [
 </script>
 
 <template>
-    <div v-click-outside="() => $emit('close')" class="animate__animated animate__fadeIn flex flex-col gap-2 rounded-t-[15px] bg-[#0E0F11] p-[15px] pb-[75px] lg:hidden">
+    <div class="animate__animated animate__fadeIn flex flex-col gap-2 rounded-t-[15px] bg-[#0E0F11] p-[15px] pb-[75px] lg:hidden">
         <div class="mb-[20px] flex w-full items-center justify-between lg:hidden">
             <h2 class="text-[18px] text-white">Уведомления</h2>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex grow flex-col gap-[5px] overflow-y-auto p-0 lg:rounded-[20px] lg:bg-[#101113] lg:p-5">
+    <div class="flex grow flex-col gap-[5px] p-0 lg:rounded-[20px] lg:bg-[#101113] lg:p-5">
         <MainTableRowWrapper class="h-[45px]">
             <div class="flex w-[40%] justify-start pl-[15px] sm:w-[40%] lg:pl-[30px]"><span>Пользователь</span></div>
             <div class="flex w-[20%] justify-center sm:w-[40%] sm:justify-start"><span>Время</span></div>

@@ -7,15 +7,15 @@ const isShowModalSettings = ref(false);
 
 <template>
     <div class="flex items-center gap-2.5">
-        <div class="relative flex items-center justify-center">
+        <div v-click-outside="() => (isShowModalLang = false)" class="relative flex items-center justify-center">
             <button @click="isShowModalLang = !isShowModalLang" class="relative flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
                 <img class="flex h-[23px] w-[23px] rounded-full object-cover" :src="ruflag" alt="flag" />
             </button>
 
-            <PopupsLang @close="isShowModalLang = false" v-if="isShowModalLang" class="absolute top-[calc(100%+38px)] z-[9999]" />
+            <PopupsLang @close="isShowModalLang = false" v-if="isShowModalLang" class="animate__fadeIn absolute top-[calc(100%+38px)] z-[9999]" />
         </div>
 
-        <div class="relative flex items-center justify-center">
+        <div v-click-outside="() => (isShowModalSettings = false)" class="relative flex items-center justify-center">
             <button @click="isShowModalSettings = !isShowModalSettings" class="flex h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                     <g clip-path="url(#clip0_790_125520)">
@@ -34,7 +34,7 @@ const isShowModalSettings = ref(false);
                 </svg>
             </button>
 
-            <PopupsSettings @close="isShowModalSettings = false" v-if="isShowModalSettings" class="absolute right-0 top-[calc(100%+38px)] z-[9999]" />
+            <PopupsSettings @close="isShowModalSettings = false" v-if="isShowModalSettings" class="animate__fadeIn absolute right-0 top-[calc(100%+38px)] z-[9999]" />
         </div>
 
         <button class="hidden h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E] xl:flex">

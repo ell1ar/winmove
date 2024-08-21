@@ -7,7 +7,7 @@ const isShowModalBalance = ref(false);
 
 <template>
     <div class="flex h-[35px] gap-2.5 md:h-[53px]">
-        <div class="relative flex items-center justify-center">
+        <div v-click-outside="() => (isShowModalBalance = false)" class="relative flex items-center justify-center">
             <button @click="isShowModalBalance = !isShowModalBalance" class="flex h-full items-center justify-center rounded-[10px] bg-[#1B1C1E] pl-[14px] pr-[7px]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                     <g clip-path="url(#clip0_790_90682)">
@@ -48,8 +48,8 @@ const isShowModalBalance = ref(false);
             <PopupsBalance @close="isShowModalBalance = false" v-if="isShowModalBalance" class="absolute right-0 top-[calc(100%+38px)] z-[9999] lg:right-[auto]" />
         </div>
 
-        <div class="relative flex items-center justify-center">
-            <button @click="isShowModalProfile = !isShowModalProfile" class="hidden h-full w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] md:flex">
+        <div v-click-outside="() => (isShowModalProfile = false)" class="relative flex items-center justify-center">
+            <button @click="isShowModalProfile = !isShowModalProfile" class="hidden h-full w-[90px] items-center rounded-[10px] bg-[#1B1C1E] p-[7px] xl:flex">
                 <div
                     class="h-[39px] w-[39px] rounded-[10px] border-[1px] border-[#FDF74B] bg-[#1B1C1E] bg-contain bg-center bg-no-repeat"
                     :style="{ 'background-image': 'url(' + avatar + ')' }"
