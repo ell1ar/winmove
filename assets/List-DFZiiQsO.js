@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as r,F as n,r as a,e as c,d as l}from"./index-CkW0NMUm.js";const _={},d={class:"flex gap-2.5 overflow-x-auto 2xl:grid 2xl:grid-cols-1"};function i(f,x){const s=c("MainBetCard");return e(),r("div",d,[(e(),r(n,null,a(5,o=>l(s,{class:"w-[318px] shrink-0 2xl:w-full",key:o})),64))])}const m=t(_,[["render",i]]);export{m as default};
