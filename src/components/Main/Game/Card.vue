@@ -24,8 +24,10 @@ const classes = {
 </script>
 
 <template>
-    <div
+    <a
+        href="#"
         class="relative flex aspect-[557/225] h-full max-h-[225px] min-h-[188px] w-full grow flex-col overflow-hidden rounded-[20px] border-[1px] border-[#151619] bg-cover bg-no-repeat p-[22px] [background:linear-gradient(50deg,#020202,#202127)]"
+        :class="[isClosed ? 'cursor-not-allowed' : '']"
     >
         <div class="relative z-[2] flex h-full w-fit flex-col justify-center">
             <div class="leading-5">
@@ -71,5 +73,5 @@ const classes = {
                 <span class="text-[20px] text-white/[18%]">Скоро</span>
             </span>
         </div>
-    </div>
+    </a>
 </template>
