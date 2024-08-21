@@ -1,7 +1,4 @@
-<script setup>
-import wincoin from "./assets/wincoin.png";
-import freegame from "./assets/freegame.png";
-</script>
+<script setup></script>
 
 <template>
     <div v-click-outside="() => $emit('close')" class="animate__animated animate__fadeIn flex w-[310px] flex-col gap-2 rounded-[15px] bg-[#161719] p-[15px]">
@@ -33,7 +30,7 @@ import freegame from "./assets/freegame.png";
 
         <div class="flex h-[50px] items-center justify-between rounded-[10px] bg-[#191A1C] px-[15px]">
             <div class="flex gap-2">
-                <img class="h-[25px w-[25px]" :src="wincoin" alt="wincoin" />
+                <img class="h-[25px w-[25px]" src="./assets/wincoin.png" alt="wincoin" />
 
                 <span class="text-[16px] uppercase text-[#D4D4D4]">WinCoin</span>
             </div>
@@ -43,7 +40,7 @@ import freegame from "./assets/freegame.png";
 
         <div class="flex h-[50px] items-center justify-between rounded-[10px] bg-[#191A1C] px-[15px]">
             <div class="flex gap-2">
-                <img class="h-[25px w-[25px]" :src="freegame" alt="freegame" />
+                <img class="h-[25px w-[25px]" src="./assets/freegame.png" alt="freegame" />
 
                 <span class="text-[16px] uppercase text-[#D4D4D4]">FreeGame</span>
             </div>
