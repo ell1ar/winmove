@@ -1,1 +1,0 @@
-import{_ as t,o as r,c,d as e,e as n}from"./index-Xl4eVu2S.js";const s={},i={class:"flex w-full gap-5 overflow-x-auto rounded-[20px] bg-[#101113] p-5 lg:overflow-x-hidden 2xl:flex-col"};function d(l,_){const o=n("MainBannerRightCard1"),a=n("MainBannerRightCard2");return r(),c("div",i,[e(o),e(a)])}const p=t(s,[["render",d]]);export{p as default};
