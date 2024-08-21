@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class="relative h-[167px] w-[318px] shrink-0 select-none overflow-hidden rounded-[20px] bg-white/10 bg-gradient-to-b from-[#1D2025] to-[#111111] p-[20px] sm:w-full sm:shrink md:h-[201px] lg:h-[270px] xl:h-[176px] 2xl:h-[213px]"
+        class="relative h-[167px] w-[318px] shrink-0 select-none overflow-hidden rounded-[20px] bg-white/10 bg-gradient-to-b from-[#1D2025] to-[#111111] p-[20px] sm:w-full sm:shrink md:h-[201px] lg:h-[270px] xl:h-[213px] 2xl:h-[213px]"
     >
         <div class="relative z-20 flex h-full w-fit flex-col">
             <h2 class="text-[22px] leading-6 text-white md:leading-normal">

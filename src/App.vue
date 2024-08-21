@@ -14,7 +14,7 @@ const isAuth = ref(false);
 
 <template>
     <HeaderIndex
-        class="fixed left-0 right-0 top-0 z-[9999]"
+        class="fixed left-0 right-0 top-0 z-[9999] h-[65px] md:h-[77px] 2xl:h-[90px]"
         @toggle-chat="isShowChat = !isShowChat"
         @toggle-sidebar="isFullSidebar = !isFullSidebar"
         @auth="isAuth = true"
@@ -25,8 +25,8 @@ const isAuth = ref(false);
 
     <div class="flex pt-[65px] md:pt-[77px] lg:h-full 2xl:pt-[90px]">
         <SidebarIndex
-            class="fixed bottom-[88px] left-2.5 top-[75px] z-50 transition-all duration-300 md:top-[80px] xl:relative xl:bottom-0 xl:left-0 xl:top-0"
-            :class="[{ 'translate-x-[-120%]': !isShowSidebar }, { 'translate-x-0': isShowSidebar }]"
+            class="fixed bottom-[88px] left-2.5 top-[75px] z-50 transition-all duration-300 md:top-[77px] xl:bottom-0 xl:left-0 2xl:top-[90px]"
+            :class="[{ 'translate-x-[-120%]': !isShowSidebar }, { 'translate-x-0': isShowSidebar }, { 'w-[234px]': isFullSidebar }, { 'w-[80px]': !isFullSidebar }]"
             :isFull="isFullSidebar"
             @close="isShowSidebar = false"
             @toggle-modal-settings="isShowModalSettings = !isShowModalSettings"
@@ -34,14 +34,14 @@ const isAuth = ref(false);
         />
 
         <main
-            class="mx-auto w-full max-w-full px-0 pb-[100px] pt-0 md:px-[16px] md:pt-[16px] lg:overflow-y-auto lg:px-[20px] lg:pt-[20px] xl:max-w-[calc(100%/1.5)] xl:px-[24px] xl:pb-[35px] xl:pt-[24px] 2xl:max-w-[1588px] 2xl:px-[35px] 2xl:pt-[35px]"
+            class="mx-auto w-full max-w-full px-0 pb-[100px] pl-0 pt-0 md:pl-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
         >
             <router-view></router-view>
             <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />
         </main>
 
         <ChatIndex
-            class="fixed bottom-[84px] left-2.5 right-2.5 top-[70px] z-[9998] transition-all duration-300 xl:relative xl:bottom-0 xl:left-0 xl:right-0 xl:top-0"
+            class="fixed bottom-[84px] right-2.5 top-[70px] z-[9998] transition-all duration-300 md:top-[77px] xl:bottom-0 xl:right-0 xl:w-[342px] 2xl:top-[90px] 2xl:w-[300px]"
             :class="[{ 'translate-x-[120%]': !isShowChat }, { 'translate-x-0': isShowChat }]"
             @toggle-chat="isShowChat = !isShowChat"
         />

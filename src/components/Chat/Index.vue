@@ -54,8 +54,7 @@ const messages = [
 
 <template>
     <aside
-        id="chat"
-        class="flex shrink-0 flex-col items-center overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#121315] px-[15px] py-[15px] lg:rounded-none lg:bg-[#0D0E11] lg:py-[35px] xl:w-[342px] 2xl:w-[300px]"
+        class="flex shrink-0 flex-col items-center overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#121315] px-[15px] py-[15px] lg:rounded-none lg:bg-[#0D0E11] lg:py-[35px]"
     >
         <ChatHead @toggle-chat="$emit('toggle-chat')" />
 

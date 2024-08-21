@@ -1,1 +1,0 @@
-import{_ as t,o as c,c as s,d as e,e as o}from"./index-8jAAtXtu.js";const _={},r={class:"bg-[#101113] rounded-[20px] p-5 gap-5 flex flex-col"};function d(i,m){const n=o("MainGameHead"),a=o("MainGameList");return c(),s("div",r,[e(n),e(a)])}const l=t(_,[["render",d]]);export{l as default};

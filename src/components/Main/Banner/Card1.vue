@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class="relative flex h-[213px] select-none items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5 lg:h-[270px] xl:h-[176px] 2xl:h-[213px]"
+        class="relative flex h-[213px] select-none items-center justify-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5 lg:h-[270px] xl:h-[213px] 2xl:h-[213px]"
     >
         <div class="relative z-10 flex flex-col items-center -space-y-5">
             <p class="text-[22px] uppercase text-white">Бонус</p>
