@@ -1,0 +1,1 @@
+import{_ as t,o as c,c as s,d as e,e as o}from"./index-z2-0-NE6.js";const _={},r={class:"gap-5 rounded-[20px] bg-[#101113] p-5 xl:flex-col"};function d(i,m){const n=o("MainGameHead"),a=o("MainGameList");return c(),s("div",r,[e(n),e(a)])}const l=t(_,[["render",d]]);export{l as default};
