@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { ModalsContainer } from "vue-final-modal";
 const MOBILE_WIDTH = 1280;
 const isShowChat = ref(window.innerWidth >= MOBILE_WIDTH);
@@ -9,6 +9,8 @@ const isShowModalLang = ref(false);
 const isFullSidebar = ref(true);
 const isShowModalRegister = ref(false);
 const isAuth = ref(false);
+const isShowSidebarBackdrop = computed(() => isShowSidebar.value && window.innerWidth <= MOBILE_WIDTH);
+
 const handleOutsideChat = () => {
     if (window.innerWidth < MOBILE_WIDTH) isShowChat.value = false;
 };
@@ -34,7 +36,7 @@ const handleOutsideChat = () => {
             @toggle-modal-settings="isShowModalSettings = !isShowModalSettings"
             @toggle-modal-lang="isShowModalLang = !isShowModalLang"
         />
-        <div v-if="isShowSidebar" @click="isShowSidebar = false" class="fixed z-[9998] h-full w-full bg-black/10 backdrop-blur-sm"></div>
+        <div v-if="isShowSidebarBackdrop" @click="isShowSidebar = false" class="fixed z-[9998] h-full w-full bg-black/10 backdrop-blur-sm"></div>
 
         <main
             class="mx-auto h-fit w-full max-w-[2034px] pb-[100px] pl-0 pr-0 pt-0 md:pl-[16px] md:pr-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
