@@ -22,7 +22,9 @@ const socials = [
 <template>
     <ul class="flex justify-between px-3">
         <li v-for="(social, index) in socials" :key="index">
-            <img :src="social.img" alt="social" />
+            <a href="">
+                <img :src="social.img" alt="social" />
+            </a>
         </li>
     </ul>
 </template>

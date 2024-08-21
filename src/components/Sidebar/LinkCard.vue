@@ -12,7 +12,8 @@ const classes = {
 </script>
 
 <template>
-    <div
+    <a
+        href="#"
         class="relative flex w-full items-center overflow-hidden rounded-[10px] border-[1px] border-[#191A1C] bg-[#141517]"
         :class="[isFull ? 'h-[60px]' : 'h-[50px] w-[50px] justify-center']"
     >
@@ -29,5 +30,5 @@ const classes = {
         <template v-if="!isFull">
             <div class="absolute -left-10 z-[0] h-[60px] w-[120px] rounded-full opacity-25 blur-[20px]" :style="{ background: `radial-gradient(${classes.color}, #141517)` }"></div>
         </template>
-    </div>
+    </a>
 </template>

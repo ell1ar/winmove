@@ -15,7 +15,7 @@ const toggleModalSettings = () => {
 
 <template>
     <aside
-        class="flex shrink-0 flex-col overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#0D0E11] px-[12px] py-[12px] transition-all duration-300 lg:py-[35px] xl:rounded-none"
+        class="flex shrink-0 select-none flex-col overflow-y-auto rounded-[20px] border-[1px] border-[#151619] bg-[#0D0E11] px-[12px] py-[12px] transition-all duration-300 lg:py-[35px] xl:rounded-none"
     >
         <SidebarMenuList :isFull="isFull" />
 

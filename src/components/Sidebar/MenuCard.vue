@@ -33,15 +33,19 @@ const classes = {
 </script>
 
 <template>
-    <div class="flex relative w-full items-center bg-gradient-to-r overflow-hidden rounded-[10px]" :class="[isFull ? 'pl-[50px] pr-[11px] h-[60px]' : 'h-[50px] w-[50px]', classes.bg]">
-        <span class="absolute top-0 left-0" :class="[isFull ? 'h-[60px]' : 'h-[50px]']">
+    <a
+        href="#"
+        class="relative flex w-full items-center overflow-hidden rounded-[10px] bg-gradient-to-r"
+        :class="[isClosed ? 'cursor-not-allowed' : '', isFull ? 'h-[60px] pl-[50px] pr-[11px]' : 'h-[50px] w-[50px]', classes.bg]"
+    >
+        <span class="absolute left-0 top-0" :class="[isFull ? 'h-[60px]' : 'h-[50px]']">
             <slot name="image"></slot>
         </span>
 
         <div v-if="isFull" class="flex flex-col">
             <h1 class="text-[18px]" :class="[classes.title]">{{ title }}</h1>
 
-            <span class="text-[13px] inline-flex gap-0.5 items-center" :class="[classes.count]">
+            <span class="inline-flex items-center gap-0.5 text-[13px]" :class="[classes.count]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
                     <path
                         d="M5.357 5.80482C5.93107 5.80482 6.49224 5.63459 6.96955 5.31564C7.44686 4.9967 7.81887 4.54338 8.03853 4.013C8.25819 3.48262 8.31564 2.89902 8.20361 2.33599C8.09158 1.77297 7.8151 1.25581 7.40914 0.849918C7.00318 0.444029 6.48597 0.167641 5.92292 0.0557085C5.35988 -0.0562243 4.77628 0.00132534 4.24595 0.22108C3.71561 0.440834 3.26235 0.812923 2.94349 1.29029C2.62463 1.76765 2.45449 2.32886 2.45459 2.90292C2.4554 3.67239 2.76146 4.41011 3.30561 4.95416C3.84976 5.49822 4.58753 5.80415 5.357 5.80482ZM9.15375 8.20242C8.41828 7.44804 7.47463 6.93003 6.44334 6.71454C5.41204 6.49906 4.33992 6.59589 3.36392 6.99266C2.38792 7.38944 1.55236 8.06815 0.963955 8.9421C0.375551 9.81605 0.0610229 10.8456 0.0605469 11.8991C0.0605469 12.0338 0.114053 12.163 0.209295 12.2582C0.304537 12.3535 0.433713 12.407 0.568405 12.407H10.1466C10.2813 12.407 10.4105 12.3535 10.5057 12.2582C10.601 12.163 10.6545 12.0338 10.6545 11.8991C10.6564 11.3606 10.5733 10.8252 10.4082 10.3126C10.1623 9.52012 9.73243 8.79706 9.15375 8.20242Z"
@@ -60,18 +64,18 @@ const classes = {
             </span>
         </div>
 
-        <div v-if="isFull" class="flex flex-col items-center ml-auto">
+        <div v-if="isFull" class="ml-auto flex flex-col items-center">
             <span class="text-[#CEBCE3]" :class="[classes.price]">$18.32</span>
-            <div class="p-[1px] rounded-full flex items-center h-[21px] bg-gradient-to-r justify-center text-[#9883B0] text-[11px]" :class="[classes.winBg]">
-                <div class="flex items-center justify-center bg-[#141517] rounded-full px-[13px]" :class="[classes.winText]">WIN</div>
+            <div class="flex h-[21px] items-center justify-center rounded-full bg-gradient-to-r p-[1px] text-[11px] text-[#9883B0]" :class="[classes.winBg]">
+                <div class="flex items-center justify-center rounded-full bg-[#141517] px-[13px]" :class="[classes.winText]">WIN</div>
             </div>
         </div>
 
-        <div v-if="isClosed" class="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-[#08090C]/50 z-10 backdrop-blur-[2px]">
+        <div v-if="isClosed" class="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-[#08090C]/50 backdrop-blur-[2px]">
             <span class="inline-flex items-center justify-center gap-[7px]">
-                <img :src="close" class="w-[23px] h-[23px]" alt="close" />
+                <img :src="close" class="h-[23px] w-[23px]" alt="close" />
                 <span v-if="isFull" class="text-[16px] text-white/[18%]">Скоро</span>
             </span>
         </div>
-    </div>
+    </a>
 </template>

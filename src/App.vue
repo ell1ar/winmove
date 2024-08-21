@@ -34,7 +34,7 @@ const isAuth = ref(false);
         />
 
         <main
-            class="mx-auto w-full max-w-full px-0 pb-[100px] pl-0 pt-0 md:pl-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
+            class="mx-auto w-full max-w-full pb-[100px] pl-0 pr-0 pt-0 md:pl-[16px] md:pr-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
         >
             <router-view></router-view>
             <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />

@@ -3,7 +3,7 @@ const { message } = defineProps(["message"]);
 </script>
 
 <template>
-    <div class="flex w-full gap-2.5">
+    <div class="flex w-full gap-2.5 select-text">
         <PlayerAvatar :color="message.color" />
 
         <div class="flex grow flex-col">
