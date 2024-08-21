@@ -18,8 +18,6 @@
 
         <img class="absolute right-0 top-0 z-10 h-full w-[165px] object-contain lg:w-auto" src="./assets/card1.png" alt="card-1" />
         <img class="absolute left-0 top-0 z-[1] h-full w-full object-cover" src="./assets/card1pattern.svg" alt="card-pattern" />
-        <!-- Gradients -->
-        <div class="absolute left-0 z-0 h-[200px] w-[200px] -translate-x-[50%] rounded-full bg-[#BD52FD] opacity-50 blur-3xl"></div>
-        <div class="absolute bottom-0 right-0 z-0 h-[200px] w-[300px] translate-x-[20%] translate-y-[40%] rounded-full bg-[#BD52FD] opacity-50 blur-3xl"></div>
+        <img class="absolute left-0 top-0 z-[1] h-full w-full object-cover" src="./assets/card2light.svg" alt="card-light" />
     </div>
 </template>

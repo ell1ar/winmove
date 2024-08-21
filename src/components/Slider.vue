@@ -1,7 +1,7 @@
 <template>
     <section class="relative mx-auto w-full overflow-hidden">
         <div class="overflow-hidden" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
-            <div ref="slides" class="ease flex gap-2 transition-transform duration-[0.5s]" :style="{ transform: `translateX(-${currentIndex * slideWidth}%)` }">
+            <div ref="slides" class="ease flex justify-between transition-transform duration-[0.5s]" :style="{ transform: `translateX(-${currentIndex * slideWidth}%)` }">
                 <slot name="slides"></slot>
             </div>
         </div>
@@ -86,8 +86,9 @@ export default {
                     }
                 });
             this.slideWidth = 100 / this.slidesPerView;
+            const kof = this.slidesPerView === 1 ? 1 : 0.98;
             for (let slide of this.$refs.slides.children) {
-                slide.style.width = `${this.slideWidth}%`;
+                slide.style.width = `${this.slideWidth * kof}%`;
                 slide.style.flexShrink = 0;
             }
         },
