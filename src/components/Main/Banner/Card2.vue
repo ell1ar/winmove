@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class="relative flex h-[213px] w-full select-none items-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5 lg:h-[270px] xl:h-[176px] 2xl:h-[213px]"
+        class="relative flex h-[213px] select-none items-center overflow-hidden rounded-[20px] bg-gradient-to-b from-[#1D2025] to-[#111111] p-5 lg:h-[270px] xl:h-[176px] 2xl:h-[213px]"
     >
         <div class="relative z-20 flex h-full w-fit flex-col justify-center">
             <p class="text-start text-[22px] font-bold leading-6 text-white">
@@ -23,5 +23,3 @@
         <div class="absolute bottom-0 right-0 z-0 h-[200px] w-[300px] translate-x-[20%] translate-y-[40%] rounded-full bg-[#BD52FD] opacity-50 blur-3xl"></div>
     </div>
 </template>
-
-
