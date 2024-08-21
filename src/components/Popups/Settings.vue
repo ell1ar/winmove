@@ -26,9 +26,9 @@ onMounted(() => {
 <template>
     <div
         v-click-outside="() => $emit('close')"
-        class="settings animate__animated animate__fadeIn flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg lg:w-[310px] lg:rounded-b-[15px]"
+        class="settings animate__animated animate__fadeIn flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg md:w-[310px] md:rounded-b-[15px]"
     >
-        <div class="mb-[20px] flex w-full items-center justify-between lg:hidden">
+        <div class="mb-[20px] flex w-full items-center justify-between md:hidden">
             <h2 class="text-[18px] text-white">Настройки</h2>
 
             <button @click="$emit('close')">

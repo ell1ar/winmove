@@ -16,18 +16,32 @@ const isShowModalProfile = ref(false);
 const isShowModalNotifications = ref(false);
 const activeLink = ref(null);
 
-const handleNotifications = () => {
-    isShowModalProfile.value = false;
-    isShowModalNotifications.value = true;
+const handleClickOnSidebarMenu = () => {
+    activeLink.value = null;
+    emit("toggle-sidebar");
 };
 
-const handleClickMenu = (link) => {
+const handleClickMenuItem = (link) => {
     if (activeLink.value === link) {
         activeLink.value = null;
         return;
     }
-
     activeLink.value = link;
+};
+
+const handleClickGuestProfileMenu = () => {
+    activeLink.value = null;
+    emit("auth");
+};
+
+const handleClickAuthProfileMenu = () => {
+    activeLink.value = null;
+    isShowModalProfile.value = !isShowModalProfile.value;
+};
+
+const handleOpenNotifications = () => {
+    isShowModalProfile.value = false;
+    isShowModalNotifications.value = true;
 };
 
 const handleLogout = () => {
@@ -39,35 +53,35 @@ const handleLogout = () => {
 <template>
     <div class="flex h-[70px] md:mx-auto md:w-2/3">
         <div class="relative z-10 flex h-full w-full items-center justify-between rounded-[55px] border-[1px] border-[#232426] bg-[#1A1B1D] px-[22px]">
-            <MobileNavBarItem :isActive="isShowSidebar" @click="$emit('toggle-sidebar')" :link="{ title: 'Меню', img: iconMenu }" />
+            <MobileNavBarItem :isActive="isShowSidebar" @click="handleClickOnSidebarMenu" :link="{ title: 'Меню', img: iconMenu }" />
 
             <MobileNavBarItem
                 :isActive="activeLink === 'bonuses'"
-                @click="() => handleClickMenu('bonuses')"
+                @click="() => handleClickMenuItem('bonuses')"
                 :link="{ title: 'Бонусы', img: activeLink === 'bonuses' ? iconBonusActive : iconBonus }"
             />
 
             <MobileNavBarItem
                 classIcon="bg-[#FDF74B]/[8%]"
                 :isActive="activeLink === 'games'"
-                @click="() => handleClickMenu('games')"
+                @click="() => handleClickMenuItem('games')"
                 :link="{ title: 'Игры', img: activeLink === 'games' ? iconGameActive : iconGame }"
             />
 
             <MobileNavBarItem
                 :isActive="activeLink === 'bets'"
-                @click="() => handleClickMenu('bets')"
+                @click="() => handleClickMenuItem('bets')"
                 :link="{ title: 'Ставки', img: activeLink === 'bets' ? iconBetActive : iconBet }"
             />
 
             <MobileNavBarItem
                 v-if="!isAuth"
                 :isActive="activeLink === 'profile'"
-                @click="$emit('auth')"
+                @click="handleClickGuestProfileMenu"
                 :link="{ title: 'Профиль', img: activeLink === 'profile' ? iconProfileActive : iconProfile }"
             />
 
-            <button v-if="isAuth" @click="isShowModalProfile = !isShowModalProfile" class="relative flex h-full flex-col items-center justify-between py-[7px]">
+            <button v-if="isAuth" @click="handleClickAuthProfileMenu" class="relative flex h-full flex-col items-center justify-between py-[7px]">
                 <div
                     class="relative flex h-[36px] w-[36px] justify-center rounded-full border-[0.5px] border-[#FDF74B] bg-contain bg-center bg-no-repeat"
                     :style="{ 'background-image': 'url(' + avatar + ')' }"
@@ -110,12 +124,24 @@ const handleLogout = () => {
         </div>
 
         <!-- Mobile menu -->
-        <MobileNavBarMenuBets v-if="activeLink === 'bets'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-        <MobileNavBarMenuBonus v-if="activeLink === 'bonuses'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-        <MobileNavBarMenuGames v-if="activeLink === 'games'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+        <MobileNavBarMenuBets v-click-outside="() => (activeLink = null)" v-if="activeLink === 'bets'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+        <MobileNavBarMenuBonus v-click-outside="() => (activeLink = null)" v-if="activeLink === 'bonuses'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
+        <MobileNavBarMenuGames v-click-outside="() => (activeLink = null)" v-if="activeLink === 'games'" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
 
         <!-- Mobile modals -->
-        <PopupsProfile @logout="handleLogout" @notifications="handleNotifications" v-if="isShowModalProfile" class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0" />
-        <PopupsNotifications @close="isShowModalNotifications = false" v-if="isShowModalNotifications" class="absolute bottom-1/2 left-0 right-0 z-0" />
+        <PopupsProfile
+            v-if="isShowModalProfile"
+            class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0"
+            v-click-outside="() => (isShowModalProfile = false)"
+            @logout="handleLogout"
+            @notifications="handleOpenNotifications"
+        />
+
+        <PopupsNotifications
+            v-if="isShowModalNotifications"
+            class="absolute bottom-1/2 left-0 right-0 z-0"
+            v-click-outside="() => (isShowModalNotifications = false)"
+            @close="isShowModalNotifications = false"
+        />
     </div>
 </template>

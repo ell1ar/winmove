@@ -34,5 +34,3 @@ const { isAuth } = defineProps(["isAuth"]);
         </div>
     </header>
 </template>
-
-

@@ -1,7 +1,7 @@
 <template>
     <section class="relative mx-auto w-full overflow-hidden">
         <div class="overflow-hidden" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
-            <div ref="slides" class="ease flex justify-between transition-transform duration-[0.5s]" :style="{ transform: `translateX(-${currentIndex * slideWidth}%)` }">
+            <div ref="slides" class="ease flex justify-between transition-all duration-1000" :style="{ transform: `translateX(-${currentIndex * slideWidth}%)` }">
                 <slot name="slides"></slot>
             </div>
         </div>

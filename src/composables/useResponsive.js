@@ -1,21 +1,15 @@
-import { onMounted, onUnmounted, reactive, toRefs } from "vue";
+import { onBeforeMount, onMounted, onUnmounted, reactive, ref, toRefs } from "vue";
 
 export function useResponsive() {
-    const sizes = reactive({
-        browserWidth: window.innerWidth,
-        deviceWidth: screen.width,
-        isMobile: false,
-    });
+    const isMobile = ref(false);
 
     const browserResized = () => {
-        sizes.browserWidth = window.innerWidth;
-        sizes.deviceWidth = screen.width;
-        sizes.isMobile = isMobile();
+        isMobile.value = window.innerWidth < 1280;
     };
 
-    const isMobile = () => {
-        return window.innerWidth <= 1280 ? true : false;
-    };
+    onBeforeMount(() => {
+        browserResized();
+    });
 
     onMounted(() => {
         window.addEventListener("resize", browserResized);
@@ -26,6 +20,6 @@ export function useResponsive() {
     });
 
     return {
-        ...toRefs(sizes),
+        isMobile,
     };
 }

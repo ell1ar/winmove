@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#101113] rounded-[20px] p-5 gap-5 flex flex-col">
+    <div class="gap-5 rounded-[20px] bg-[#101113] p-5 xl:flex-col">
         <MainGameHead />
         <MainGameList />
     </div>

@@ -65,7 +65,7 @@ const links = [
         <div class="flex w-full flex-col items-center rounded-[20px] border-[1px] border-[#222325] bg-[#101113] px-[25px] py-[30px] 2xl:px-[50px] 2xl:py-[50px]">
             <div class="flex w-full flex-col items-center justify-center lg:flex-row lg:justify-between xl:flex-col 2xl:flex-row">
                 <!-- Statistics -->
-                <ul class="grid w-full grid-cols-2 items-center gap-x-[30px] gap-y-[22px] sm:flex">
+                <ul class="grid w-full grid-cols-2 items-center justify-between gap-x-[30px] gap-y-[22px] sm:flex lg:justify-start xl:justify-between 2xl:justify-start">
                     <li v-for="(stat, i) in stats" :key="i" class="items-cemter flex gap-[14px]">
                         <img :src="stat.img" alt="icon" class="w-[30px] sm:w-[35px]" />
 
@@ -82,7 +82,9 @@ const links = [
                 </ul>
 
                 <!-- Social links -->
-                <div class="mt-[35px] flex w-full justify-center gap-[17px] sm:mt-[24px] sm:justify-start lg:mt-0 lg:w-auto xl:mt-[28px] xl:w-full xl:justify-start 2xl:mt-0 2xl:w-auto">
+                <div
+                    class="mt-[35px] flex w-full justify-center gap-[17px] sm:mt-[24px] sm:justify-start lg:mt-0 lg:w-auto xl:mt-[28px] xl:w-full xl:justify-start 2xl:mt-0 2xl:w-auto"
+                >
                     <a v-for="(social, index) in socials" :key="index" href="" class="w-[37px] shrink-0"><img :src="social.img" alt="socail" /></a>
                 </div>
             </div>

@@ -1,15 +1,20 @@
 <script setup>
 import { ref } from "vue";
 import { ModalsContainer } from "vue-final-modal";
-import { useResponsive } from "./composables/useResponsive";
-const sizes = useResponsive();
-const isShowChat = ref(!sizes.isMobile.value);
-const isShowSidebar = ref(!sizes.isMobile.value);
+const MOBILE_WIDTH = 1280;
+const isShowChat = ref(window.innerWidth >= MOBILE_WIDTH);
+const isShowSidebar = ref(window.innerWidth >= MOBILE_WIDTH);
 const isShowModalSettings = ref(false);
 const isShowModalLang = ref(false);
 const isFullSidebar = ref(true);
 const isShowModalRegister = ref(false);
 const isAuth = ref(false);
+const handleOutsideSidebar = () => {
+    if (window.innerWidth < MOBILE_WIDTH) isShowSidebar.value = false;
+};
+const handleOutsideChat = () => {
+    if (window.innerWidth < MOBILE_WIDTH) isShowChat.value = false;
+};
 </script>
 
 <template>
@@ -25,6 +30,7 @@ const isAuth = ref(false);
 
     <div class="flex pt-[65px] md:pt-[77px] lg:h-full 2xl:pt-[90px]">
         <SidebarIndex
+            v-click-outside="handleOutsideSidebar"
             class="fixed bottom-[88px] left-2.5 top-[75px] z-50 transition-all duration-300 md:top-[77px] xl:bottom-0 xl:left-0 2xl:top-[90px]"
             :class="[{ 'translate-x-[-120%]': !isShowSidebar }, { 'translate-x-0': isShowSidebar }, { 'w-[234px]': isFullSidebar }, { 'w-[80px]': !isFullSidebar }]"
             :isFull="isFullSidebar"
@@ -34,13 +40,14 @@ const isAuth = ref(false);
         />
 
         <main
-            class="mx-auto w-full max-w-full pb-[100px] pl-0 pr-0 pt-0 md:pl-[16px] md:pr-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
+            class="mx-auto h-fit w-full pb-[100px] pl-0 pr-0 pt-0 md:pl-[16px] md:pr-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
         >
             <router-view></router-view>
             <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />
         </main>
 
         <ChatIndex
+            v-click-outside="handleOutsideChat"
             class="fixed bottom-[84px] right-2.5 top-[70px] z-[9998] transition-all duration-300 md:top-[77px] xl:bottom-0 xl:right-0 xl:w-[342px] 2xl:top-[90px] 2xl:w-[300px]"
             :class="[{ 'translate-x-[120%]': !isShowChat }, { 'translate-x-0': isShowChat }]"
             @toggle-chat="isShowChat = !isShowChat"
