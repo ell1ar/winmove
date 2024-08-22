@@ -51,7 +51,7 @@ const onBackspace = (index) => {
 
     <p class="mt-[25px] text-[14px] text-[#787878]">Пожалуйста введите код, полученный по электронной почте: <strong class="text-[#E2E2E2]">filup287@gmail.com</strong></p>
 
-    <div class="mt-[20px] flex flex-nowrap gap-[7px] sm:gap-[10px]">
+    <div class="mt-[20px] w-full justify-center xl:justify-start flex flex-nowrap gap-[7px] sm:gap-[10px]">
         <input
             v-for="(digit, index) in digits"
             :key="index"

@@ -12,7 +12,7 @@ const emit = defineEmits(["verify"]);
         <div class="relative flex w-full items-center">
             <Input placeholder="Пароль" autocomplete :type="showPassword ? 'text' : 'password'" />
 
-            <button @click="showPassword = !showPassword" class="absolute right-[16px]" type="button">
+            <button @click="showPassword = !showPassword" class="absolute right-[16px] -m-3 p-3" type="button">
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M8.99965 8.59058C10.5301 8.59058 11.7708 7.3499 11.7708 5.81945C11.7708 4.28899 10.5301 3.04831 8.99965 3.04831C7.4692 3.04831 6.22852 4.28899 6.22852 5.81945C6.22852 7.3499 7.4692 8.59058 8.99965 8.59058Z"
