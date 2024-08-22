@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,d as n,x as d,e}from"./index-DYWm5E0a.js";const _={},i={class:"rounded-[20px] bg-[#101113] px-5 py-5 lg:overflow-x-hidden"};function p(l,m){const o=e("MainBannerCard1"),a=e("MainBannerCard2"),r=e("Slider");return s(),c("div",i,[n(r,{breakpoints:{640:2}},{slides:d(()=>[n(o),n(a)]),_:1})])}const f=t(_,[["render",p]]);export{f as default};
