@@ -25,8 +25,31 @@ const list = [
             <span class="realtive z-10 text-[14px] text-[#E2E2E2]" v-html="item.content"></span>
 
             <!-- Gradients -->
-            <div class="absolute left-0 top-0 h-12 w-24 -translate-x-8 -translate-y-8 -rotate-[35deg] rounded-full bg-[#FDF74B] opacity-60 blur-2xl"></div>
-            <div class="absolute bottom-0 right-0 h-10 w-20 translate-x-4 translate-y-2 -rotate-[35deg] rounded-full bg-[#FDF74B] opacity-30 blur-xl"></div>
+            <svg class="absolute left-0 top-0" xmlns="http://www.w3.org/2000/svg" width="124" height="60" viewBox="0 0 124 60" fill="none">
+                <g opacity="0.3" filter="url(#filter0_f_1283_47938)">
+                    <ellipse cx="90.3073" cy="46.7865" rx="90.3073" ry="46.7865" transform="matrix(0.914235 -0.405185 0.555469 0.831537 -157 -21.8176)" fill="#FDF74B" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_1283_47938" x="-220.628" y="-158.513" width="344.358" height="278.018" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="42.8" result="effect1_foregroundBlur_1283_47938" />
+                    </filter>
+                </defs>
+            </svg>
+
+            <svg class="absolute bottom-0 right-0" xmlns="http://www.w3.org/2000/svg" width="164" height="60" viewBox="0 0 164 60" fill="none">
+                <g opacity="0.3" filter="url(#filter0_f_1283_47941)">
+                    <ellipse cx="90.3073" cy="46.7865" rx="90.3073" ry="46.7865" transform="matrix(0.914235 -0.405185 0.555469 0.831537 20 88.1824)" fill="#FDF74B" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_1283_47941" x="-43.6283" y="-48.513" width="344.358" height="278.018" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="42.8" result="effect1_foregroundBlur_1283_47941" />
+                    </filter>
+                </defs>
+            </svg>
         </div>
     </div>
 </template>
