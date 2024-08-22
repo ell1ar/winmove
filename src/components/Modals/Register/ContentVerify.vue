@@ -20,6 +20,17 @@ const onBackspace = (index) => {
         });
     }
 };
+
+const onPaste = (event) => {
+    const pastedData = event.clipboardData.getData("text");
+    if (/^\d{6}$/.test(pastedData)) {
+        digits.value = pastedData.split("");
+        nextTick(() => {
+            digitRefs.value[5].focus(); // Фокусируемся на последнем input
+        });
+    }
+    event.preventDefault(); // Предотвращаем вставку, чтобы не дублировать данные
+};
 </script>
 
 <template>
@@ -35,7 +46,7 @@ const onBackspace = (index) => {
             электронной почты
         </h2>
 
-        <button class="absolute flex xl:hidden right-0 top-0" @click="$emit('close')">
+        <button class="absolute right-0 top-0 flex xl:hidden" @click="$emit('close')">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M1.23234 12.9185C0.913628 12.9371 0.600176 12.8311 0.358078 12.623C-0.119359 12.1427 -0.119359 11.3671 0.358078 10.8868L10.8124 0.432433C11.309 -0.0322305 12.0882 -0.00640016 12.5528 0.490176C12.973 0.939228 12.9975 1.62943 12.6102 2.10711L2.09427 12.623C1.85532 12.8281 1.54687 12.9339 1.23234 12.9185Z"
@@ -51,7 +62,7 @@ const onBackspace = (index) => {
 
     <p class="mt-[25px] text-[14px] text-[#787878]">Пожалуйста введите код, полученный по электронной почте: <strong class="text-[#E2E2E2]">filup287@gmail.com</strong></p>
 
-    <div class="mt-[20px] w-full justify-center xl:justify-start flex flex-nowrap gap-[7px] sm:gap-[10px]">
+    <div class="mt-[20px] flex w-full flex-nowrap justify-center gap-[7px] sm:gap-[10px] xl:justify-start">
         <input
             v-for="(digit, index) in digits"
             :key="index"
@@ -61,6 +72,7 @@ const onBackspace = (index) => {
             v-model="digits[index]"
             @input="onInput(index)"
             @keydown.backspace="onBackspace(index)"
+            @paste="onPaste($event)"
             ref="digitRefs"
         />
     </div>

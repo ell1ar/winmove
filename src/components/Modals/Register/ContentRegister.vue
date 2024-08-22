@@ -30,7 +30,7 @@ const emit = defineEmits(["verify"]);
 
         <Checkbox id="register-checkbox" v-model="checked">
             <template #label>
-                <span class="text-[11px] sm:text-[12px] text-[#626262]">
+                <span class="text-[11px] text-[#626262] sm:text-[12px]">
                     Я подтверждаю, что мне 18 лет и я прочитал(а) <br />
                     <a href="" class="text-[#C1C1C1]">Условия предоставления услуг</a>
                 </span>
