@@ -92,7 +92,7 @@ const tabs = [
 
                 <ModalsRegisterContentRegister @verify="slectedTab = 2" v-if="slectedTab === 0" />
                 <ModalsRegisterContentLogin v-if="slectedTab === 1" />
-                <ModalsRegisterContentVerify @login="slectedTab = 0" v-if="slectedTab === 2" />
+                <ModalsRegisterContentVerify @close="isShowModalRegister = false" @login="slectedTab = 0" v-if="slectedTab === 2" />
             </div>
         </div>
     </VueFinalModal>
