@@ -41,7 +41,7 @@ const handleOutsideChat = () => {
         <main
             class="mx-auto h-fit w-full max-w-[2034px] pb-[100px] pl-0 pr-0 pt-0 md:pl-[16px] md:pr-[16px] md:pt-[16px] lg:pt-[20px] xl:pb-[35px] xl:pl-[calc(234px+24px)] xl:pr-[calc(342px+16px)] xl:pt-[24px] 2xl:pl-[calc(234px+35px)] 2xl:pr-[calc(300px+35px)] 2xl:pt-[35px]"
         >
-            <router-view></router-view>
+            <RouterView />
             <FooterIndex class="mt-[25px] px-[15px] lg:px-0 2xl:mt-[80px]" />
         </main>
 

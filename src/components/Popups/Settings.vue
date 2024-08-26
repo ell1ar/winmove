@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="settings animate__animated flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg md:w-[310px] md:rounded-b-[15px]">
+    <div class="popup-settings animate__animated flex flex-col rounded-b-[0px] rounded-t-[15px] bg-[#161719] p-[15px] shadow-lg md:w-[310px] md:rounded-b-[15px]">
         <div class="mb-[20px] flex w-full items-center justify-between md:hidden">
             <h2 class="text-[18px] text-white">Настройки</h2>
 
