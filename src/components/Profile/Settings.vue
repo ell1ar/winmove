@@ -70,15 +70,15 @@ const isNeedSave = computed(() => {
                 любом устройстве.
             </p>
 
-            <Checkbox class="mb-[17px] mt-[18px]">
+            <Checkbox class="mb-[20px] mt-[18px]">
                 <template #label>
                     <span class="text-[15px] font-medium text-[#D7D7D7]">Получать промо-акции по почте</span>
                 </template>
             </Checkbox>
 
             <div class="mt-auto flex h-[45px] items-center justify-between rounded-[10px] border-[1px] border-[#191A1D] bg-[#08090C] py-2 pl-5 pr-2">
-                <input type="text" class="h-full bg-transparent text-[14px] text-[#D7D7D7] placeholder:text-[#595959] focus:outline-none" placeholder="Email" />
-                <button class="flex h-full items-center justify-center rounded-[7px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">Edit</button>
+                <input type="text" class="h-full w-full bg-transparent text-[14px] text-[#D7D7D7] placeholder:text-[#595959] focus:outline-none" placeholder="Email" />
+                <button class="flex h-full ml-2 items-center justify-center rounded-[7px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">Edit</button>
             </div>
         </div>
 
@@ -108,7 +108,7 @@ const isNeedSave = computed(() => {
                 </p>
             </div>
             <!-- Content -->
-            <p class="mt-[51px] text-[14px] font-medium leading-5 text-[#595959]">Должно содержать не менее 8 символов: сочетание букв и символов.</p>
+            <p class="mb-[20px] mt-[51px] text-[14px] font-medium leading-5 text-[#595959]">Должно содержать не менее 8 символов: сочетание букв и символов.</p>
 
             <button class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#91E2FD] px-3 font-bold uppercase text-[#101010]">Добавить</button>
         </div>
@@ -151,7 +151,7 @@ const isNeedSave = computed(() => {
                 </p>
             </div>
             <!-- Content -->
-            <p class="mt-[15px] text-[14px] font-medium leading-5 text-[#595959]">
+            <p class="mb-[20px] mt-[15px] text-[14px] font-medium leading-5 text-[#595959]">
                 Второй уровень безопасности вашей учетной записи BetFury. Установите 2FA для защиты вашей учетной записи (доступно только при регистрации через Google или если
                 установлены адрес электронной почты и пароль)..
             </p>
@@ -175,7 +175,7 @@ const isNeedSave = computed(() => {
                 <p class="text-[13px] font-medium text-[#595959]">Ваше имя пользователя не будет отображаться в общем списке ставок и предварительном просмотре ставок.</p>
             </div>
 
-            <div class="mt-[20px] flex flex-col">
+            <div class="mb-[20px] mt-[20px] flex flex-col">
                 <p class="flex items-center gap-4">
                     <ButtonToggle v-model="settingsPrivacy.second" />
                     <span class="text-[15px] font-medium text-[#D7D7D7]">Скрыть статистику от других пользователей</span>
@@ -186,7 +186,7 @@ const isNeedSave = computed(() => {
 
             <button
                 :disabled="!isNeedSave"
-                class="mb-[24px] mt-[34px] flex h-[40px] w-fit items-center justify-center rounded-[8px] bg-[#FDF74B] px-5 font-bold uppercase text-[#101010] transition-all duration-300"
+                class="mt-auto flex h-[40px] w-fit items-center justify-center rounded-[8px] bg-[#FDF74B] px-5 font-bold uppercase text-[#101010] transition-all duration-300"
                 :class="[isNeedSave ? '' : 'opacity-30']"
             >
                 Сохранить изменения
