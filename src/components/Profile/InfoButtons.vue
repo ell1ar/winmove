@@ -16,7 +16,7 @@
                 />
             </svg>
 
-            <span>Пополнить</span>
+            <span class="text-[14px] 2xl:text-[16px]">Пополнить</span>
         </button>
     </div>
 </template>

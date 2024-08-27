@@ -16,7 +16,7 @@
                         fill="#84FD4B"
                     />
                 </svg>
-                <span class="">ответственная игра</span>
+                <span>ответственная игра</span>
             </div>
         </button>
     </div>
