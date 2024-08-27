@@ -93,8 +93,10 @@ const handleLogout = () => {
                     </div>
                     <span class="text-[11px] font-extrabold text-[#717171]">Профиль</span>
                 </button>
+
                 <PopupsProfile
                     v-if="isShowModalProfile"
+                    @close="isShowModalProfile = false"
                     class="absolute bottom-[calc(100%+8px)] left-0 right-0 z-0"
                     @logout="handleLogout"
                     @open-notifications="handleOpenNotifications"

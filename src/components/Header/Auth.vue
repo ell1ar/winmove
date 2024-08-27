@@ -62,7 +62,12 @@ const isShowModalBalance = ref(false);
                 </div>
             </button>
 
-            <PopupsProfile @logout="$emit('logout')" @close="isShowModalProfile = false" v-if="isShowModalProfile" class="absolute right-0 top-[calc(100%+38px)] z-[9999]" />
+            <PopupsProfile 
+                v-if="isShowModalProfile" 
+                @close="isShowModalProfile = false" 
+                class="absolute right-0 top-[calc(100%+38px)] z-[9999]" 
+                @logout="$emit('logout')" 
+            />
         </div>
     </div>
 </template>
