@@ -6,7 +6,7 @@ import pattern3 from "./assets/pattern3.svg";
 
 <template>
     <div
-        class="relative overflow-hidden rounded-[20px] border-[1px] border-[#191A1C]"
+        class="relative h-[150px] overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] md:h-[235px] lg:h-[164px] xl:h-[235px] 2xl:h-full"
         :style="{
             backgroundColor: `#101114`,
             backgroundImage: `url(${pattern3})`,

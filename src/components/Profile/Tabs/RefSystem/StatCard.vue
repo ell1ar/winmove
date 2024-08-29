@@ -7,7 +7,7 @@ const { icon, value, title } = defineProps(["icon", "value", "title"]);
 
 <template>
     <div
-        class="relative flex h-[134px] w-full flex-row items-center gap-[15px] overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] p-[15px] md:flex-col md:justify-center md:gap-0"
+        class="relative flex h-[75px] md:h-[134px] w-full flex-row items-center gap-[15px] overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] p-[15px] md:flex-col md:justify-center md:gap-0"
         :style="{
             backgroundImage: 'url(' + pattern1 + ')',
         }"

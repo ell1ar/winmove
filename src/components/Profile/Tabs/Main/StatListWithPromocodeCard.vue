@@ -1,7 +1,7 @@
 <script setup>
-import IconGamepad from "./icons/gamepad.vue";
-import IconWallet from "./icons/wallet.vue";
-import IconTop from "./icons/top.vue";
+import IconGamepad from "./icons/IconGamepad.vue";
+import IconWallet from "./icons/IconWallet.vue";
+import IconTop from "./icons/IconTop.vue";
 const list = [
     {
         icon: IconGamepad,

@@ -1,10 +1,10 @@
 <script setup>
-import IconBonus from "./icons/bonus.vue";
-import IconHistory from "./icons/history.vue";
-import IconProfile from "./icons/profile.vue";
-import IconRef from "./icons/ref.vue";
-import IconTransaction from "./icons/transaction.vue";
-import IconVerify from "./icons/verify.vue";
+import IconBonus from "./icons/IconBonus.vue";
+import IconHistory from "./icons/IconHistory.vue";
+import IconProfile from "./icons/IconProfile.vue";
+import IconRef from "./icons/IconRef.vue";
+import IconTransaction from "./icons/IconTransaction.vue";
+import IconVerify from "./icons/IconVerify.vue";
 
 const activeTabIndex = defineModel();
 const tabs = [
