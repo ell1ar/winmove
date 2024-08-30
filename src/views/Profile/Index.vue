@@ -4,7 +4,7 @@ const activeTabIndex = ref(0);
 </script>
 
 <template>
-    <div class="mt-[34px] px-[15px] md:mt-0 md:px-0">
+    <div class="mt-[25px] md:mt-0 md:px-0">
         <ProfileTabList class="mb-5" v-model="activeTabIndex" />
         <ProfileTabsMainIndex v-if="activeTabIndex === 0" />
         <ProfileTabsHistoryIndex v-if="activeTabIndex === 1" />

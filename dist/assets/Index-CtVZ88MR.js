@@ -1,1 +1,0 @@
-import{_ as r,o as a,c,e,f as o}from"./index-C9mM-L1B.js";const n={},i={class:"rounded-[15px] bg-[#101113] p-[25px]"};function _(l,f){const s=o("ProfileTabsHistoryTabList"),t=o("ProfileTabsHistoryTable");return a(),c("div",i,[e(s),e(t,{class:"mt-[25px]"})])}const b=r(n,[["render",_]]);export{b as default};

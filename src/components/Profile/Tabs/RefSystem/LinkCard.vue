@@ -6,14 +6,14 @@ import pattern4 from "./assets/pattern4.svg";
 
 <template>
     <div
-        class="relative h-[127px] w-full overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] px-[35px] py-[28px] md:h-[164px]"
+        class="relative flex h-[127px] w-full items-center overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] px-[15px] md:h-[164px] md:px-[35px] md:py-[28px]"
         :style="{
             background: `url(${pattern4}),linear-gradient(45deg, #020202 0%, #202127 100%)`,
         }"
     >
-        <div class="relative z-10">
+        <div class="relative z-10 w-full">
             <h2 class="text-[18px] font-medium text-[#E4E4E4]">Приглашайте пользователей</h2>
-            <div class="mt-[15px] flex h-[50px] items-center rounded-[8px] bg-white/[3%] px-[21px] md:h-[66px]">
+            <div class="mt-[15px] flex h-[50px] items-center rounded-[8px] bg-white/[3%] px-[15px] md:h-[66px] md:px-[21px]">
                 <span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -28,8 +28,8 @@ import pattern4 from "./assets/pattern4.svg";
                 </span>
 
                 <div class="ml-[21px] flex flex-col">
-                    <span class="text-[16px] text-[#D7D7D7]">https://winmove.com/bonuses</span>
-                    <span class="text-[14px] text-[#878787]">Реферальная ссылка</span>
+                    <span class="text-[14px] text-[#D7D7D7] md:text-[16px]">https://winmove.com/bonuses</span>
+                    <span class="text-[11px] text-[#878787] md:text-[14px]">Реферальная ссылка</span>
                 </div>
 
                 <button class="ml-auto">
@@ -50,6 +50,6 @@ import pattern4 from "./assets/pattern4.svg";
         </div>
 
         <img class="absolute bottom-0 left-0 z-10 h-full w-full" :src="ImageLinkCardLightLeft" alt="ImageLevelCardLightLeft" />
-        <img class="absolute right-0 top-0 z-10 h-full w-full" :src="ImageLinkCardLightRight" alt="ImageLevelCardLightRight" />
+        <img class="absolute right-0 top-0 z-10 h-full w-full max-md:hidden" :src="ImageLinkCardLightRight" alt="ImageLevelCardLightRight" />
     </div>
 </template>
