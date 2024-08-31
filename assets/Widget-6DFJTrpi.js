@@ -1,0 +1,1 @@
+import{_ as n,o as t,c,e,a as _,f as a}from"./index-DuC6AApZ.js";const r={},d={class:"gap-5 rounded-[20px] bg-[#101113] p-5 xl:flex-col"},i={class:"flex"};function l(m,p){const o=a("MainGameHead"),s=a("MainGameList");return t(),c("div",d,[e(o),_("div",i,[e(s)])])}const x=n(r,[["render",l]]);export{x as default};
