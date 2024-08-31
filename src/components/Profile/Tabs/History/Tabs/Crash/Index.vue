@@ -64,23 +64,25 @@ const rows = [
 </script>
 
 <template setup>
-    <table class="w-full shrink-0 text-start [border-collapse:separate] [border-spacing:0px_5px]">
-        <thead class="mb-1">
-            <tr class="h-[45px] whitespace-nowrap bg-[#161719] text-left text-[#4C4D4F] [&>th]:px-[15px]">
-                <th class="rounded-l-[10px] 2xl:!pl-[90px]">Время</th>
-                <th>Сумма ставки</th>
-                <th>Коэффициент</th>
-                <th class="rounded-r-[10px]">Результат</th>
-            </tr>
-        </thead>
+    <div class="overflow-x-auto">
+        <table class="w-full shrink-0 text-start [border-collapse:separate] [border-spacing:0px_5px]">
+            <thead class="mb-1">
+                <tr class="h-[45px] whitespace-nowrap bg-[#161719] text-left text-[#4C4D4F] [&>th]:px-[15px]">
+                    <th class="rounded-l-[10px] 2xl:!pl-[90px]">Время</th>
+                    <th>Сумма ставки</th>
+                    <th>Коэффициент</th>
+                    <th class="rounded-r-[10px]">Результат</th>
+                </tr>
+            </thead>
 
-        <tbody class="text-[#BCBCBC]">
-            <tr class="mb-1 h-[56px] whitespace-nowrap bg-[#161719] last-of-type:rounded-r-[10px] [&>td]:px-[15px]" v-for="(row, i) in rows" :key="i">
-                <td class="rounded-l-[10px] 2xl:!pl-[90px]" v-html="row.time"></td>
-                <td v-html="row.bet"></td>
-                <td v-html="row.coef"></td>
-                <td class="rounded-r-[10px]" v-html="row.result"></td>
-            </tr>
-        </tbody>
-    </table>
+            <tbody class="text-[#BCBCBC]">
+                <tr class="mb-1 h-[56px] whitespace-nowrap bg-[#161719] last-of-type:rounded-r-[10px] [&>td]:px-[15px]" v-for="(row, i) in rows" :key="i">
+                    <td class="rounded-l-[10px] 2xl:!pl-[90px]" v-html="row.time"></td>
+                    <td v-html="row.bet"></td>
+                    <td v-html="row.coef"></td>
+                    <td class="rounded-r-[10px]" v-html="row.result"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>

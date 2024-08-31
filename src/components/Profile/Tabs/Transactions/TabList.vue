@@ -15,7 +15,7 @@ const tabs = [
 </script>
 
 <template>
-    <div class="flex h-[40px] rounded-[10px]">
+    <div class="flex h-[40px] overflow-x-auto rounded-[10px]">
         <button
             @click="activeTabIndex = index"
             v-for="(tab, index) in tabs"
@@ -27,7 +27,7 @@ const tabs = [
             }"
         >
             <component :is="tab.icon" />
-            <span v-html="tab.title"></span>
+            <span class="whitespace-nowrap" v-html="tab.title"></span>
         </button>
     </div>
 </template>

@@ -25,7 +25,7 @@ const tabs = [
 </script>
 
 <template>
-    <div class="flex h-[60px] w-full gap-[15px] overflow-x-auto">
+    <div class="flex w-full gap-[15px] overflow-x-auto pb-3">
         <button v-for="(tab, index) in tabs" :key="index" @click="activeTabIndex = index">
             <component :is="tab.component" v-bind="tab.props"></component>
         </button>
