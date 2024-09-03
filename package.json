@@ -19,7 +19,8 @@
         "vue-click-outside": "^1.1.0",
         "vue-final-modal": "^4.5.4",
         "vue-router": "^4.4.3",
-        "vue3-carousel": "^0.3.3"
+        "vue3-carousel": "^0.3.3",
+        "vue3-perfect-scrollbar": "^2.0.0"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.1.2",
