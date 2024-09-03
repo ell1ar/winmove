@@ -1,0 +1,1 @@
+import{o as s,c as a,a as o,t as r,j as n}from"./index-BjhNw672.js";const p={class:"flex h-[55px] items-center justify-between rounded-[10px] bg-[#141517] pl-[25px] pr-[8px]"},c={class:"text-[18px] text-[#BCBCBC]"},x={__name:"Category",props:["title"],setup(e){return(t,l)=>(s(),a("div",p,[o("span",c,r(e.title),1),n(t.$slots,"right")]))}};export{x as default};
