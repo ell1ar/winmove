@@ -4,9 +4,9 @@ const { imgSrc, desc } = defineProps(["imgSrc", "desc"]);
 </script>
 
 <template>
-    <div class="relative flex h-[207px] w-[318px] sm:w-[344px] shrink-0 overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] bg-[#121315] p-[15px] sm:p-6">
-        <div class="flex w-full flex-col">
-            <div class="sm:-mt-[9px] flex items-center gap-[13px]">
+    <div class="relative flex h-[207px] w-[318px] md:w-[344px] shrink-0 overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] bg-[#121315] p-[15px] md:p-6">
+        <div class="flex w-full flex-col relative z-10">
+            <div class="md:-mt-[9px] flex items-center gap-[13px]">
                 <img class="h-[55px]" :src="imgSrc" alt="" />
 
                 <div class="-mt-1 flex flex-col">

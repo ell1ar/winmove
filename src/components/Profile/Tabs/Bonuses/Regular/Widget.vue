@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col rounded-[20px] bg-[#101113] p-[15px] sm:p-[25px]">
+    <div class="flex flex-col rounded-[20px] bg-[#101113] p-[15px] md:p-[25px]">
         <h2 class="mb-[35px] flex items-center gap-[13px] text-[20px] font-medium text-[#E4E4E4]">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
                 <path
@@ -21,40 +21,76 @@
             </svg>
         </h2>
 
-        <div class="flex w-full flex-col gap-2.5 sm:gap-5">
-            <ProfileTabsBonusesRegularCategory title="Каждый час">
+        <div class="flex w-full flex-col">
+            <ProfileTabsBonusesRegularCategory class="mb-2.5 md:mb-5" title="Каждый час">
+                <template #right>
+                    <div
+                        class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#191A1C] px-4 text-[12px] text-[#8E8F91] md:h-[40px] md:text-[15px]"
+                    >
+                        55 : 27
+                    </div>
+                </template>
+            </ProfileTabsBonusesRegularCategory>
+            <div class="mb-[5px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:mb-2.5 md:gap-5 md:pb-2.5">
+                <ProfileTabsBonusesRegularCard color="yellow" />
+                <ProfileTabsBonusesRegularCard color="purple" />
+                <ProfileTabsBonusesRegularCard color="blue" />
+            </div>
+
+            <ProfileTabsBonusesRegularCategory class="mb-2.5 md:mb-5" title="Каждый день">
+                <template #right>
+                    <div
+                        class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#191A1C] px-4 text-[12px] text-[#8E8F91] md:h-[40px] md:text-[15px]"
+                    >
+                        02 : 55 : 27
+                    </div>
+                </template>
+            </ProfileTabsBonusesRegularCategory>
+            <div class="mb-[5px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:mb-2.5 md:gap-5 md:pb-2.5">
+                <ProfileTabsBonusesRegularCard color="yellow" />
+                <ProfileTabsBonusesRegularCard color="purple" />
+                <ProfileTabsBonusesRegularCard color="blue" />
+            </div>
+
+            <ProfileTabsBonusesRegularCategory class="mb-2.5 md:mb-5" title="Каждая неделя">
                 <template #right>
                     <div class="flex items-center gap-[5px]">
                         <div
-                            class="flex h-[40px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#1D1E20] px-[17px] text-[15px] font-bold text-[#999A9C]"
+                            class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#1D1E20] px-[17px] text-[12px] font-bold text-[#999A9C] md:h-[40px] md:text-[15px]"
                         >
-                            17 дней
+                            2 дня
                         </div>
-                        <div class="flex h-[40px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#191A1C] px-4 text-[15px] text-[#8E8F91]">
+                        <div
+                            class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#191A1C] px-4 text-[12px] text-[#8E8F91] md:h-[40px] md:text-[15px]"
+                        >
                             02 : 55 : 27
                         </div>
                     </div>
                 </template>
             </ProfileTabsBonusesRegularCategory>
-            <div class="flex items-center gap-2.5 overflow-x-auto sm:gap-5">
+            <div class="mb-[5px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:mb-2.5 md:gap-5 md:pb-2.5">
                 <ProfileTabsBonusesRegularCard color="yellow" />
                 <ProfileTabsBonusesRegularCard color="purple" />
                 <ProfileTabsBonusesRegularCard color="blue" />
             </div>
-            <ProfileTabsBonusesRegularCategory title="Каждый день" />
-            <div class="flex items-center gap-2.5 overflow-x-auto sm:gap-5">
-                <ProfileTabsBonusesRegularCard color="yellow" />
-                <ProfileTabsBonusesRegularCard color="purple" />
-                <ProfileTabsBonusesRegularCard color="blue" />
-            </div>
-            <ProfileTabsBonusesRegularCategory title="Каждая неделя" />
-            <div class="flex items-center gap-2.5 overflow-x-auto sm:gap-5">
-                <ProfileTabsBonusesRegularCard color="yellow" />
-                <ProfileTabsBonusesRegularCard color="purple" />
-                <ProfileTabsBonusesRegularCard color="blue" />
-            </div>
-            <ProfileTabsBonusesRegularCategory title="Каждый месяц" />
-            <div class="flex items-center gap-2.5 overflow-x-auto sm:gap-5">
+
+            <ProfileTabsBonusesRegularCategory class="mb-2.5 md:mb-5" title="Каждый месяц">
+                <template #right>
+                    <div class="flex items-center gap-[5px]">
+                        <div
+                            class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#1D1E20] px-[11px] text-[12px] font-bold text-[#999A9C] md:h-[40px] md:px-[17px] md:text-[15px]"
+                        >
+                            17 дней
+                        </div>
+                        <div
+                            class="flex h-[31px] items-center justify-center rounded-[10px] border-[1px] border-[#1E1F21] bg-[#191A1C] px-4 text-[12px] text-[#8E8F91] md:h-[40px] md:text-[15px]"
+                        >
+                            02 : 55 : 27
+                        </div>
+                    </div>
+                </template>
+            </ProfileTabsBonusesRegularCategory>
+            <div class="mb-[5px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:mb-2.5 md:gap-5 md:pb-2.5">
                 <ProfileTabsBonusesRegularCard color="yellow" />
                 <ProfileTabsBonusesRegularCard color="purple" />
                 <ProfileTabsBonusesRegularCard color="blue" />

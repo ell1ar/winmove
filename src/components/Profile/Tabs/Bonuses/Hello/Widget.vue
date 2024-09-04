@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col rounded-[20px] bg-[#101113] p-[25px]">
+    <div class="flex flex-col rounded-[20px] bg-[#101113] px-[15px] pb-[10px] pt-[15px] md:px-[25px] md:pb-[15px] md:pt-[25px]">
         <h2 class="fonr-medium flex items-center gap-[13px] text-[20px] text-[#E4E4E4]">
             <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -10,7 +10,7 @@
             Приветственный бонус
         </h2>
 
-        <div class="mt-[35px] flex items-center gap-5 overflow-x-auto">
+        <div class="mt-[35px] flex items-center gap-5 overflow-x-auto pb-[5px] md:pb-[10px]">
             <ProfileTabsBonusesHelloCard />
             <ProfileTabsBonusesHelloCard :isDisabled="true" />
             <ProfileTabsBonusesHelloCard :isDisabled="true" />

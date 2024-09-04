@@ -21,18 +21,34 @@ body {
     background-color: rgb(46, 46, 46);
 }
 
+.profile-tabs-bonuses-day-list {
+    &::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #7f8082;
+        border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #ffffff11;
+        border-radius: 2px;
+    }
+}
+
 .profile-settings-table {
     &::-webkit-scrollbar {
         height: 3px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #7F8082;
+        background-color: #7f8082;
         border-radius: 10px;
     }
 
     &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px #E5E5E511;
+        box-shadow: inset 0 0 6px #e5e5e511;
         border-radius: 10px;
     }
 }

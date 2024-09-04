@@ -1,5 +1,5 @@
 <template>
-    <div class="scrollbar-container h-2 w-full cursor-pointer rounded-[2px] bg-white/[11%]" ref="scrollbarContainer" @mousedown="startDrag">
+    <div class="scrollbar-container h-[5px] w-full cursor-pointer rounded-[2px] bg-white/[11%] sm:h-2" ref="scrollbarContainer" @mousedown="startDrag">
         <div class="scrollbar-thumb h-full rounded-[2px] bg-[#7F8082]" :style="thumbStyle"></div>
     </div>
 </template>

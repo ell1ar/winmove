@@ -46,7 +46,7 @@ const classes = {
 
 <template>
     <div
-        class="relative flex h-[244px] w-[318px] shrink-0 grow flex-col overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] bg-[#101114] px-[15px] pb-5 pt-5 sm:w-[344px] sm:px-6 sm:pt-6 2xl:w-fit"
+        class="relative flex h-[244px] w-[318px] shrink-0 grow flex-col overflow-hidden rounded-[20px] border-[1px] border-[#191A1C] bg-[#101114] px-[15px] pb-5 pt-5 md:w-[344px] md:px-6 md:pt-6 2xl:w-fit"
     >
         <div class="relative z-10 grid grid-cols-2">
             <div class="flex flex-col">
@@ -73,7 +73,7 @@ const classes = {
 
             <div class="relative flex items-center justify-center">
                 <img :src="classes.ticket" class="absolute z-10" alt="ticket" />
-                <img class="motion-safe:animate-spin-reverse-slow" :src="classes.circle" alt="circle" />
+                <img class="relative z-0 animate-spin-reverse-slow" :src="classes.circle" alt="circle" />
             </div>
         </div>
 
