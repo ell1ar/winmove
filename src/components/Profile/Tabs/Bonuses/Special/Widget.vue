@@ -17,11 +17,13 @@ const isShowNoBanner = ref(false);
             Специальные бонусы
         </h2>
 
-        <div v-if="!isShowNoBanner" class="mt-[30px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:gap-5 md:pb-[10px]">
+        <div v-if="!isShowNoBanner" class="profile-tabs-bonuses-day-list mt-[30px] flex items-center gap-2.5 overflow-x-auto pb-[5px] md:gap-5 md:pb-[10px]">
             <ProfileTabsBonusesSpecialCard :imgSrc="ImageFB" desc="100 фрибетов" />
+            <ProfileTabsBonusesSpecialCard :imgSrc="ImageFG" desc="100 фригеймс" />
+            <ProfileTabsBonusesSpecialCard :imgSrc="ImageFG" desc="100 фригеймс" />
             <ProfileTabsBonusesSpecialCard :imgSrc="ImageFG" desc="100 фригеймс" />
         </div>
 
-        <ProfileTabsBonusesSpecialNoBanner class="mt-[30px] mb-[5px] md:mb-[10px]" v-if="isShowNoBanner" />
+        <ProfileTabsBonusesSpecialNoBanner class="mb-[5px] mt-[30px] md:mb-[10px]" v-if="isShowNoBanner" />
     </div>
 </template>
