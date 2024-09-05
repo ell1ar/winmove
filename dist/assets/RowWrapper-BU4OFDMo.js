@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as s,j as o}from"./index-MoiZYnTI.js";const c={},n={class:"flex w-full shrink-0 items-center rounded-[10px] bg-[#161719] text-[#4C4D4F]"};function a(e,l){return r(),s("div",n,[o(e.$slots,"default")])}const d=t(c,[["render",a]]);export{d as default};

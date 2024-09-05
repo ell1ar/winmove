@@ -56,7 +56,7 @@ const rows = [
         <table class="w-full shrink-0 text-start [border-collapse:separate] [border-spacing:0px_5px]">
             <thead class="mb-1">
                 <tr class="h-[45px] whitespace-nowrap bg-[#161719] text-left text-[#4C4D4F] [&>th]:px-[15px]">
-                    <th class="rounded-l-[10px] 2xl:!pl-[90px]">ID</th>
+                    <th class="rounded-l-[10px] 2xl:!pl-[74px]">ID</th>
                     <th>Метод</th>
                     <th>Сумма</th>
                     <th>Бонус</th>
@@ -67,11 +67,13 @@ const rows = [
 
             <tbody class="text-[#BCBCBC]">
                 <tr class="h-[56px] whitespace-nowrap bg-[#161719] last-of-type:rounded-r-[10px] [&>td]:px-[15px]" v-for="(row, i) in rows" :key="i">
-                    <td class="$1l:!pl-[74px] rounded-l-[10px]" v-html="row.id"></td>
-                    <td><img :src="row.method" alt="" /></td>
+                    <td class="rounded-l-[10px] 2xl:!pl-[74px]" v-html="row.id"></td>
+                    <td><img :src="row.method" alt="method" /></td>
                     <td v-html="row.sum"></td>
                     <td v-html="row.bonus"></td>
-                    <td><span class="flex flex-col items-start"><span>20:27</span><strong class="text-[#5E5E5E] text-[13px]">27.06.2024</strong></span></td>
+                    <td>
+                        <span class="flex flex-col items-start"><span>20:27</span><strong class="text-[13px] text-[#5E5E5E]">27.06.2024</strong></span>
+                    </td>
                     <td class="rounded-r-[10px]">
                         <component :is="row.statusIcon" />
                     </td>
