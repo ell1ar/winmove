@@ -11,5 +11,6 @@ const activeTabIndex = ref(0);
         <ProfileTabsTransactionsIndex v-if="activeTabIndex === 2" />
         <ProfileTabsBonusesIndex v-if="activeTabIndex === 3" />
         <ProfileTabsRefSystemIndex v-if="activeTabIndex === 4" />
+        <ProfileTabsVerificationIndex v-if="activeTabIndex === 5" />
     </div>
 </template>
