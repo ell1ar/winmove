@@ -32,7 +32,9 @@ const isNeedSave = computed(() => {
     return settingsPrivacy.first || settingsPrivacy.second;
 });
 
-const isShowEmailModal = ref(false);
+const isShowModalEmail = ref(false);
+const isShowModal2FA = ref(false);
+const isShowModalPassword = ref(false);
 </script>
 
 <template>
@@ -81,16 +83,16 @@ const isShowEmailModal = ref(false);
             <div class="mt-auto flex h-[45px] items-center justify-between rounded-[10px] border-[1px] border-[#191A1D] bg-[#08090C] py-2 pl-5 pr-2">
                 <input type="text" class="h-full w-full bg-transparent text-[14px] text-[#D7D7D7] placeholder:text-[#595959] focus:outline-none" placeholder="Email" />
                 <button
-                    @click="isShowEmailModal = !isShowEmailModal"
+                    @click="isShowModalEmail = !isShowModalEmail"
                     class="ml-2 flex h-full items-center justify-center rounded-[7px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]"
                 >
                     Edit
                 </button>
                 <ProfileTabsMainModalsEmailIndex
-                    v-model="isShowEmailModal"
+                    v-model="isShowModalEmail"
                     class="flex items-end justify-center xl:items-center"
                     content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
-                    @close="isShowEmailModal = false"
+                    @close="isShowModalEmail = false"
                 />
             </div>
         </div>
@@ -123,7 +125,19 @@ const isShowEmailModal = ref(false);
             <!-- Content -->
             <p class="mb-[20px] mt-[51px] text-[14px] font-medium leading-5 text-[#595959]">Должно содержать не менее 8 символов: сочетание букв и символов.</p>
 
-            <button class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#91E2FD] px-3 font-bold uppercase text-[#101010]">Добавить</button>
+            <button
+                @click="isShowModalPassword = true"
+                class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#91E2FD] px-3 font-bold uppercase text-[#101010]"
+            >
+                Добавить
+            </button>
+
+            <ProfileTabsMainModalsPasswordIndex
+                v-model="isShowModalPassword"
+                class="flex items-end justify-center xl:items-center"
+                content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                @close="isShowModalPassword = false"
+            />
         </div>
 
         <div class="col-span-1 flex flex-col rounded-[20px] bg-[#101113] p-[25px] lg:col-span-4 xl:col-span-1 2xl:col-span-4">
@@ -159,7 +173,6 @@ const isShowEmailModal = ref(false);
                             fill="#F33D48"
                         />
                     </svg>
-
                     <span>2FA не активирован</span>
                 </p>
             </div>
@@ -169,7 +182,15 @@ const isShowEmailModal = ref(false);
                 установлены адрес электронной почты и пароль)..
             </p>
 
-            <button class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">Активировать</button>
+            <button @click="isShowModal2FA = true" class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">
+                Активировать
+            </button>
+            <ProfileTabsMainModals2FAIndex
+                v-model="isShowModal2FA"
+                class="flex items-end justify-center xl:items-center"
+                content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                @close="isShowModal2FA = false"
+            />
         </div>
 
         <div class="col-span-1 flex flex-col rounded-[20px] bg-[#101113] p-[25px] lg:col-span-6 xl:col-span-1 2xl:col-span-6">
