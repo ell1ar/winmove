@@ -31,6 +31,8 @@ const sessions = ref([
 const isNeedSave = computed(() => {
     return settingsPrivacy.first || settingsPrivacy.second;
 });
+
+const isShowEmailModal = ref(false);
 </script>
 
 <template>
@@ -78,7 +80,18 @@ const isNeedSave = computed(() => {
 
             <div class="mt-auto flex h-[45px] items-center justify-between rounded-[10px] border-[1px] border-[#191A1D] bg-[#08090C] py-2 pl-5 pr-2">
                 <input type="text" class="h-full w-full bg-transparent text-[14px] text-[#D7D7D7] placeholder:text-[#595959] focus:outline-none" placeholder="Email" />
-                <button class="flex h-full ml-2 items-center justify-center rounded-[7px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">Edit</button>
+                <button
+                    @click="isShowEmailModal = !isShowEmailModal"
+                    class="ml-2 flex h-full items-center justify-center rounded-[7px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]"
+                >
+                    Edit
+                </button>
+                <ProfileTabsMainModalsEmailIndex
+                    v-model="isShowEmailModal"
+                    class="flex items-end justify-center xl:items-center"
+                    content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                    @close="isShowEmailModal = false"
+                />
             </div>
         </div>
 

@@ -45,7 +45,7 @@ const isShowModalBalance = ref(false);
                 </div>
             </button>
 
-            <PopupsBalance @close="isShowModalBalance = false" v-if="isShowModalBalance" class="absolute right-0 top-[calc(100%+38px)] z-[9999] lg:right-[auto]" />
+            <PopupsBalance @close="isShowModalBalance = false" v-if="isShowModalBalance" class="absolute right-0 top-[calc(100%+38px)] z-[999] lg:right-[auto]" />
         </div>
 
         <div v-click-outside="() => (isShowModalProfile = false)" class="relative flex items-center justify-center">
@@ -65,7 +65,7 @@ const isShowModalBalance = ref(false);
             <PopupsProfile 
                 v-if="isShowModalProfile" 
                 @close="isShowModalProfile = false" 
-                class="absolute right-0 top-[calc(100%+38px)] z-[9999]" 
+                class="absolute right-0 top-[calc(100%+38px)] z-[999]" 
                 @logout="$emit('logout')" 
             />
         </div>

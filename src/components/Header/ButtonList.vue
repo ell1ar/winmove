@@ -12,7 +12,7 @@ const isShowModalSettings = ref(false);
                 <img class="flex h-[23px] w-[23px] rounded-full object-cover" :src="ruflag" alt="flag" />
             </button>
 
-            <PopupsLang @close="isShowModalLang = false" v-if="isShowModalLang" class="animate__fadeIn absolute top-[calc(100%+38px)] z-[9999]" />
+            <PopupsLang @close="isShowModalLang = false" v-if="isShowModalLang" class="animate__fadeIn absolute top-[calc(100%+38px)] z-[999]" />
         </div>
 
         <div v-click-outside="() => (isShowModalSettings = false)" class="relative flex items-center justify-center">
@@ -34,7 +34,7 @@ const isShowModalSettings = ref(false);
                 </svg>
             </button>
 
-            <PopupsSettings @close="isShowModalSettings = false" v-if="isShowModalSettings" class="animate__fadeIn absolute right-0 top-[calc(100%+38px)] z-[9999]" />
+            <PopupsSettings @close="isShowModalSettings = false" v-if="isShowModalSettings" class="animate__fadeIn absolute right-0 top-[calc(100%+38px)] z-[999]" />
         </div>
 
         <button class="hidden h-[53px] w-[53px] items-center justify-center rounded-[10px] bg-[#1B1C1E] xl:flex">

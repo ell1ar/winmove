@@ -1,36 +1,9 @@
 <script setup>
-import { nextTick, ref } from "vue";
-const digits = ref(Array(6).fill(""));
-const digitRefs = ref([]);
+import { ref } from "vue";
+import { useDigitInput } from "@/composables/useDigitInput";
 const emit = defineEmits(["login"]);
 const checked = ref(false);
-
-const onInput = (index) => {
-    if (digits.value[index].length === 1 && index < digits.value.length - 1) {
-        nextTick(() => {
-            digitRefs.value[index + 1].focus();
-        });
-    }
-};
-
-const onBackspace = (index) => {
-    if (digits.value[index] === "" && index > 0) {
-        nextTick(() => {
-            digitRefs.value[index - 1].focus();
-        });
-    }
-};
-
-const onPaste = (event) => {
-    const pastedData = event.clipboardData.getData("text");
-    if (/^\d{6}$/.test(pastedData)) {
-        digits.value = pastedData.split("");
-        nextTick(() => {
-            digitRefs.value[5].focus(); // Фокусируемся на последнем input
-        });
-    }
-    event.preventDefault(); // Предотвращаем вставку, чтобы не дублировать данные
-};
+const { digits, digitRefs, onInput, onBackspace, onPaste } = useDigitInput();
 </script>
 
 <template>
