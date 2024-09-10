@@ -40,7 +40,13 @@ const slectedTab = ref(0);
 </script>
 
 <template>
-    <VueFinalModal v-model="isOpen" swipe-to-close="down" :overlay-transition="options.overlayTransition" :content-transition="options.contentTransition">
+    <VueFinalModal
+        v-model="isOpen"
+        overlay-class="bg-[#08090C]/[75%]"
+        swipe-to-close="down"
+        :overlay-transition="options.overlayTransition"
+        :content-transition="options.contentTransition"
+    >
         <div
             class="relative flex w-full items-center overflow-hidden rounded-t-[25px] bg-[#1B1C1E] px-[20px] pb-[20px] pt-[20px] xl:w-[770px] xl:rounded-b-[25px] xl:px-[50px] xl:pb-[50px] xl:pt-[58px]"
         >

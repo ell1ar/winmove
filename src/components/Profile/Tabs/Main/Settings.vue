@@ -90,8 +90,8 @@ const isShowModalPassword = ref(false);
                 </button>
                 <ProfileTabsMainModalsEmailIndex
                     v-model="isShowModalEmail"
-                    class="flex items-end justify-center xl:items-center"
-                    content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                    class="flex justify-center items-center"
+                    content-class="sm:mx-auto sm:w-2/3 left-[15px] fixed sm:relative right-[15px] sm:w-[380px] sm:left-none sm:right-none"
                     @close="isShowModalEmail = false"
                 />
             </div>
@@ -134,8 +134,8 @@ const isShowModalPassword = ref(false);
 
             <ProfileTabsMainModalsPasswordIndex
                 v-model="isShowModalPassword"
-                class="flex items-end justify-center xl:items-center"
-                content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                class="flex items-center justify-center"
+                content-class="sm:mx-auto sm:w-2/3 left-[15px] fixed sm:relative right-[15px] sm:w-[380px] sm:left-none sm:right-none"
                 @close="isShowModalPassword = false"
             />
         </div>
@@ -187,8 +187,8 @@ const isShowModalPassword = ref(false);
             </button>
             <ProfileTabsMainModals2FAIndex
                 v-model="isShowModal2FA"
-                class="flex items-end justify-center xl:items-center"
-                content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                class="flex items-end justify-center lg:items-center"
+                content-class="lg:mx-auto w-full lg:w-[538px] left-[15px] fixed lg:relative right-[15px] lg:left-none lg:right-none"
                 @close="isShowModal2FA = false"
             />
         </div>

@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from "vue";
 import InfoPattern from "./assets/infoPattern.svg";
+const isShowModalPhoto = ref(false);
 </script>
 
 <template>
@@ -20,7 +22,11 @@ import InfoPattern from "./assets/infoPattern.svg";
                             class="w-[94px] rounded-[6px] border-[1px] border-white/[6%] bg-white/[5%] px-3 text-[13px] text-[#B9BABC] focus:outline-none"
                             value="462...wAM"
                         />
-                        <button class="flex h-[32px] w-[32px] items-center justify-center rounded-[6px] border-[1px] border-white/[6%] bg-white/[5%]">
+
+                        <button
+                            @click="isShowModalPhoto = true"
+                            class="flex h-[32px] w-[32px] items-center justify-center rounded-[6px] border-[1px] border-white/[6%] bg-white/[5%]"
+                        >
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M7.09156 0.366581L6.14522 1.31285L8.68705 3.85448L9.63339 2.90821C10.1222 2.41944 10.1222 1.62762 9.63339 1.13885L8.86302 0.366581C8.37421 -0.122194 7.58233 -0.122194 7.09352 0.366581H7.09156ZM5.70333 1.7547L1.14564 6.31399C0.942296 6.51732 0.793697 6.76953 0.711576 7.0452L0.019417 9.39719C-0.0294643 9.56337 0.0155065 9.74128 0.136732 9.8625C0.257958 9.98372 0.435886 10.0287 0.600127 9.98176L2.95229 9.28965C3.22799 9.20754 3.48021 9.05895 3.68356 8.85562L8.24516 4.29633L5.70333 1.7547Z"
@@ -28,6 +34,13 @@ import InfoPattern from "./assets/infoPattern.svg";
                                 />
                             </svg>
                         </button>
+
+                        <ProfileTabsMainModalsPhotoIndex
+                            v-model="isShowModalPhoto"
+                            class="flex items-center justify-center"
+                            content-class="md:mx-auto md:w-2/3 left-[15px] fixed xl:relative right-[15px] xl:w-fit xl:left-none xl:right-none"
+                            @close="isShowModalPhoto = false"
+                        />
                     </div>
 
                     <p class="mt-[12px] flex items-center gap-[5px] text-[11px]">

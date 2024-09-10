@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as s,a as o}from"./index-BdCfnIti.js";const c={},r={class:"flex h-[207px] items-center rounded-[20px] justify-center border-[1px] border-[#191A1C] bg-[#121315]"},n=o("span",{class:"text-[18px] text-[#696A6C]"},"Нет активных предложений",-1),a=[n];function _(d,x){return t(),s("div",r,a)}const p=e(c,[["render",_]]);export{p as default};

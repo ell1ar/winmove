@@ -14,10 +14,10 @@ const selectClass = "h-[55px] border-[1px] border-[#1C1D1F] bg-[#161719] font-me
         <div class="mb-[15px] mt-[30px] grid w-full grid-cols-6 gap-[15px]">
             <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Имя" type="text" />
             <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Фамилия" type="text" />
-            <Select :class="selectClass" class="col-span-6 sm:col-span-2" text="День рождения" />
-            <Select :class="selectClass" class="col-span-6 sm:col-span-2" text="Месяц рождения" />
-            <Select :class="selectClass" class="col-span-6 sm:col-span-2" text="Год рождения" />
-            <Select :class="selectClass" class="col-span-6 sm:col-span-2 !bg-[#131416] text-[#424345] border-[#191A1C]" text="Ваша страна" />
+            <Select :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="День рождения" />
+            <Select :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="Месяц рождения" />
+            <Select :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="Год рождения" />
+            <Select :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2 !bg-[#131416] text-[#424345] border-[#191A1C]" text="Ваша страна" />
             <Input :class="inputClass" class="col-span-6 sm:col-span-2" placeholder="Ваш город" type="text" />
             <Input :class="inputClass" class="col-span-6 sm:col-span-2" placeholder="Почтовый индекс" type="text" />
             <Input :class="inputClass" class="col-span-6" placeholder="Жилой адрес" type="text" />

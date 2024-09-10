@@ -5,14 +5,14 @@ const {steps} = defineProps(['steps'])
 
 
 <template>
-    <div class="flex justify-between gap-[15px] items-center flex-col lg:flex-row">
-        <div class="flex gap-2.5 w-full">
+    <div class="flex justify-between gap-[15px] items-center flex-col lg:flex-row flex-wrap-reverse">
+        <div class="flex gap-2.5 w-full lg:w-fit">
             <button
                 @click="activeStep = step"
                 v-for="step in steps"
                 :key="step.value"
                 :class="activeStep === step ? (activeStep.value === 1 ? 'bg-[#FDF74B] text-[#101010] !font-bold' : 'bg-[#202123] text-[#A8A9AB]') : 'bg-[#161719] text-[#3F4042]', step.value < activeStep.value  || step.isCompleted ? '!bg-[#84FD4B] !font-bold' : ''"
-                class="h-[40px] rounded-[10px] w-full lg:w-fit lg:px-[28px] font-medium"
+                class="h-[40px] rounded-[10px] w-full lg:w-fit lg:px-[28px] font-medium whitespace-nowrap"
             >
                 Шаг {{ step.value }}
             </button>

@@ -15,14 +15,13 @@ const back = () => {
 
 <template>
     <VueFinalModal
-        overlay-class="bg-[#08090C]/[75%]"
         v-model="isOpen"
+        overlay-class="bg-[#08090C]/[75%]"
         swipe-to-close="down"
         :overlay-transition="options.overlayTransition"
         :content-transition="options.contentTransition"
-        teleport-to="body"
     >
-        <div class="flex w-[380px] flex-col items-center rounded-[20px] bg-[#1B1C1E] px-[25px] pb-[30px] pt-[23px]">
+        <div class="flex w-full flex-col items-center rounded-[20px] bg-[#1B1C1E] px-[25px] pb-[30px] pt-[23px]">
             <div class="flex w-full justify-between text-[13px] font-medium text-[#393A3C]">
                 <button @click="back" class="flex items-center gap-[5px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">

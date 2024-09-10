@@ -13,13 +13,13 @@ const isShowPassword2 = ref(false);
 
 <template>
     <VueFinalModal
-        overlay-class="bg-[#08090C]/[75%]"
         v-model="isOpen"
+        overlay-class="bg-[#08090C]/[75%]"
         swipe-to-close="down"
         :overlay-transition="options.overlayTransition"
         :content-transition="options.contentTransition"
     >
-        <div class="flex w-[380px] flex-col items-center rounded-[25px] bg-[#1B1C1E] p-[25px]">
+        <div class="flex w-full flex-col items-center rounded-[25px] bg-[#1B1C1E] p-[25px]">
             <div class="flex w-full justify-end">
                 <button @click="$emit('close')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -78,7 +78,7 @@ const isShowPassword2 = ref(false);
                 </button>
             </div>
 
-            <button class="mb-[20px] mt-[15px] flex items-center justify-center rounded-[8px] uppercase text-[#101010] bg-[#84FD4B] h-[35px] w-full">Сохранить</button>
+            <button class="mb-[20px] mt-[15px] flex h-[35px] w-full items-center justify-center rounded-[8px] bg-[#84FD4B] uppercase text-[#101010]">Сохранить</button>
         </div>
     </VueFinalModal>
 </template>
