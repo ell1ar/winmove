@@ -1,0 +1,1 @@
+import{l as n,o as s,c,e,f as o}from"./index-DO85-jd5.js";const i={class:"flex gap-2.5 flex-col lg:flex-row px-[15px] md:px-0"},_={__name:"Index",setup(t){return n(0),(l,f)=>{const a=o("ProfileTabsVerificationSidebar"),r=o("ProfileTabsVerificationFormIndex");return s(),c("div",i,[e(a,{class:"w-full lg:w-[338px]"}),e(r)])}}};export{_ as default};
