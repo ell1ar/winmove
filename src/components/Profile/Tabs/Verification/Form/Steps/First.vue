@@ -19,22 +19,25 @@ const selectCountry = ref();
         <div class="mb-[30px] mt-[30px] grid w-full grid-cols-6 gap-[15px]">
             <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Имя" type="text" />
             <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Фамилия" type="text" />
-            <Select v-model="selectBirthDay" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="День рождения">
+            <Select v-model="selectBirthDay" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+                <template #titleContent>День рождения</template>
+                <template #selectedContent>{{ selectBirthDay }}</template>
                 <SelectOption v-for="i in 31" :value="i">{{ i }}</SelectOption>
             </Select>
-            <Select v-model="selectBirthMonth" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="Месяц рождения">
+            <Select v-model="selectBirthMonth" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+                <template #titleContent>Месяц рождения</template>
+                <template #selectedContent>{{ selectBirthMonth }}</template>
                 <SelectOption v-for="i in 12" :value="i">{{ i }}</SelectOption>
             </Select>
-            <Select v-model="selectBirthYear" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" text="Год рождения">
+            <Select v-model="selectBirthYear" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+                <template #titleContent>Год рождения</template>
+                <template #selectedContent>{{ selectBirthYear }}</template>
                 <SelectOption v-for="i in 100" :value="2024 - i">{{ 2024 - i }}</SelectOption>
             </Select>
-            <Select
-                v-model="selectCountry"
-                :class="selectClass"
-                class="col-span-6 border-[#191A1C] !bg-[#131416] text-[#424345] sm:col-span-2 xl:col-span-3 2xl:col-span-2"
-                text="Ваша страна"
-            >
-                <SelectOption v-for="i in 10" :value="i">Finland</SelectOption>
+            <Select v-model="selectCountry" :class="selectClass" class="col-span-6 border-[#191A1C] !bg-[#131416] text-[#424345] sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+                <template #titleContent>Ваша стран</template>
+                <template #selectedContent>{{ selectCountry }}</template>
+                <SelectOption v-for="country in ['Finland', 'Russia']" :value="country">{{ country }}</SelectOption>
             </Select>
             <Input :class="inputClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" placeholder="Ваш город" type="text" />
             <Input :class="inputClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" placeholder="Почтовый индекс" type="text" />

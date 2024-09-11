@@ -233,7 +233,9 @@ const isShowModalPassword = ref(false);
             <div class="flex w-full justify-between">
                 <h2 class="text-[17px] font-bold text-[#D7D7D7]">Мои сессии</h2>
 
-                <Select class="h-[40px] w-[145px]" text="Все" v-model="selected">
+                <Select v-model="selected" class="h-[40px] w-[145px]">
+                    <template #titleContent>Все</template>
+                    <template #selectedContent>{{ selected }}</template>
                     <SelectOption value="1">1</SelectOption>
                     <SelectOption value="2">2</SelectOption>
                 </Select>

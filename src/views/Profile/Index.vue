@@ -9,7 +9,7 @@ const activeTabIndex = ref(0);
         <ProfileTabsMainIndex v-if="activeTabIndex === 0" />
         <ProfileTabsHistoryIndex v-if="activeTabIndex === 1" />
         <ProfileTabsTransactionsIndex v-if="activeTabIndex === 2" />
-        <ProfileTabsBonusesIndex v-if="activeTabIndex === 3" />
+        <ProfileTabsBonusIndex v-if="activeTabIndex === 3" />
         <ProfileTabsRefSystemIndex v-if="activeTabIndex === 4" />
         <ProfileTabsVerificationIndex v-if="activeTabIndex === 5" />
     </div>

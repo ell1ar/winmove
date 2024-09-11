@@ -1,1 +1,0 @@
-import{_ as t,o as s,c as o,j as c,a as n}from"./index-TAob8CT9.js";const a={},r={class:"h-[119px] items-center rounded-[20px] bg-[#141517] p-[15px]"},_=n("h3",{class:"text-[18px] text-[#C9C9C9]"},"Крипто депозит",-1);function d(e,l){return s(),o("div",r,[_,c(e.$slots,"default")])}const x=t(a,[["render",d]]);export{x as default};
