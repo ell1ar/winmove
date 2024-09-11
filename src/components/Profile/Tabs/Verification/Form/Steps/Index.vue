@@ -12,7 +12,7 @@ const {steps} = defineProps(['steps'])
                 v-for="step in steps"
                 :key="step.value"
                 :class="activeStep === step ? (activeStep.value === 1 ? 'bg-[#FDF74B] text-[#101010] !font-bold' : 'bg-[#202123] text-[#A8A9AB]') : 'bg-[#161719] text-[#3F4042]', step.value < activeStep.value  || step.isCompleted ? '!bg-[#84FD4B] !font-bold' : ''"
-                class="h-[40px] rounded-[10px] w-full lg:w-fit lg:px-[28px] font-medium whitespace-nowrap"
+                class="h-[40px] rounded-[10px] text-[14px] sm:text-[16px] w-full lg:w-fit lg:px-[28px] font-medium whitespace-nowrap"
             >
                 Шаг {{ step.value }}
             </button>

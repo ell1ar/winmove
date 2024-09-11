@@ -2,7 +2,7 @@
 
 <template>
     <div class="mt-[35px] flex grow flex-col pb-[25px]">
-        <ul class="space-y-[15px] text-[#787878] [&>li>strong]:text-[#C4C4C4]">
+        <ul class="mb-[50px] space-y-[15px] text-[#787878] [&>li>strong]:text-[#C4C4C4]">
             <li>
                 Ваше имя:
                 <strong>Jack Guerrero</strong>

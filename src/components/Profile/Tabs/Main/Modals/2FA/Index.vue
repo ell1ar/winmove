@@ -21,7 +21,7 @@ const isCheckedSave = ref(true);
         :overlay-transition="options.overlayTransition"
         :content-transition="options.contentTransition"
     >
-        <div class="flex w-full flex-col items-center rounded-t-[25px] bg-[#1B1C1E] pb-[30px] pl-[25px] pr-[12.5px] pt-[25px] lg:rounded-b-[25px] lg:rounded-t-[25px]">
+        <div class="flex w-full flex-col items-center rounded-t-[25px] bg-[#1B1C1E] pb-[15px] sm:pb-[30px] pl-[12.5px] sm:pl-[25px] pr-[6.25px] sm:pr-[12.5px] pt-[12.5px] sm:pt-[25px] sm:rounded-b-[25px] sm:rounded-t-[25px]">
             <div class="flex w-full justify-between pr-[12.5px]">
                 <h2 class="upperc text-[20px] text-[#E5E5E5]">2FA активация</h2>
 
@@ -97,7 +97,7 @@ const isCheckedSave = ref(true);
                             </Checkbox>
                         </div>
 
-                        <div class="mb-[10px] h-[133px] w-[133px] shrink-0 rounded-[15px] bg-[#E5E5E5] p-[5px] lg:mb-0">
+                        <div class="mb-[10px] h-[133px] w-[133px] shrink-0 rounded-[15px] bg-[#E5E5E5] p-[5px] sm:mb-0">
                             <img :src="ImageQR" class="h-full w-full rounded-[13px] object-contain" alt="qк" />
                         </div>
                     </div>
@@ -105,7 +105,7 @@ const isCheckedSave = ref(true);
 
                 <p class="mt-[15px] w-full text-left text-[15px] font-medium text-[#D7D7D7]">Код подтверждения</p>
 
-                <div class="mt-[15px] flex w-full flex-nowrap justify-center gap-[7px]">
+                <div class="mt-[15px] flex w-full flex-nowrap justify-center gap-[7px] px-[1px]">
                     <input
                         v-for="(digit, index) in digits"
                         :key="index"

@@ -1,1 +1,0 @@
-import{_ as r,o as a,c as n,e as s,f as e}from"./index-DO85-jd5.js";const c={},i={class:"rounded-[15px] bg-[#101113] p-[25px]"};function _(d,f){const o=e("ProfileTabsHistoryTabList"),t=e("ProfileTabsHistoryTabsCrashIndex");return a(),n("div",i,[s(o),s(t,{class:"mt-[13px]"})])}const p=r(c,[["render",_]]);export{p as default};

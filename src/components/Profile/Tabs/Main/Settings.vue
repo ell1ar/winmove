@@ -90,7 +90,7 @@ const isShowModalPassword = ref(false);
                 </button>
                 <ProfileTabsMainModalsEmailIndex
                     v-model="isShowModalEmail"
-                    class="flex justify-center items-center"
+                    class="flex items-center justify-center"
                     content-class="sm:mx-auto sm:w-2/3 left-[15px] fixed sm:relative right-[15px] sm:w-[380px] sm:left-none sm:right-none"
                     @close="isShowModalEmail = false"
                 />
@@ -185,10 +185,11 @@ const isShowModalPassword = ref(false);
             <button @click="isShowModal2FA = true" class="mt-auto flex h-[40px] items-center justify-center rounded-[8px] bg-[#FDF74B] px-3 font-bold uppercase text-[#101010]">
                 Активировать
             </button>
+
             <ProfileTabsMainModals2FAIndex
                 v-model="isShowModal2FA"
-                class="flex items-end justify-center lg:items-center"
-                content-class="lg:mx-auto w-full lg:w-[538px] left-[15px] fixed lg:relative right-[15px] lg:left-none lg:right-none"
+                class="flex items-end justify-center sm:items-center"
+                content-class="sm:mx-auto sm:w-[538px] left-[15px] fixed sm:relative right-[15px] sm:left-none sm:right-none"
                 @close="isShowModal2FA = false"
             />
         </div>

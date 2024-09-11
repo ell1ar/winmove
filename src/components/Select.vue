@@ -9,23 +9,26 @@ const model = defineModel();
 const options = ref({});
 const emit = defineEmits(["update:modelValue"]);
 const $slots = useSlots();
+const vnodeCB = (vnode) => {
+    options.value[vnode.props.value] = vnode.children.default;
+    Object.assign((vnode.props ??= {}), { onClick: () => select(vnode.props.value) }, vnode.props ?? {});
+    return vnode;
+};
 const renderOptions = () => {
-    options.value = {};
     return $slots.default().map((vnode) => {
-        options.value[vnode.props.value] = vnode.children.default;
-        Object.assign((vnode.props ??= {}), { onClick: () => select(vnode.props.value) }, vnode.props ?? {});
-        return vnode;
+        if (Array.isArray(vnode.children)) return vnode.children.map(vnodeCB);
+        return vnodeCB(vnode);
     });
 };
 
-function select(option) {
+const select = (option) => {
     visible.value = false;
     model.value = option;
-}
+};
 </script>
 
 <template>
-    <div class="relative flex items-center rounded-[8px] border-[1px] border-[#17181A] bg-[#121315] text-[#ABABAB]">
+    <div v-click-outside="() => (visible = false)" class="relative flex items-center rounded-[8px] border-[1px] border-[#17181A] bg-[#121315] text-[#ABABAB]">
         <button @click="visible = !visible" class="flex h-full w-full items-center px-[15px]">
             <component v-if="model" :is="options[model]" />
             <template v-else>{{ text }}</template>
@@ -37,7 +40,7 @@ function select(option) {
             </span>
         </button>
 
-        <div v-if="visible" class="absolute top-[calc(100%+10px)] z-10 w-full overflow-hidden rounded-[8px] bg-[#121315]">
+        <div v-if="visible" class="absolute top-[calc(100%+10px)] z-10 max-h-[150px] w-full overflow-hidden overflow-y-auto rounded-[8px] bg-[#121315]">
             <render-options></render-options>
         </div>
     </div>
