@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from "vue";
 const emit = defineEmits(["complete"]);
-const inputClass = "h-[55px] border-[1px] border-[#18191B] bg-[#0B0C0E] font-medium placeholder:text-[#757678]";
-const selectClass = "h-[55px] border-[1px] border-[#1C1D1F] bg-[#161719] font-medium";
+const inputClass = "h-[55px] border-[1px] !border-[#18191B] !bg-[#0B0C0E] font-medium !placeholder:text-[#757678]";
+const selectClass = "h-[55px] border-[1px] !border-[#1C1D1F] !bg-[#161719] font-medium";
 const selectBirthDay = ref();
 const selectBirthMonth = ref();
 const selectBirthYear = ref();
