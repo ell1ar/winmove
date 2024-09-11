@@ -1,1 +1,0 @@
-import{_ as t,o as r,c,e,f as n}from"./index-CQQeREp_.js";const s={},i={class:"flex w-full gap-5 overflow-x-auto rounded-[20px] bg-[#101113] p-5 lg:overflow-x-hidden 2xl:flex-col"};function l(_,d){const o=n("MainBannerRightCard1"),a=n("MainBannerRightCard2");return r(),c("div",i,[e(o),e(a)])}const p=t(s,[["render",l]]);export{p as default};
