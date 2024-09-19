@@ -7,7 +7,7 @@ const emit = defineEmits(["crypto", "other"]);
 </script>
 
 <template>
-    <div class="flex w-[544px] flex-col bg-[#101113] px-[30px] py-[25px]">
+    <div class="flex w-full flex-col bg-[#101113] px-[30px] py-[25px] md:w-[544px]">
         <h2 class="text-[23px] text-white">Варианты депозита</h2>
 
         <div class="mt-[34px] flex flex-col gap-5">

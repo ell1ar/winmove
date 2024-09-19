@@ -27,8 +27,8 @@ const isShowPaymentModal = ref(false);
 
         <ModalsWalletIndex
             v-model="isShowPaymentModal"
-            class="flex items-center justify-center"
-            content-class="lg:mx-auto left-[15px] fixed lg:relative right-[15px] lg:w-fit lg:left-none lg:right-none"
+            class="flex items-end md:items-center justify-center"
+            content-class="md:mx-auto left-[15px] fixed md:relative right-[15px] md:w-fit md:left-none md:right-none"
             @close="isShowPaymentModal = false"
         />
     </div>

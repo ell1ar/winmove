@@ -4,8 +4,8 @@ const activeTabIndex = ref(0);
 </script>
 
 <template>
-    <div class="flex w-full flex-col rounded-[15px] bg-[#101113] px-[15px] md:px-[30px] md:pb-[30px] md:pt-[20px]">
-        <div class="mb-[34px] flex items-center gap-[15px]">
+    <div class="flex w-full flex-col bg-[#101113] px-[15px] md:px-[30px] md:pb-[30px] md:pt-[20px]">
+        <div class="mb-[15px] flex items-center gap-[15px] md:mb-[34px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
             <h2 class="text-[20px] font-bold text-[#DFDFDF]">История платежей</h2>
         </div>

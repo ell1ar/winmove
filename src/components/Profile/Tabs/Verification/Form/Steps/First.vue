@@ -19,25 +19,49 @@ const selectCountry = ref();
         <div class="mb-[30px] mt-[30px] grid w-full grid-cols-6 gap-[15px]">
             <InputV2 :classes="{ base: 'col-span-6 sm:col-span-3' }" placeholder="Имя" type="text" id="name" />
             <InputV2 :classes="{ base: 'col-span-6 sm:col-span-3' }" placeholder="Фамилия" type="text" />
-            <Select v-model="selectBirthDay" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+            <Select
+                v-model="selectBirthDay"
+                :options="Array.from({ length: 31 }, (_, i) => i)"
+                :classes="{
+                    base: `${selectClass} col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2`,
+                }"
+            >
                 <template #unSelectedOption>День рождения</template>
-                <template #selectedOption>{{ selectBirthDay }}</template>
-                <SelectOption v-for="i in 31" :value="i">{{ i }}</SelectOption>
+                <template #selectedOption="{ option }">{{ option }}</template>
+                <template #option="{ option }">{{ option }}</template>
             </Select>
-            <Select v-model="selectBirthMonth" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+            <Select
+                v-model="selectBirthMonth"
+                :options="Array.from({ length: 12 }, (_, i) => i)"
+                :classes="{
+                    base: `${selectClass} col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2`,
+                }"
+            >
                 <template #unSelectedOption>Месяц рождения</template>
-                <template #selectedOption>{{ selectBirthMonth }}</template>
-                <SelectOption v-for="i in 12" :value="i">{{ i }}</SelectOption>
+                <template #selectedOption="{ option }">{{ option }}</template>
+                <template #option="{ option }">{{ option }}</template>
             </Select>
-            <Select v-model="selectBirthYear" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
+            <Select
+                v-model="selectBirthYear"
+                :options="Array.from({ length: 100 }, (_, i) => 2024 - i)"
+                :classes="{
+                    base: `${selectClass} col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2`,
+                }"
+            >
                 <template #unSelectedOption>Год рождения</template>
-                <template #selectedOption>{{ selectBirthYear }}</template>
-                <SelectOption v-for="i in 100" :value="2024 - i">{{ 2024 - i }}</SelectOption>
+                <template #selectedOption="{ option }">{{ option }}</template>
+                <template #option="{ option }">{{ option }}</template>
             </Select>
-            <Select v-model="selectCountry" :class="selectClass" class="col-span-6 border-[#191A1C] !bg-[#131416] text-[#424345] sm:col-span-2 xl:col-span-3 2xl:col-span-2">
-                <template #unSelectedOption>Ваша стран</template>
-                <template #selectedOption>{{ selectCountry }}</template>
-                <SelectOption v-for="country in ['Finland', 'Russia']" :value="country">{{ country }}</SelectOption>
+            <Select
+                v-model="selectCountry"
+                :options="['Finland', 'Russia']"
+                :classes="{
+                    base: `${selectClass} col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2`,
+                }"
+            >
+                <template #unSelectedOption>Ваша страна</template>
+                <template #selectedOption="{ option }">{{ option }}</template>
+                <template #option="{ option }">{{ option }}</template>
             </Select>
             <InputV2 :classes="{ base: 'col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2' }" placeholder="Ваш город" type="text" />
             <InputV2 :classes="{ base: 'col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2' }" placeholder="Почтовый индекс" type="text" />

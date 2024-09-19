@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import usd from "@/assets/img/usd.svg";
+import usd from "@/assets/img/currency/usd.svg";
 import wincoin from "@/assets/img/wincoin.png";
 import freegame from "@/assets/img/fg.png";
 const activeButton = ref(0);

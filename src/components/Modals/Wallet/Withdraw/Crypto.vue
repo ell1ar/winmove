@@ -40,18 +40,14 @@ const currencies = [
 </script>
 
 <template>
-    <div class="flex w-[612px] shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px]">
+    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px] md:w-[612px]">
         <div class="flex items-center gap-[15px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
             <ModalsWalletTitle title="Вывод средств" />
         </div>
 
         <div class="mt-[30px] flex items-center gap-2.5">
-            <Select
-                v-model="selectedCurrency"
-                :options="currencies"
-                :classes="{ base: 'h-[60px] w-full', optionWrapper: 'p-[15px] bg-[#161719] flex flex-col gap-[15px] !rounded-[15px]', optionList: 'space-y-[5px]' }"
-            >
+            <Select v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Валюта</template>
                 <template #selectedOption>
                     <div class="flex items-center gap-[10px]">
@@ -81,18 +77,12 @@ const currencies = [
                     </div>
                 </template>
                 <template #option="{ option }">
-                    <div class="flex h-10 w-full shrink-0 items-center gap-2.5 rounded-[10px] bg-[#1A1B1D] px-2.5">
-                        <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
-                        <span class="text-[13px] font-normal uppercase leading-5 text-[#D4D4D4]">{{ option.name }}</span>
-                    </div>
+                    <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
+                    <span>{{ option.name }}</span>
                 </template>
             </Select>
 
-            <Select
-                v-model="selectedNetwork"
-                :options="networks"
-                :classes="{ base: 'h-[60px] w-full', optionWrapper: 'p-[15px] bg-[#161719] flex flex-col gap-[15px] !rounded-[15px]', optionList: 'space-y-[5px]' }"
-            >
+            <Select v-model="selectedNetwork" :options="networks" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Сеть</template>
                 <template #selectedOption>
                     <div class="flex items-center gap-[10px]">
@@ -104,10 +94,8 @@ const currencies = [
                     </div>
                 </template>
                 <template #option="{ option }">
-                    <div class="flex h-10 w-full shrink-0 items-center gap-2.5 rounded-[10px] bg-[#1A1B1D] px-2.5">
-                        <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
-                        <span class="text-[13px] font-normal uppercase leading-5 text-[#D4D4D4]">{{ option.name }}</span>
-                    </div>
+                    <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
+                    <span>{{ option.name }}</span>
                 </template>
             </Select>
         </div>

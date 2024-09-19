@@ -5,7 +5,7 @@ const emit = defineEmits(["wait"]);
 </script>
 
 <template>
-    <div class="flex w-[612px] shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px]">
+    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px] md:w-[612px]">
         <div class="flex items-center gap-[15px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
             <ModalsWalletTitle title="Вывод средств" />

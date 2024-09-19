@@ -145,8 +145,8 @@ const rows = [
 </script>
 
 <template>
-    <div class="h-[554px] overflow-y-auto pr-[15px]">
-        <div class="grid w-full grid-cols-2 gap-2.5">
+    <div class="overflow-y-auto md:h-[554px] md:pr-[15px]">
+        <div class="grid w-full grid-cols-1 gap-2.5 md:grid-cols-2">
             <TransactionCard class="min-w-[290px]" v-for="row in rows" :key="row.id" :row="row" />
         </div>
     </div>
