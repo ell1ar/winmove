@@ -1,12 +1,12 @@
 <script setup>
-import ImageBitcoin from "../../assets/bitcoin.png";
-import ImageMastercard from "../../assets/mastercard.png";
-import ImageMir from "../../assets/mir.png";
-import ImageTether from "../../assets/tether.png";
-import ImageVisa from "../../assets/visa.png";
-import IconFail from "../../icons/IconFail.vue";
-import IconSuccess from "../../icons/IconSuccess.vue";
-import IconWait from "../../icons/IconWait.vue";
+import IconFail from "@/components/Transaction/icons/IconFail.vue";
+import IconSuccess from "@/components/Transaction/icons/IconSuccess.vue";
+import IconWait from "@/components/Transaction/icons/IconWait.vue";
+import ImageBitcoin from "@/components/Transaction/assets/bitcoin.png";
+import ImageMastercard from "@/components/Transaction/assets/mastercard.png";
+import ImageMir from "@/components/Transaction/assets/mir.png";
+import ImageTether from "@/components/Transaction/assets/tether.png";
+import ImageVisa from "@/components/Transaction/assets/visa.png";
 const rows = [
     {
         id: "48374927",
@@ -72,7 +72,10 @@ const rows = [
                     <td v-html="row.sum"></td>
                     <td v-html="row.bonus"></td>
                     <td>
-                        <span class="flex flex-col items-start"><span>20:27</span><strong class="text-[13px] text-[#5E5E5E]">27.06.2024</strong></span>
+                        <span class="flex flex-col items-start">
+                            <span>20:27</span>
+                            <strong class="text-[13px] text-[#5E5E5E]">27.06.2024</strong>
+                        </span>
                     </td>
                     <td class="rounded-r-[10px]">
                         <component :is="row.statusIcon" />
@@ -83,6 +86,6 @@ const rows = [
     </div>
 
     <div class="flex w-full flex-col gap-2 md:hidden">
-        <ProfileTabsTransactionsMobCard v-for="row in rows" :key="row.id" :row="row" />
+        <TransactionCard v-for="row in rows" :key="row.id" :row="row" />
     </div>
 </template>

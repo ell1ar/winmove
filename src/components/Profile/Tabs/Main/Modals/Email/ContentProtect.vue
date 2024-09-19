@@ -1,11 +1,11 @@
 <script setup>
-import ImageProtect from "../assets/protect.png";
+import ImageSuccess from "@/assets/img/shields/success.png";
 const emit = defineEmits(["close", "next"]);
 </script>
 
 <template>
     <div class="h-[153px] w-[153px]">
-        <img :src="ImageProtect" class="h-full w-full scale-[1.5] object-cover" alt="ImageProtect" />
+        <img :src="ImageSuccess" class="h-full w-full scale-[1.5] object-cover" alt="ImageSuccess" />
     </div>
 
     <h2 class="mt-[10px] text-[20px] text-[#E5E5E5]">Ограничения аккаунта</h2>

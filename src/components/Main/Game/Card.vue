@@ -1,5 +1,5 @@
 <script setup>
-import close from "@assets/img/close.svg";
+import close from "@/assets/img/close.svg";
 const { figure, title, color, figureClass, isClosed, pattern } = defineProps(["figure", "title", "color", "figureClass", "isClosed", "pattern"]);
 const classes = {
     pink: {

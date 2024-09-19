@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import avatar from "@assets/img/avatar.png";
+import avatar from "@/assets/img/avatar.png";
 import iconBet from "./assets/iconBet.svg";
 import iconBetActive from "./assets/iconBetActive.svg";
 import iconBonus from "./assets/iconBonus.svg";

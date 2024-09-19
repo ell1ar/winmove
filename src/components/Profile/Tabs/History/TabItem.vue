@@ -1,5 +1,5 @@
 <script setup>
-import close from "@assets/img/close.svg";
+import close from "@/assets/img/close.svg";
 import ImageTabItemLight from "./assets/tab-item-light.png";
 const { img, title, isClosed } = defineProps(["img", "title", "isClosed"]);
 </script>

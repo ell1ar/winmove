@@ -1,5 +1,5 @@
 <script setup>
-import avatar from "@assets/img/avatar.png";
+import avatar from "@/assets/img/avatar.png";
 import { useRouter } from "vue-router";
 const emit = defineEmits(["close"]);
 const router = useRouter();

@@ -9,7 +9,7 @@
         <template v-for="i in 2">
             <MainTableRowWrapper class="h-[56px]" v-for="i in 5" :key="i">
                 <div class="flex w-[40%] items-center justify-start gap-2.5 pl-[15px] sm:w-[40%] lg:pl-[30px]">
-                    <PlayerAvatar :color="['blue', 'orange', 'purple', 'white', 'yellow'][i - 1]" />
+                    <PlayerAvatarIndex :color="['blue', 'orange', 'purple', 'white', 'yellow'][i - 1]" />
                     <PlayerName class="text-[10px] sm:text-[15px]" :color="['blue', 'orange', 'purple', 'white', 'yellow'][i - 1]" />
                 </div>
 

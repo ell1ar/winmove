@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,f as n,x as _,g as e}from"./index-COG8RniO.js";const d={},i={class:"rounded-[20px] bg-[#101113] px-5 py-5 lg:overflow-x-hidden"};function p(l,f){const o=e("MainBannerCard1"),a=e("MainBannerCard2"),r=e("Slider");return s(),c("div",i,[n(r,{breakpoints:{640:2}},{slides:_(()=>[n(o),n(a)]),_:1})])}const x=t(d,[["render",p]]);export{x as default};

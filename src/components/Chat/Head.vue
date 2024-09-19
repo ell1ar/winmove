@@ -1,5 +1,5 @@
 <script setup>
-import avatar from "@assets/img/avatar.png";
+import avatar from "@/assets/img/avatar.png";
 const colors = ["orange", "white", "purple"];
 </script>
 

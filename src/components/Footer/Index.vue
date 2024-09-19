@@ -1,12 +1,12 @@
 <script setup>
-import wifiIcon from "@assets/img/wifi.svg";
-import playIcon from "@assets/img/play.svg";
-import communityIcon from "@assets/img/community.svg";
-import payIcon from "@assets/img/pay.svg";
-import telegram from "@assets/img/links/telegram.svg";
-import discord from "@assets/img/links/discord.svg";
-import vk from "@assets/img/links/vk.svg";
-import youtube from "@assets/img/links/youtube.svg";
+import wifiIcon from "@/assets/img/wifi.svg";
+import playIcon from "@/assets/img/play.svg";
+import communityIcon from "@/assets/img/community.svg";
+import payIcon from "@/assets/img/pay.svg";
+import telegram from "@/assets/img/social/telegram.svg";
+import discord from "@/assets/img/social/discord.svg";
+import vk from "@/assets/img/social/vk.svg";
+import youtube from "@/assets/img/social/youtube.svg";
 const props = defineProps(["foo"]);
 const stats = [
     {
@@ -102,7 +102,8 @@ const links = [
                     <h3 class="text-[12px] font-bold text-[#bcbcbc]">© 2018 – 2024 CSFail</h3>
 
                     <p class="text-center text-[12px] font-medium leading-[17px] text-[#4c4d4f] sm:text-start 2xl:text-start">
-                        ITSFAIL LTD: Company number 13246765, 16 John Nicholas Crescent,<br />
+                        ITSFAIL LTD: Company number 13246765, 16 John Nicholas Crescent,
+                        <br />
                         Ellesmere Port, Cheshire, United Kingdom, CH65 2D
                     </p>
                 </div>
@@ -111,19 +112,19 @@ const links = [
 
         <ul class="flex list-none justify-between gap-2 lg:justify-center lg:gap-8">
             <li>
-                <img src="../../assets/img/bitcoin.svg" alt="bitcoin" />
+                <img src="./assets/bitcoin.svg" alt="bitcoin" />
             </li>
             <li>
-                <img src="../../assets/img/tether.svg" alt="tether" />
+                <img src="./assets/tether.svg" alt="tether" />
             </li>
             <li>
-                <img src="../../assets/img/visa.svg" alt="visa" />
+                <img src="./assets/visa.svg" alt="visa" />
             </li>
             <li>
-                <img src="../../assets/img/mastercard.svg" alt="mastercard" />
+                <img src="./assets/mastercard.svg" alt="mastercard" />
             </li>
             <li>
-                <img src="../../assets/img/mir.svg" alt="mir" />
+                <img src="./assets/mir.svg" alt="mir" />
             </li>
         </ul>
     </footer>

@@ -13,7 +13,7 @@ const isShowModalPhoto = ref(false);
     >
         <div class="relative z-10 flex justify-between">
             <div class="flex items-center gap-5">
-                <PlayerAvatar class="h-[70px] w-[70px]" :isShowLevel="false" color="yellow" />
+                <PlayerAvatarIndex class="h-[70px] w-[70px]" :isShowLevel="false" color="yellow" />
 
                 <div class="flex flex-col">
                     <div class="flex gap-[3px]">

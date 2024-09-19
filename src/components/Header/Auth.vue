@@ -1,5 +1,5 @@
 <script setup>
-import avatar from "@assets/img/avatar.png";
+import avatar from "@/assets/img/avatar.png";
 import { ref } from "vue";
 const isShowModalProfile = ref(false);
 const isShowModalBalance = ref(false);
@@ -62,12 +62,7 @@ const isShowModalBalance = ref(false);
                 </div>
             </button>
 
-            <PopupsProfile 
-                v-if="isShowModalProfile" 
-                @close="isShowModalProfile = false" 
-                class="absolute right-0 top-[calc(100%+38px)] z-[999]" 
-                @logout="$emit('logout')" 
-            />
+            <PopupsProfile v-if="isShowModalProfile" @close="isShowModalProfile = false" class="absolute right-0 top-[calc(100%+38px)] z-[999]" @logout="$emit('logout')" />
         </div>
     </div>
 </template>

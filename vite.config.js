@@ -1,9 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { fileURLToPath } from "node:url";
-import svgLoader from "vite-svg-loader";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue({
@@ -13,12 +11,11 @@ export default defineConfig({
                 },
             },
         }),
-        // svgLoader(),
     ],
     resolve: {
         alias: [
             { find: "@", replacement: fileURLToPath(new URL("./src", import.meta.url)) },
-            { find: "@assets", replacement: fileURLToPath(new URL("./src/assets", import.meta.url)) },
+            { find: "@icons", replacement: fileURLToPath(new URL("./src/components/icons", import.meta.url)) },
         ],
     },
     base: "/winmove/",

@@ -1,20 +1,19 @@
 <script setup>
-const { isShowSidebar } = defineProps(["isShowSidebar"]);
-import iconHelloBonus from "./assets/iconHelloBonus.svg";
-import iconRegularBonus from "./assets/iconRegularBonus.svg";
-import iconBonusStar from "./assets/iconBonusStar.svg";
+import IconBonusHello from "@/components/Bonus/icons/IconBonusHello.vue";
+import IconBonusRegular from "@/components/Bonus/icons/IconBonusRegular.vue";
+import IconBonusStar from "@/components/Bonus/icons/IconBonusStar.vue";
 const list = [
     {
         title: "Приветственный бонус",
-        img: iconHelloBonus,
+        icon: IconBonusHello,
     },
     {
         title: "Регулярные бонусы",
-        img: iconRegularBonus,
+        icon: IconBonusRegular,
     },
     {
         title: "Специальные бонусы",
-        img: iconBonusStar,
+        icon: IconBonusStar,
     },
 ];
 </script>
@@ -26,7 +25,7 @@ const list = [
             :key="index"
             class="relative flex h-[60px] w-[164px] shrink-0 items-center overflow-hidden rounded-[10px] border-[1px] border-[#191A1C] bg-[#0F1012] px-[10px]"
         >
-            <img :src="item.img" alt="iconRegularBonus" />
+            <component :is="item.icon" />
             <p class="ml-[10px] text-[14px] text-[#E2E2E2]">{{ item.title }}</p>
             <div class="absolute bottom-2 right-2 flex h-[14px] items-center justify-center rounded-[6px] bg-[#BD52FD] px-2 text-[12px] text-[#151618]">3</div>
 

@@ -4,7 +4,7 @@ const { message } = defineProps(["message"]);
 
 <template>
     <div class="flex w-full gap-2.5 select-text">
-        <PlayerAvatar :color="message.color" />
+        <PlayerAvatarIndex :color="message.color" />
 
         <div class="flex grow flex-col">
             <div class="flex justify-between">

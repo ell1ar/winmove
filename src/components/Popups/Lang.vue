@@ -1,5 +1,5 @@
 <script setup>
-import ruflag from "@assets/img/ruflag.png";
+import ruflag from "@/assets/img/ruflag.png";
 </script>
 
 <template>

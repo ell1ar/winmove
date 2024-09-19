@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import ruflag from "@assets/img/ruflag.png";
+import ruflag from "@/assets/img/ruflag.png";
 const isShowModalLang = ref(false);
 const isShowModalSettings = ref(false);
 </script>

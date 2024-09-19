@@ -234,8 +234,8 @@ const isShowModalPassword = ref(false);
                 <h2 class="text-[17px] font-bold text-[#D7D7D7]">Мои сессии</h2>
 
                 <Select v-model="selected" class="h-[40px] w-[145px]">
-                    <template #titleContent>Все</template>
-                    <template #selectedContent>{{ selected }}</template>
+                    <template #unSelectedOption>Все</template>
+                    <template #selectedOption>{{ selected }}</template>
                     <SelectOption value="1">1</SelectOption>
                     <SelectOption value="2">2</SelectOption>
                 </Select>

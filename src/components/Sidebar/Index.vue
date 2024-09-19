@@ -1,5 +1,5 @@
 <script setup>
-import ruflag from "@assets/img/ruflag.png";
+import ruflag from "@/assets/img/ruflag.png";
 const emit = defineEmits(["close", "toggle-modal-lang", "toggle-modal-settings"]);
 const { isFull } = defineProps(["isFull"]);
 const toggleModalLang = () => {

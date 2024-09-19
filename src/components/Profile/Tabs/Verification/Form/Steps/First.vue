@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
 const emit = defineEmits(["complete"]);
-const inputClass = "h-[55px] border-[1px] !border-[#18191B] !bg-[#0B0C0E] font-medium !placeholder:text-[#757678]";
 const selectClass = "h-[55px] border-[1px] !border-[#1C1D1F] !bg-[#161719] font-medium";
 const selectBirthDay = ref();
 const selectBirthMonth = ref();
@@ -12,36 +11,37 @@ const selectCountry = ref();
 <template>
     <div class="mt-[25px] flex w-full grow flex-col sm:pb-[15px]">
         <p class="text-[14px] font-medium text-[#787878]">
-            Чтобы лучше заботиться о вас и предоставлять внимательное обслуживание, <br />
+            Чтобы лучше заботиться о вас и предоставлять внимательное обслуживание,
+            <br />
             пожалуйста, заполните свою личную информацию.
         </p>
 
         <div class="mb-[30px] mt-[30px] grid w-full grid-cols-6 gap-[15px]">
-            <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Имя" type="text" />
-            <Input :class="inputClass" class="col-span-6 sm:col-span-3" placeholder="Фамилия" type="text" />
+            <InputV2 :classes="{ base: 'col-span-6 sm:col-span-3' }" placeholder="Имя" type="text" id="name" />
+            <InputV2 :classes="{ base: 'col-span-6 sm:col-span-3' }" placeholder="Фамилия" type="text" />
             <Select v-model="selectBirthDay" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
-                <template #titleContent>День рождения</template>
-                <template #selectedContent>{{ selectBirthDay }}</template>
+                <template #unSelectedOption>День рождения</template>
+                <template #selectedOption>{{ selectBirthDay }}</template>
                 <SelectOption v-for="i in 31" :value="i">{{ i }}</SelectOption>
             </Select>
             <Select v-model="selectBirthMonth" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
-                <template #titleContent>Месяц рождения</template>
-                <template #selectedContent>{{ selectBirthMonth }}</template>
+                <template #unSelectedOption>Месяц рождения</template>
+                <template #selectedOption>{{ selectBirthMonth }}</template>
                 <SelectOption v-for="i in 12" :value="i">{{ i }}</SelectOption>
             </Select>
             <Select v-model="selectBirthYear" :class="selectClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2">
-                <template #titleContent>Год рождения</template>
-                <template #selectedContent>{{ selectBirthYear }}</template>
+                <template #unSelectedOption>Год рождения</template>
+                <template #selectedOption>{{ selectBirthYear }}</template>
                 <SelectOption v-for="i in 100" :value="2024 - i">{{ 2024 - i }}</SelectOption>
             </Select>
             <Select v-model="selectCountry" :class="selectClass" class="col-span-6 border-[#191A1C] !bg-[#131416] text-[#424345] sm:col-span-2 xl:col-span-3 2xl:col-span-2">
-                <template #titleContent>Ваша стран</template>
-                <template #selectedContent>{{ selectCountry }}</template>
+                <template #unSelectedOption>Ваша стран</template>
+                <template #selectedOption>{{ selectCountry }}</template>
                 <SelectOption v-for="country in ['Finland', 'Russia']" :value="country">{{ country }}</SelectOption>
             </Select>
-            <Input :class="inputClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" placeholder="Ваш город" type="text" />
-            <Input :class="inputClass" class="col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2" placeholder="Почтовый индекс" type="text" />
-            <Input :class="inputClass" class="col-span-6" placeholder="Жилой адрес" type="text" />
+            <InputV2 :classes="{ base: 'col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2' }" placeholder="Ваш город" type="text" />
+            <InputV2 :classes="{ base: 'col-span-6 sm:col-span-2 xl:col-span-3 2xl:col-span-2' }" placeholder="Почтовый индекс" type="text" />
+            <InputV2 :classes="{ base: 'col-span-6' }" placeholder="Жилой адрес" type="text" />
         </div>
 
         <div class="mt-auto flex flex-col-reverse gap-[15px] sm:flex-row sm:items-center sm:justify-between">

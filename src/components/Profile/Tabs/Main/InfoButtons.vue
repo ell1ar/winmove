@@ -25,7 +25,7 @@ const isShowPaymentModal = ref(false);
             <span class="text-[14px] 2xl:text-[16px]">Пополнить</span>
         </button>
 
-        <ModalsPaymentIndex
+        <ModalsWalletIndex
             v-model="isShowPaymentModal"
             class="flex items-center justify-center"
             content-class="lg:mx-auto left-[15px] fixed lg:relative right-[15px] lg:w-fit lg:left-none lg:right-none"

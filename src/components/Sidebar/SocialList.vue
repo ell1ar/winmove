@@ -1,8 +1,8 @@
 <script setup>
-import telegram from "@assets/img/links/telegram.svg";
-import discord from "@assets/img/links/discord.svg";
-import vk from "@assets/img/links/vk.svg";
-import youtube from "@assets/img/links/youtube.svg";
+import telegram from "@/assets/img/social/telegram.svg";
+import discord from "@/assets/img/social/discord.svg";
+import vk from "@/assets/img/social/vk.svg";
+import youtube from "@/assets/img/social/youtube.svg";
 const socials = [
     {
         img: telegram,
