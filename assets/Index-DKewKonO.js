@@ -1,0 +1,1 @@
+import{_ as r,o as a,c as n,f as s,g as o}from"./index-CCoYaeig.js";const c={},i={class:"rounded-[15px] bg-[#101113] p-[25px]"};function _(d,f){const e=o("ProfileTabsHistoryTabList"),t=o("ProfileTabsHistoryTabsCrashIndex");return a(),n("div",i,[s(e),s(t,{class:"mt-[13px]"})])}const p=r(c,[["render",_]]);export{p as default};

@@ -1,0 +1,1 @@
+import{_ as t,o,c as r,k as n}from"./index-CCoYaeig.js";const s={},c={class:"flex w-full border-[1px] border-white/[5%] px-[15px] py-[5px] transition-all duration-200 hover:bg-white/[2%]"};function a(e,l){return o(),r("button",c,[n(e.$slots,"default")])}const p=t(s,[["render",a]]);export{p as default};
