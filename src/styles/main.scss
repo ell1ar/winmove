@@ -26,6 +26,12 @@ body {
         height: 7px;
     }
 
+    @media screen and (max-width: 768px) {
+        &::-webkit-scrollbar {
+            height: 3px;
+        }
+    }
+
     &::-webkit-scrollbar-thumb {
         background-color: #7f8082;
         border-radius: 2px;

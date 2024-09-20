@@ -6,7 +6,7 @@ import ImageDay4 from "./assets/4.png";
 </script>
 
 <template>
-    <div class="scrollbar-heavy pb-[25px] flex h-full items-center gap-[7px] overflow-x-auto">
+    <div class="scrollbar-heavy flex h-full items-center gap-[7px] overflow-x-auto pb-[25px]">
         <ProfileTabsBonusDayCard day="1 день" :imgSrc="ImageDay1" />
         <ProfileTabsBonusDayCard day="2 день" :imgSrc="ImageDay2" />
         <ProfileTabsBonusDayCard day="3 день" :imgSrc="ImageDay3" />

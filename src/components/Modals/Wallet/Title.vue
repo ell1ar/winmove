@@ -3,5 +3,5 @@ const { title } = defineProps(["title"]);
 </script>
 
 <template>
-    <h2 class="text-[20px] font-bold text-[#DFDFDF]">{{ title }}</h2>
+    <h2 class="text-[17px] font-bold text-[#DFDFDF] md:text-[20px]">{{ title }}</h2>
 </template>

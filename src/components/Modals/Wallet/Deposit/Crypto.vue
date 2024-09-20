@@ -71,13 +71,13 @@ const helloBonuses = [
 </script>
 
 <template>
-    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px] md:w-[612px]">
+    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[15px] pb-[15px] pt-[15px] md:w-[612px] md:px-[30px] md:pb-[30px] md:pt-[20px]">
         <div class="flex items-center gap-[15px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
             <ModalsWalletTitle title="Крипто депозит" />
         </div>
 
-        <div class="mt-[30px] flex items-center gap-2.5">
+        <div class="mt-[20px] grid grid-cols-1 items-center gap-2.5 md:mt-[30px] md:grid-cols-2">
             <Select v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Валюта</template>
                 <template #selectedOption="{ option }">
@@ -134,22 +134,26 @@ const helloBonuses = [
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
 
         <div class="flex flex-col gap-[20px]">
-            <h2 class="flex items-center text-[20px] font-normal text-[#E4E4E4]">
-                <IconBonusHello />
-                <span class="ml-[13px]">Приветственный бонус</span>
+            <div class="contents md:flex md:justify-between">
+                <h2 class="flex items-center text-[20px] font-normal text-[#E4E4E4]">
+                    <IconBonusHello />
+                    <span class="ml-[13px]">Приветственный бонус</span>
+                </h2>
 
-                <a href="#" class="ml-[20px] inline-flex shrink-0 items-center gap-[7px] text-sm font-normal leading-5 text-[#757678] [font-family:Stapel]">
-                    <span>Подробнее</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
-                        <path d="M6 3.5L0.75 6.53109L0.75 0.468911L6 3.5Z" fill="#757678" />
-                    </svg>
-                </a>
+                <div class="order-last flex flex-row-reverse justify-between gap-[20px] md:order-2 md:flex-row md:justify-end">
+                    <a href="#" class="inline-flex shrink-0 items-center gap-[7px] text-sm font-normal leading-5 text-[#757678] [font-family:Stapel]">
+                        <span>Подробнее</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                            <path d="M6 3.5L0.75 6.53109L0.75 0.468911L6 3.5Z" fill="#757678" />
+                        </svg>
+                    </a>
 
-                <div class="ml-auto flex items-center gap-2.5">
-                    <span class="text-[15px] font-normal leading-[26px] text-[#757678] [font-family:Stapel]">Без бонуса</span>
-                    <ButtonToggle />
+                    <div class="flex items-center gap-2.5">
+                        <span class="text-[15px] font-normal leading-[26px] text-[#757678] [font-family:Stapel]">Без бонуса</span>
+                        <ButtonToggle />
+                    </div>
                 </div>
-            </h2>
+            </div>
 
             <ul class="space-y-[10px]">
                 <li v-for="(helloBonus, index) in helloBonuses" :key="index" class="flex items-center gap-2.5 text-[13px] font-[400] text-[#A8A9AB] [&>strong]:text-[#C9C9C9]">
@@ -175,7 +179,7 @@ const helloBonuses = [
                 Специальные бонусы
             </h2>
 
-            <div v-if="!isShowNoBanner" class="scrollbar-heavy flex w-full items-center gap-2.5 overflow-x-scroll pb-[5px] md:pb-[15px]">
+            <div v-if="!isShowNoBanner" class="scrollbar-heavy flex w-full items-center gap-2.5 overflow-x-scroll pb-[15px]">
                 <BonusSpecialCard class="!w-[318px] border-[1px] border-[#FDF74B] !px-[15px]" :imgSrc="ImageFB" desc="100 фрибетов" />
                 <BonusSpecialCard class="!w-[318px] !px-[15px]" :imgSrc="ImageFG" desc="100 фригеймс" />
             </div>
@@ -193,12 +197,12 @@ const helloBonuses = [
                     <button class="absolute right-[15px]"><IconCopy /></button>
                 </div>
 
-                <p class="mt-2 text-[13px] text-[#757678]">
+                <p class="mt-2 text-center text-[13px] text-[#757678] md:text-start">
                     Мин сумма депозита
                     <strong class="text-[#C9C9C9]">0.5 USDT</strong>
                 </p>
 
-                <p class="mt-3 flex gap-2.5 text-[12px] leading-4 text-[#A8A9AB]">
+                <p class="mt-3 flex justify-center gap-2.5 text-[12px] leading-4 text-[#A8A9AB] md:justify-start">
                     <IconDanger />
                     <span>Только отправка USDT по этому адресу</span>
                 </p>

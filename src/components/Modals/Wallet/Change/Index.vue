@@ -1,14 +1,14 @@
 <script setup>
-import IconChange from "@/components/icons/IconChange.vue";
-import ImageWM from "@/assets/img/wm.png";
 import ImageUSD from "@/assets/img/currency/usd.svg";
+import ImageWM from "@/assets/img/wm.png";
+import IconChange from "@/components/icons/IconChange.vue";
 </script>
 
 <template>
-    <div class="flex w-full flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px] md:w-[600px]">
+    <div class="flex w-full grow flex-col bg-[#101113] px-[15px] pb-[15px] pt-[15px] md:w-[600px] md:px-[30px] md:pb-[30px] md:pt-[20px]">
         <div class="flex items-center gap-[15px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
-            <h2 class="text-[20px] font-bold text-[#DFDFDF]">Обмен</h2>
+            <ModalsWalletTitle title="Обмен" />
         </div>
 
         <div class="mt-[20px] flex flex-col items-center gap-[7px] md:mt-[30px] md:flex-row">

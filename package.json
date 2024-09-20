@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@splidejs/vue-splide": "^0.6.12",
-        "@vueuse/core": "^11.0.1",
+        "@vueuse/core": "^11.1.0",
         "animate.css": "^4.1.1",
         "click-outside-vue3": "^4.0.1",
         "lodash": "^4.17.21",

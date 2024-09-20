@@ -23,7 +23,12 @@ const { tabs } = defineProps(["tabs"]);
         <Select
             v-model="activeTab"
             :options="tabs"
-            :classes="{ base: '!h-[45px] w-full bg-[#1D1E20] border-[1px] border-[#252628]', optionWrapper: 'border-[1px] border-[#252628]' }"
+            :classes="{
+                base: '!h-[45px] flex md:hidden w-full bg-[#1D1E20] border-[1px] border-[#252628]',
+                optionWrapper: 'bg-[#191A1C] w-[70%] right-0',
+                option: 'h-[45px] border-[1px] border-[#252628]',
+                activeOption: 'bg-[#FDF74B] !text-[#101010] !font-bold',
+            }"
         >
             <template #unSelectedOption>Валюта</template>
             <template #selectedOption="{ option }">
@@ -34,7 +39,7 @@ const { tabs } = defineProps(["tabs"]);
             </template>
             <template #option="{ option }">
                 <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.title" />
-                <span>{{ option.title }}</span>
+                <span class="capitalize">{{ option.title }}</span>
             </template>
         </Select>
     </div>

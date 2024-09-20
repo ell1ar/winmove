@@ -8,11 +8,11 @@ const { list } = defineProps(["list"]);
 </script>
 
 <template>
-    <div class="relative flex items-center gap-[15px]">
-        <img v-if="list.includes('visa')" class="h-[25px] w-[63px] shrink-0 object-contain" :src="ImageVisa" alt="visa" />
-        <img v-if="list.includes('mastercard')" class="h-[35px] w-[39px] shrink-0 object-contain" :src="ImageMastercard" alt="mastercard" />
-        <img v-if="list.includes('sbp')" class="h-[41px] w-[75px] shrink-0 object-contain" :src="ImageSBP" alt="sbp" />
-        <img v-if="list.includes('mir')" class="h-[21px] w-[61px] shrink-0 object-contain" :src="ImageMir" alt="mir" />
-        <img v-if="list.includes('piastrix')" class="h-[37px] w-[98px] shrink-0 object-contain" :src="ImagePiastrix" alt="piastrix" />
+    <div class="relative flex items-center gap-[9px] md:gap-[15px]">
+        <img v-if="list.includes('visa')" class="h-[19px] w-[45px] shrink-0 object-contain md:h-[25px] md:w-[63px]" :src="ImageVisa" alt="visa" />
+        <img v-if="list.includes('mastercard')" class="h-[23px] w-[29px] shrink-0 object-contain md:h-[35px] md:w-[39px]" :src="ImageMastercard" alt="mastercard" />
+        <img v-if="list.includes('sbp')" class="h-[29px] w-[54px] shrink-0 object-contain md:h-[41px] md:w-[75px]" :src="ImageSBP" alt="sbp" />
+        <img v-if="list.includes('mir')" class="h-[17px] w-[42px] shrink-0 object-contain md:h-[21px] md:w-[61px]" :src="ImageMir" alt="mir" />
+        <img v-if="list.includes('piastrix')" class="h-[25px] w-[70px] shrink-0 object-contain md:h-[37px] md:w-[98px]" :src="ImagePiastrix" alt="piastrix" />
     </div>
 </template>

@@ -40,13 +40,13 @@ const currencies = [
 </script>
 
 <template>
-    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[30px] pb-[30px] pt-[20px] md:w-[612px]">
+    <div class="flex w-full shrink-0 flex-col bg-[#101113] px-[15px] pb-[15px] pt-[15px] md:w-[612px] md:px-[30px] md:pb-[30px] md:pt-[20px]">
         <div class="flex items-center gap-[15px]">
             <ModalsWalletButtonBack @click="$emit('back')" />
             <ModalsWalletTitle title="Вывод средств" />
         </div>
 
-        <div class="mt-[30px] flex items-center gap-2.5">
+        <div class="mt-[15px] md:mt-[30px] grid grid-cols-1 items-center gap-2.5 md:grid-cols-2">
             <Select v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Валюта</template>
                 <template #selectedOption>

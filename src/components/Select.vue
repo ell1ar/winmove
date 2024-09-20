@@ -7,6 +7,10 @@ const select = (option) => {
     isOptionWrapperVisible.value = false;
     model.value = option;
 };
+const optionClass = classes?.option ?? "";
+const activeOptionClass = classes?.activeOption ?? "";
+const optionWrapperClass = classes?.optionWrapper ?? "";
+const optionListClass = classes?.optionList ?? "";
 </script>
 
 <template>
@@ -29,18 +33,18 @@ const select = (option) => {
         <div
             v-if="isOptionWrapperVisible"
             class="absolute top-[calc(100%+10px)] z-20 flex w-full flex-col gap-[15px] overflow-hidden rounded-[15px] bg-[#161719] py-[15px] pl-[15px] pr-[7.5px]"
-            :class="classes?.optionWrapper ?? []"
+            :class="optionWrapperClass"
         >
             <slot name="optionContent" />
-            <div class="max-h-[150px] space-y-[5px] overflow-y-auto pr-[7.5px]" :class="classes?.optionList ?? []">
+            <div class="max-h-[150px] space-y-[5px] overflow-y-auto pr-[7.5px]" :class="optionListClass">
                 <button
                     class="flex h-10 w-full shrink-0 items-center gap-2.5 rounded-[10px] bg-[#1A1B1D] px-2.5 text-[13px] font-normal uppercase text-[#D4D4D4]"
-                    :class="classes?.option ?? []"
+                    :class="[model === option ? activeOptionClass : '', optionClass]"
                     @click="select(option)"
                     v-for="option in options"
                     :key="option"
                 >
-                    <slot name="option" :option="option"></slot>
+                    <slot name="option" :option="option" :isActive="model === option"></slot>
                 </button>
             </div>
         </div>

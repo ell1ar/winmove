@@ -7,10 +7,10 @@ const emit = defineEmits(["crypto", "other"]);
 </script>
 
 <template>
-    <div class="flex w-full flex-col bg-[#101113] px-[30px] py-[25px] md:w-[544px]">
+    <div class="flex w-full flex-col bg-[#101113] px-[15px] py-[15px] md:w-[544px] md:px-[30px] md:py-[25px]">
         <h2 class="text-[23px] text-white">Варианты депозита</h2>
 
-        <div class="mt-[34px] flex flex-col gap-5">
+        <div class="mt-[15px] flex flex-col gap-5 md:mt-[34px]">
             <ModalsWalletMenuItem @click="$emit('crypto')" title="Крипто вывод" class="gap-[15px]">
                 <ModalsWalletCryptoList />
                 <img class="absolute bottom-0 left-0 h-full w-full" :src="IconLightLCrypto" alt="light" />
