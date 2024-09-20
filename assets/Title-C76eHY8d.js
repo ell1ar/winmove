@@ -1,1 +1,0 @@
-import{o as e,c as o,t as s}from"./index-CCoYaeig.js";const a={class:"text-[17px] font-bold text-[#DFDFDF] md:text-[20px]"},r={__name:"Title",props:["title"],setup(t){return(c,l)=>(e(),o("h2",a,s(t.title),1))}};export{r as default};
