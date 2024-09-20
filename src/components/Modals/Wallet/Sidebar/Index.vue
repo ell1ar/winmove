@@ -24,9 +24,9 @@ const { tabs } = defineProps(["tabs"]);
             v-model="activeTab"
             :options="tabs"
             :classes="{
-                base: '!h-[45px] flex md:hidden w-full bg-[#1D1E20] border-[1px] border-[#252628]',
-                optionWrapper: 'bg-[#191A1C] w-[70%] right-0',
-                option: 'h-[45px] border-[1px] border-[#252628]',
+                base: '!h-[45px] !flex md:!hidden !w-full !bg-[#1D1E20] !border-[1px] !border-[#252628]',
+                optionWrapper: 'bg-[#191A1C] !w-[70%] !right-0',
+                option: '!h-[45px] !border-[1px] !border-[#252628]',
                 activeOption: 'bg-[#FDF74B] !text-[#101010] !font-bold',
             }"
         >
