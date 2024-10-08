@@ -1,0 +1,1 @@
+import{_ as r,o as t,c,e,l as _,f as n}from"./index-DgEng_tQ.js";const d={},i={class:"rounded-[20px] bg-[#101113] px-5 py-5 lg:overflow-x-hidden"};function l(p,f){const a=n("PagesMainBannerCard1"),o=n("PagesMainBannerCard2"),s=n("UISlider");return t(),c("div",i,[e(s,{breakpoints:{640:2}},{slides:_(()=>[e(a),e(o)]),_:1})])}const x=r(d,[["render",l]]);export{x as default};

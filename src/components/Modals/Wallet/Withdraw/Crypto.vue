@@ -47,7 +47,7 @@ const currencies = [
         </div>
 
         <div class="mt-[15px] md:mt-[30px] grid grid-cols-1 items-center gap-2.5 md:grid-cols-2">
-            <Select v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
+            <UISelect v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Валюта</template>
                 <template #selectedOption>
                     <div class="flex items-center gap-[10px]">
@@ -80,9 +80,9 @@ const currencies = [
                     <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
                     <span>{{ option.name }}</span>
                 </template>
-            </Select>
+            </UISelect>
 
-            <Select v-model="selectedNetwork" :options="networks" :classes="{ base: 'h-[60px] w-full' }">
+            <UISelect v-model="selectedNetwork" :options="networks" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Сеть</template>
                 <template #selectedOption>
                     <div class="flex items-center gap-[10px]">
@@ -97,14 +97,14 @@ const currencies = [
                     <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
                     <span>{{ option.name }}</span>
                 </template>
-            </Select>
+            </UISelect>
         </div>
 
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
 
         <div class="space-y-2.5">
-            <InputV2 label="Ваш адрес кошелька" placeholder="0x0000000000000000000000000000000000000000" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
-            <InputV2 label="Сумма" placeholder="$0.00" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
+            <UIInputV2 label="Ваш адрес кошелька" placeholder="0x0000000000000000000000000000000000000000" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
+            <UIInputV2 label="Сумма" placeholder="$0.00" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
         </div>
 
         <button class="mt-[18px] flex h-10 w-full shrink-0 items-center justify-center gap-2.5 rounded-lg bg-[#84FD4B] font-bold uppercase">Подтвердить вывод</button>

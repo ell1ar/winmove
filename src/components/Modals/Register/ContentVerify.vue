@@ -50,11 +50,11 @@ const { digits, digitRefs, onInput, onBackspace, onPaste } = useDigitInput();
         />
     </div>
 
-    <Checkbox id="verify-checkbox" v-model="checked" class="mt-[20px]">
+    <UICheckbox id="verify-checkbox" v-model="checked" class="mt-[20px]">
         <template #label>
             <span class="text-[12px] text-[#626262]">Я хочу получать рекламные письма</span>
         </template>
-    </Checkbox>
+    </UICheckbox>
 
     <button @click="$emit('verify')" type="button" class="mt-[20px] h-[35px] w-full rounded-[8px] bg-[#FDF74B] text-[16px] uppercase text-[#101010]">Подтвердить Email</button>
 

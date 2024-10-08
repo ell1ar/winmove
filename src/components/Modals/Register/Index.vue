@@ -7,6 +7,9 @@ import ImageRegisterLogo from "./assets/logo.png";
 import ImageLightRegister from "./assets/light.svg";
 import { VueFinalModal } from "vue-final-modal";
 import { ref } from "vue";
+import { useWindowSize } from "@vueuse/core";
+
+const { width } = useWindowSize();
 const isOpen = defineModel();
 const options = ref({
     overlayTransition: "vfm-fade",
@@ -43,7 +46,7 @@ const slectedTab = ref(0);
     <VueFinalModal
         v-model="isOpen"
         overlay-class="bg-[#08090C]/[75%]"
-        swipe-to-close="down"
+        :swipe-to-close="width < 1024 ? 'down' : 'none'"
         :overlay-transition="options.overlayTransition"
         :content-transition="options.contentTransition"
     >
@@ -83,7 +86,12 @@ const slectedTab = ref(0);
                     </div>
 
                     <div class="grid grid-cols-4 gap-2">
-                        <a href="#" v-for="(link, index) in links" :key="index" class="flex h-[40px] w-full items-center justify-center rounded-[9px] bg-[#212224]">
+                        <a
+                            href="#"
+                            v-for="(link, index) in links"
+                            :key="index"
+                            class="flex h-[40px] w-full items-center justify-center rounded-[9px] bg-[#212224]"
+                        >
                             <img :src="link.img" alt="social" />
                         </a>
                     </div>

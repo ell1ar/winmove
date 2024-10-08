@@ -24,7 +24,7 @@ const methods = [
             <ModalsWalletTitle title="Вывод средств" />
         </div>
 
-        <Select v-model="selectedMethod" :options="methods" :classes="{ base: 'h-[60px] mt-[30px] w-full' }">
+        <UISelect v-model="selectedMethod" :options="methods" :classes="{ base: 'h-[60px] mt-[30px] w-full' }">
             <template #unSelectedOption>Выберите метод</template>
             <template #option="{ option }">{{ option.name }}</template>
             <template #selectedOption>
@@ -36,19 +36,19 @@ const methods = [
                     </div>
                 </div>
             </template>
-        </Select>
+        </UISelect>
 
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
 
         <div class="grid grid-cols-12 gap-[5px]">
-            <InputV2 label="Номер карты" placeholder="1234 5678 9087 6543" :classes="{ base: 'col-span-12 !h-[60px] !rounded-[15px] !px-[15px]', input: '' }" id="card" />
-            <InputV2 label="Имя Фамилия" placeholder="IVAN IVANOV" :classes="{ base: 'col-span-7 !h-[60px] !rounded-[15px] !px-[15px]' }" />
-            <InputV2 label="Срок действия" placeholder="ММ/ГГ" :classes="{ base: 'col-span-5 !h-[60px] !rounded-[15px] !px-[15px]' }" />
+            <UIInputV2 label="Номер карты" placeholder="1234 5678 9087 6543" :classes="{ base: 'col-span-12 !h-[60px] !rounded-[15px] !px-[15px]', input: '' }" id="card" />
+            <UIInputV2 label="Имя Фамилия" placeholder="IVAN IVANOV" :classes="{ base: 'col-span-7 !h-[60px] !rounded-[15px] !px-[15px]' }" />
+            <UIInputV2 label="Срок действия" placeholder="ММ/ГГ" :classes="{ base: 'col-span-5 !h-[60px] !rounded-[15px] !px-[15px]' }" />
         </div>
 
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
 
-        <InputV2 label="Сумма" placeholder="$0.00" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
+        <UIInputV2 label="Сумма" placeholder="$0.00" :classes="{ base: 'col-span-1 !h-[60px] !rounded-[15px] !px-[15px]' }" />
 
         <button @click="$emit('success')" class="mt-[18px] flex h-10 w-full shrink-0 items-center justify-center gap-2.5 rounded-lg bg-[#84FD4B] font-bold uppercase">
             Подтвердить вывод

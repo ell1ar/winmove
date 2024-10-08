@@ -1,7 +1,6 @@
 <script setup>
 import ImageUSD from "@/assets/img/currency/usd.svg";
 import ImageWM from "@/assets/img/wm.png";
-import IconChange from "@/components/icons/IconChange.vue";
 </script>
 
 <template>

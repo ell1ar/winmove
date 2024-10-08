@@ -1,4 +1,6 @@
 <script setup>
+import IconBonusHello from "@/components/Modules/Bonus/icons/IconBonusHello.vue";
+import IconBonusStar from "@/components/Modules/Bonus/icons/IconBonusStar.vue";
 import ImageNetworkTrc from "@/assets/img/network/trc.png";
 import ImageCurrencyUSDT from "@/assets/img/currency/usdt.png";
 import ImageCurrencyBTC from "@/assets/img/currency/btc.png";
@@ -8,10 +10,6 @@ import ImageCurrencyBNB from "@/assets/img/currency/bnb.png";
 import ImageFB from "@/assets/img/fb.png";
 import ImageFG from "@/assets/img/fg.png";
 import ImageQR from "@/assets/img/qr.png";
-import IconBonusHello from "@/components/Bonus/icons/IconBonusHello.vue";
-import IconBonusStar from "@/components/Bonus/icons/IconBonusStar.vue";
-import IconCopy from "@/components/icons/IconCopy.vue";
-import IconDanger from "@/components/icons/IconDanger.vue";
 import { ref } from "vue";
 import IconBonusHelloBlue from "../assets/hello-bonuses/blue.svg";
 import IconBonusHelloPurple from "../assets/hello-bonuses/purple.svg";
@@ -78,7 +76,7 @@ const helloBonuses = [
         </div>
 
         <div class="mt-[20px] grid grid-cols-1 items-center gap-2.5 md:mt-[30px] md:grid-cols-2">
-            <Select v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
+            <UISelect v-model="selectedCurrency" :options="currencies" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Валюта</template>
                 <template #selectedOption="{ option }">
                     <div class="flex items-center gap-[10px]">
@@ -111,9 +109,9 @@ const helloBonuses = [
                     <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
                     <span>{{ option.name }}</span>
                 </template>
-            </Select>
+            </UISelect>
 
-            <Select v-model="selectedNetwork" :options="networks" :classes="{ base: 'h-[60px] w-full' }">
+            <UISelect v-model="selectedNetwork" :options="networks" :classes="{ base: 'h-[60px] w-full' }">
                 <template #unSelectedOption>Сеть</template>
                 <template #selectedOption="{ option }">
                     <div class="flex items-center gap-[10px]">
@@ -128,7 +126,7 @@ const helloBonuses = [
                     <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.name" />
                     <span>{{ option.name }}</span>
                 </template>
-            </Select>
+            </UISelect>
         </div>
 
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
@@ -150,13 +148,17 @@ const helloBonuses = [
 
                     <div class="flex items-center gap-2.5">
                         <span class="text-[15px] font-normal leading-[26px] text-[#757678] [font-family:Stapel]">Без бонуса</span>
-                        <ButtonToggle />
+                        <UIButtonToggle />
                     </div>
                 </div>
             </div>
 
             <ul class="space-y-[10px]">
-                <li v-for="(helloBonus, index) in helloBonuses" :key="index" class="flex items-center gap-2.5 text-[13px] font-[400] text-[#A8A9AB] [&>strong]:text-[#C9C9C9]">
+                <li
+                    v-for="(helloBonus, index) in helloBonuses"
+                    :key="index"
+                    class="flex items-center gap-2.5 text-[13px] font-[400] text-[#A8A9AB] [&>strong]:text-[#C9C9C9]"
+                >
                     <img :src="helloBonus.icon" />
                     <span>
                         Депозит от
@@ -180,11 +182,11 @@ const helloBonuses = [
             </h2>
 
             <div v-if="!isShowNoBanner" class="scrollbar-heavy flex w-full items-center gap-2.5 overflow-x-scroll pb-[15px]">
-                <BonusSpecialCard class="!w-[318px] border-[1px] border-[#FDF74B] !px-[15px]" :imgSrc="ImageFB" desc="100 фрибетов" />
-                <BonusSpecialCard class="!w-[318px] !px-[15px]" :imgSrc="ImageFG" desc="100 фригеймс" />
+                <ModulesBonusSpecialCard class="!w-[318px] border-[1px] border-[#FDF74B] !px-[15px]" :imgSrc="ImageFB" desc="100 фрибетов" />
+                <ModulesBonusSpecialCard class="!w-[318px] !px-[15px]" :imgSrc="ImageFG" desc="100 фригеймс" />
             </div>
 
-            <BonusSpecialNoBanner class="mb-[5px] h-[195px] md:mb-[10px]" v-if="isShowNoBanner" />
+            <UIBannerEmpty title="Нет активных предложений" class="mb-[5px] h-[195px] md:mb-[10px]" v-if="isShowNoBanner" />
         </div>
 
         <hr class="my-[15px] h-[1px] w-full border-[#191A1C]" />
@@ -193,7 +195,12 @@ const helloBonuses = [
             <div class="flex w-full flex-col sm:justify-between">
                 <div class="relative flex h-[64px] w-full shrink-0 flex-col justify-center rounded-[10px] border-[1px] border-[#1D1E20] bg-[#090A0C] px-[15px]">
                     <span class="text-sm font-normal leading-[26px] text-[#757678] [font-family:Stapel]">Ваш адрес депозита USDT</span>
-                    <input readonly class="w-full bg-transparent text-[15px] font-bold text-[#C9C9C9] focus:outline-none" type="text" value="TGmhoeUhbrX...uBUUFv1a5Vs5Fj" />
+                    <input
+                        readonly
+                        class="w-full bg-transparent text-[15px] font-bold text-[#C9C9C9] focus:outline-none"
+                        type="text"
+                        value="TGmhoeUhbrX...uBUUFv1a5Vs5Fj"
+                    />
                     <button class="absolute right-[15px]"><IconCopy /></button>
                 </div>
 

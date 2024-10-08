@@ -1,9 +1,9 @@
 <template>
     <form action="#" class="space-y-[10px] text-[14px] font-medium">
-        <Input placeholder="Email" autocomplete type="email" />
+        <UIInput placeholder="Email" autocomplete type="email" />
 
         <div class="relative flex w-full items-center">
-            <Input placeholder="Пароль" autocomplete type="password" />
+            <UIInput placeholder="Пароль" autocomplete type="password" />
 
             <button class="absolute right-[16px]" type="button">
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">

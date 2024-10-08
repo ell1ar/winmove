@@ -7,10 +7,10 @@ const emit = defineEmits(["verify"]);
 
 <template>
     <form action="#" class="space-y-[10px] text-[14px] font-medium">
-        <Input placeholder="Email" autocomplete type="email" />
+        <UIInput placeholder="Email" autocomplete type="email" />
 
         <div class="relative flex w-full items-center">
-            <Input placeholder="Пароль" autocomplete :type="isShowPassword ? 'text' : 'password'" />
+            <UIInput placeholder="Пароль" autocomplete :type="isShowPassword ? 'text' : 'password'" />
 
             <button @click="isShowPassword = !isShowPassword" class="absolute right-[16px] -m-3 p-3" type="button">
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,16 +26,16 @@ const emit = defineEmits(["verify"]);
             </button>
         </div>
 
-        <Input placeholder="Реферальный код (необязательно)" type="text" />
+        <UIInput placeholder="Реферальный код (необязательно)" type="text" />
 
-        <Checkbox id="register-checkbox" v-model="checked">
+        <UICheckbox id="register-checkbox" v-model="checked">
             <template #label>
                 <span class="text-[11px] text-[#626262] sm:text-[12px]">
                     Я подтверждаю, что мне 18 лет и я прочитал(а) <br />
                     <a href="" class="text-[#C1C1C1]">Условия предоставления услуг</a>
                 </span>
             </template>
-        </Checkbox>
+        </UICheckbox>
     </form>
 
     <button @click="$emit('verify')" type="button" class="mt-[20px] h-[35px] w-full rounded-[8px] bg-[#FDF74B] text-[16px] uppercase text-[#101010]">Создать аккаунт</button>

@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as n,e as s,f as e}from"./index-DgEng_tQ.js";const c={},i={class:"rounded-[15px] bg-[#101113] p-[25px]"};function _(d,f){const o=e("PagesProfileTabsHistoryTabList"),a=e("PagesProfileTabsHistoryTabsCrashIndex");return r(),n("div",i,[s(o),s(a,{class:"mt-[13px]"})])}const p=t(c,[["render",_]]);export{p as default};

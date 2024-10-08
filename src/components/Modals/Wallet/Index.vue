@@ -1,5 +1,4 @@
 <script setup>
-import IconClose from "@/components/icons/IconClose.vue";
 import IconChange from "@/components/Modals/Wallet/Sidebar/assets/change.svg";
 import IconDeposit from "@/components/Modals/Wallet/Sidebar/assets/deposit.svg";
 import IconHistory from "@/components/Modals/Wallet/Sidebar/assets/history.svg";
@@ -8,7 +7,7 @@ import { useWindowSize } from "@vueuse/core";
 import { ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
 
-const { width, height } = useWindowSize();
+const { width } = useWindowSize();
 const isOpen = defineModel();
 const tabs = ref([
     {

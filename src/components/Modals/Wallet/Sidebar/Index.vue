@@ -20,7 +20,7 @@ const { tabs } = defineProps(["tabs"]);
             </li>
         </ul>
 
-        <Select
+        <UISelect
             v-model="activeTab"
             :options="tabs"
             :classes="{
@@ -41,6 +41,6 @@ const { tabs } = defineProps(["tabs"]);
                 <img class="h-[20px] w-[20px] object-contain" :src="option.img" :alt="option.title" />
                 <span class="capitalize">{{ option.title }}</span>
             </template>
-        </Select>
+        </UISelect>
     </div>
 </template>
