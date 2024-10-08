@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as s,e,f as n}from"./index-DgEng_tQ.js";const c={},i={class:"flex w-full gap-5 overflow-x-auto rounded-[20px] bg-[#101113] p-5 lg:overflow-x-hidden 2xl:flex-col"};function l(_,d){const a=n("PagesMainBannerRightCard1"),o=n("PagesMainBannerRightCard2");return r(),s("div",i,[e(a),e(o)])}const g=t(c,[["render",l]]);export{g as default};

@@ -1,0 +1,1 @@
+import{o as e,c as s,a as r,t as o}from"./index-DgEng_tQ.js";const a={class:"flex h-[207px] items-center justify-center rounded-[20px] border-[1px] border-[#191A1C] bg-[#121315]"},n={class:"text-[18px] text-[#696A6C] font-[400]"},l={__name:"BannerEmpty",props:{title:String},setup(t){return(c,p)=>(e(),s("div",a,[r("span",n,o(t.title),1)]))}};export{l as default};

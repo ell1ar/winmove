@@ -1,0 +1,1 @@
+import{_ as n,o as t,c,e,a as _,f as a}from"./index-DgEng_tQ.js";const r={},d={class:"gap-5 rounded-[20px] bg-[#101113] p-5 xl:flex-col"},i={class:"flex"};function l(m,p){const s=a("PagesMainGameHead"),o=a("PagesMainGameList");return t(),c("div",d,[e(s),_("div",i,[e(o)])])}const g=n(r,[["render",l]]);export{g as default};
